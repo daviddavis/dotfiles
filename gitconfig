@@ -6,4 +6,4 @@
 [alias]
   st = status
   s = status
-  c = commit
+  ci = commit
