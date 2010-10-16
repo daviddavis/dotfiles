@@ -1,0 +1,9 @@
+[user]
+	name = David Davis
+	email = davidd@scimedsolutions.com
+[gui]
+	recentrepo = /Users/david/Sites/login_learning
+[alias]
+  st = status
+  s = status
+  c = commit
