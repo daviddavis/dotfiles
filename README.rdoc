@@ -1,7 +1,7 @@
 = David's Dot Files
 
 These are config files to set up a system the way I like it. These 
-files are based largely on Ryan Bates' project.
+files are based largely on Ryan Bates's dotfiles repo.
 
 
 == Installation
