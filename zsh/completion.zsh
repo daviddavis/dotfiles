@@ -1,4 +1,4 @@
-# not sure what this does
+# turn on completion 
 autoload -U compinit
 compinit
 
