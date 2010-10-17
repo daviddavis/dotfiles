@@ -1,5 +1,4 @@
 alias ll="ls -l"
-
-function mkcd {
-  nocorrect mkdir -p "$1" && cd "$1"
-}
+alias s="script/server -u"
+alias ..="cd .."
+alias -g ...="../.."
