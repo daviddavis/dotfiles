@@ -1,4 +1,12 @@
 export EDITOR='vim'
+autoload -U compinit; compinit
+zmodload -i zsh/complist
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+
+# load our functions
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
 
 # history
 HISTFILE=~/.zsh_history
