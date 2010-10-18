@@ -6,7 +6,7 @@ files are based largely on Ryan Bates's dotfiles repo.
 
 == Installation
 
-  git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+  git clone git@github.com:d5/dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
   rake install
 

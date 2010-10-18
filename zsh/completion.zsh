@@ -2,6 +2,8 @@
 autoload -U compinit
 compinit
 
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
