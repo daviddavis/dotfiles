@@ -13,9 +13,11 @@ SAVEHIST=1000
 REPORTTIME=10 # print elapsed time when more than 10 seconds
 
 # command line prompt
+autoload colors zsh/terminfo
+colors
 autoload -U promptinit
 promptinit
-export PROMPT="%n@%m %c %# "
+PS1="%{$fg[green]%}%n@%m %c %# %{$reset_color%}%"
 
 # bind some keys
 bindkey '^[^[[D' backward-word
