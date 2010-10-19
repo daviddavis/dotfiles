@@ -1,3 +1,3 @@
-funcion chpwd() {
-  savepath;
-}
+#funcion chpwd() {
+  #savepath;
+#}
