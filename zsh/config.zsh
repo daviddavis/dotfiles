@@ -17,7 +17,7 @@ autoload colors zsh/terminfo
 colors
 autoload -U promptinit
 promptinit
-PS1="%{$fg[green]%}%n@%m %c %# %{$reset_color%}%"
+PS1="%{$fg[green]%}%n@%m %B%c%b %{$fg[green]%}%# %{$reset_color%}%"
 
 # bind some keys
 bindkey '^[^[[D' backward-word
