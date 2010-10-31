@@ -1,4 +1,4 @@
-alias ll="ls -l"
+alias ll="ls -al"
 #alias s="script/server -u"
 #alias sc="script/console -u"
 alias ..="cd .."
