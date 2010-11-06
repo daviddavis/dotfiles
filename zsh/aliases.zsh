@@ -7,4 +7,7 @@ alias gitbox="open -a Gitbox"
 alias m="mvim"
 alias mm="mvim ."
 alias u="unicorn_rails"
-alias s="cd ~/Sites"
+alias s="ss"
+
+alias g="git"
+alias gg="g st"
