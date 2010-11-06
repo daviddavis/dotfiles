@@ -73,7 +73,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 "set list
-"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+"set listchars=tab:>-,trail:-,extends:#,nbsp:.,
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
@@ -121,7 +121,8 @@ if has('gui_running')
   set guioptions=e
   set showtabline=2
   set tabpagemax=15
-  set guifont=Monaco:h10
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+  set linespace=2
   set autoindent
   set smartindent
 
