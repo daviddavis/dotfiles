@@ -1,10 +1,10 @@
 setopt prompt_subst
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' actionformats \
-    '%F{2}[%F{3}%s%F{2}:%F{7}%b%F{2}|%F{6}%a%F{2}]%f '
+    '%F{2}[%F{3}%s%F{2}:%f%b%F{2}|%F{6}%a%F{2}]%f '
 zstyle ':vcs_info:*' formats       \
-    '%F{2}[%F{3}%s%F{2}:%F{7}%b%F{2}]%f '
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{2}:%F{7}%r'
+    '%F{2}[%F{3}%s%F{2}:%f%b%F{2}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{2}:%f%r'
 
 zstyle ':vcs_info:*' enable git cvs svn
 
