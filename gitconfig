@@ -8,6 +8,7 @@
   s = status
   ci = commit
   cam = commit -a -m
+  b = branch
 [color]
   ui = auto
 [color "branch"]
