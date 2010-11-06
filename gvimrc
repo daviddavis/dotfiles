@@ -7,15 +7,15 @@ set lines=55 columns=200
 "set autoindent
 "set smartindent
 
-"" Turn on right scrollbars
+" Turn on right scrollbars
 "set guioptions+=R
 "set guioptions+=r
 
-"" go to normal mode after save
+" go to normal mode after save
 "iunmenu File.Save
 "imenu <silent> File.Save <Esc>:if expand("%") == ""<Bar>browse confirm w<Bar>else<Bar>confirm w<Bar>endif<CR>
 
-""set up peepopen (to cmd p)
+" set up peepopen (to cmd p)
 if has("gui_macvim")
   macmenu &File.Print key=<nop>
   map <D-p> <Plug>PeepOpen

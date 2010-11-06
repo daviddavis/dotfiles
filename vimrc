@@ -96,8 +96,10 @@ function! RailsScriptSearch(args)
 
     execute "grep " . a:args
   finally
-    "execute "set grepformat=" . l:savegrepformat
-    "execute "set grepprg=" . l:savegrepprg
+    "execute "set grepprg=" . escape(l:savegrepprg, '')
+    "execute "set grepformat=" . escape(l:savegrepformat, '')
+    set grepprg="grep -n $* /dev/null"
+    set grepformat="%f:%l:%m,%f:%l%m,%f  %l%m"
   endtry
 endfunction
 
