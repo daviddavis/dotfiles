@@ -11,3 +11,4 @@ alias s="ss"
 
 alias g="git"
 alias gg="g st"
+alias gs="git svn"
