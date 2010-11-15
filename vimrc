@@ -2,10 +2,11 @@
 set nocompatible
 
 " use pathogen to load plugins from .vim/bundles
-call pathogen#runtime_append_all_bundles() 
+silent! call pathogen#runtime_append_all_bundles()
 
-" Turn filetype plugin on
-filetype plugin on
+" enable syntax highlighting and file type detection
+syntax enable
+filetype plugin indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -60,7 +61,6 @@ set showmode
 set showmatch
 set ignorecase
 "set smartindent
-syntax on
 "set incsearch
 set ignorecase smartcase
 set ts=2
@@ -74,6 +74,7 @@ set nowritebackup
 set noswapfile
 "set list
 "set listchars=tab:>-,trail:-,extends:#,nbsp:.,
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
@@ -137,3 +138,7 @@ if has('gui_running')
   imenu <silent> File.Save <Esc>:if expand("%") == ""<Bar>browse confirm w<Bar>else<Bar>confirm w<Bar>endif<CR>
 
 endif
+
+" code folding
+autocmd FileType ruby setlocal foldmethod=syntax
+autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
