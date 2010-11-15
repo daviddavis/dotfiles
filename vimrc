@@ -140,5 +140,5 @@ if has('gui_running')
 endif
 
 " code folding
-autocmd FileType ruby setlocal foldmethod=syntax
-autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"autocmd FileType ruby setlocal foldmethod=syntax
+"autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
