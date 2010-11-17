@@ -1,4 +1,4 @@
-set lines=50 columns=180
+set lines=58 columns=230
 "colorscheme ir_black
 "set guioptions=e
 "set showtabline=2

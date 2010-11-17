@@ -3,6 +3,8 @@
 	email = davidd@scimedsolutions.com
 [gui]
 	recentrepo = /Users/david/Sites/login_learning
+[diff]
+  #external = /usr/bin/opendiff
 [alias]
   st = status
   s = status
