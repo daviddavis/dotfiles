@@ -26,9 +26,6 @@ export SVN_EDITOR="mvim"
 # export ARCHFLAGS
 export ARCHFLAGS="-arch i386 -arch x86_64"
 
-# Set up Sunteck CVS
-export CVSROOT=:ext:ddavis:Scimed01@www1.sunteckbroker.com:/usr/local/cvsroot
-
 # command prompt
 export PROMPT_COMMAND='PS1="\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`\u.\h:\`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\` →\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"'
 
