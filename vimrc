@@ -25,6 +25,7 @@ map <C-x> :FufFile <CR>
 
 " hit ,smr to reload snippets
 nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
+let g:snippets_dir="~/.vim/snippets"
 
 " remove the Windows line endings (^M)
 map <Leader>m mz:%s/\r$//g<cr>`z
