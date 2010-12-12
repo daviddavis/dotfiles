@@ -6,3 +6,4 @@ export rw=~s/request_web
 export elms=~s/elms
 export sp=~s/sunpay
 export st=~s/sunteck_fats
+export svn=~s/svn
