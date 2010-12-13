@@ -86,38 +86,6 @@ nnoremap ; :
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
 
-" Find in Project
-" script/plugin install http://github.com/37signals/project_search.git
-function! RailsScriptSearch(args)
-  let l:savegrepprg = &grepprg  
-  let l:savegrepformat = &grepformat
-
-  try 
-    set grepprg=script/find
-    set grepformat=%f:%l:%m
-
-    execute "grep " . a:args
-  finally
-    "execute "set grepprg=" . escape(l:savegrepprg, '')
-    "execute "set grepformat=" . escape(l:savegrepformat, '')
-    set grepprg="grep -n $* /dev/null"
-    set grepformat="%f:%l:%m,%f:%l%m,%f  %l%m"
-  endtry
-endfunction
-
-" search with explicitly provided arguments
-command! -n=? Rgrep :call RailsScriptSearch('<args>')
-
-" search for the word under the cursor
-map <leader>rg :silent call RailsScriptSearch(expand("<cword>"))<CR>:cc<CR>
-
-" search for the method definition of the word under the cursor
-map <leader>rd :silent call RailsScriptSearch(expand("'def .*<cword>'"))<CR>:cc<CR>
-
-" map :Rfinder to use script/find
-command! -nargs=* Rfinder :Rscript find <args>
-command! -n=* Rf :Rscript find <args>
-
 " gvimrc stuff
 if has('gui_running')
   set number
