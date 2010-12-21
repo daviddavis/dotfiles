@@ -62,6 +62,9 @@ endif
 
 let colors_name = "ir_black"
 
+" turn on operator highlighting in ruby
+let ruby_operators = 1
+
 
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
