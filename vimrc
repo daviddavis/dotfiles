@@ -47,6 +47,7 @@ map <D-9> 9gt
 map <D-0> :tablast<CR>
 
 " Colorscheme options
+let ruby_operators = 1
 colorscheme default
 
 " Other Options
