@@ -76,6 +76,8 @@ set noswapfile
 "set list
 "set listchars=tab:>-,trail:-,extends:#,nbsp:.,
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+" rvm status
+set statusline+=%{rvm#statusline()} 
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
