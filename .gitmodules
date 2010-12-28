@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-cucumber"]
 	path = vim/bundle/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
+[submodule "vim/bundle/rvm.vim"]
+	path = vim/bundle/rvm.vim
+	url = git://github.com/csexton/rvm.vim.git.git
