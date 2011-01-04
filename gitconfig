@@ -11,6 +11,7 @@
   ci = commit
   c = commit -a -m
   b = branch
+  co = checkout
 [color]
   ui = auto
 [color "branch"]
