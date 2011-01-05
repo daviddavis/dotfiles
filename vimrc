@@ -111,7 +111,7 @@ if has('gui_running')
 endif
 
 " code folding
-set foldnestmax=2
+set foldnestmax=1
 autocmd FileType ruby  setlocal foldmethod=syntax foldlevel=1 foldnestmax=3
 autocmd FileType css   setlocal foldmethod=indent shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal foldmethod=indent shiftwidth=2 tabstop=2
