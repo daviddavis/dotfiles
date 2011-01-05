@@ -111,9 +111,10 @@ if has('gui_running')
 endif
 
 " code folding
-autocmd FileType ruby setlocal foldmethod=syntax
-autocmd FileType ruby setlocal foldlevel=1
-autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+set foldnestmax=2
+autocmd FileType ruby  setlocal foldmethod=syntax foldlevel=1 foldnestmax=3
+autocmd FileType css   setlocal foldmethod=indent shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 " set .sql to mysql
 autocmd BufRead *.sql set filetype=mysql      
