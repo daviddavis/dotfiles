@@ -37,3 +37,6 @@
 [submodule "vim/bundle/rvm.vim"]
 	path = vim/bundle/rvm.vim
 	url = git://github.com/csexton/rvm.vim.git.git
+[submodule "vim/bundle/vim-rspec"]
+	path = vim/bundle/vim-rspec
+	url = https://github.com/taq/vim-rspec.git
