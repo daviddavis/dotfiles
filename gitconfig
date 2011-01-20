@@ -9,7 +9,8 @@
   st = status
   s = status
   ci = commit
-  c = commit -a -m
+  c = commit
+  cam = commit -a -m
   b = branch
   co = checkout
 [color]
