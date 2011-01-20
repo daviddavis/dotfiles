@@ -88,27 +88,6 @@ nnoremap ; :
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
 
-" gvimrc stuff
-if has('gui_running')
-  set number
-  colorscheme ir_black
-  set guioptions=e
-  set showtabline=2
-  set tabpagemax=15
-  set linespace=2
-  set autoindent
-  set smartindent
-
-  " Turn on right scrollbars
-  set guioptions+=R
-  set guioptions+=r
-
-  " go to normal mode after save
-  iunmenu File.Save
-  imenu <silent> File.Save <Esc>:if expand("%") == ""<Bar>browse confirm w<Bar>else<Bar>confirm w<Bar>endif<CR>
-
-endif
-
 " code folding
 set foldnestmax=2
 autocmd FileType ruby  setlocal foldmethod=syntax foldlevel=1
