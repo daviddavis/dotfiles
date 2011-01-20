@@ -1,4 +1,3 @@
-set lines=58 columns=230
 "colorscheme ir_black
 "set guioptions=e
 "set showtabline=2
@@ -17,6 +16,9 @@ set lines=58 columns=230
 
 " set up peepopen (to cmd p)
 if has("gui_macvim")
+  set lines=58 columns=230
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+
   macmenu &File.Print key=<nop>
   map <D-p> <Plug>PeepOpen
   imap <D-p> <Esc><Plug>PeepOpen

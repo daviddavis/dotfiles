@@ -95,7 +95,6 @@ if has('gui_running')
   set guioptions=e
   set showtabline=2
   set tabpagemax=15
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
   set linespace=2
   set autoindent
   set smartindent
