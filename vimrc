@@ -19,9 +19,9 @@ map <C-d> :NERDTreeToggle<CR>
 
 "Map fuzzy file find to ff
 cmap <leader>ff :FufFile **/<CR>
-nmap <leader>t :FufFile<CR>
 map <C-t> :FufFile <CR>
 map <C-x> :FufFile <CR>
+map <C-p> :CommandT <CR>
 
 " hit ,smr to reload snippets
 nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
@@ -95,4 +95,5 @@ autocmd FileType css   setlocal foldmethod=indent shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 " set .sql to mysql
-autocmd BufRead *.sql set filetype=mysql      
+autocmd BufRead *.sql set filetype=mysql
+autocmd BufRead *.clj set filetype=clojure
