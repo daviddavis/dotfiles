@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-conque"]
 	path = vim/bundle/vim-conque
 	url = https://github.com/rygwdn/vim-conque.git
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
+	url = https://github.com/wincent/Command-T.git
