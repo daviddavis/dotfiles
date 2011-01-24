@@ -18,10 +18,10 @@ let mapleader = ","
 map <C-d> :NERDTreeToggle<CR>
 
 "Map fuzzy file find to ff
-cmap <leader>ff :FufFile **/<CR>
-nmap <leader>t :FufFile<CR>
-map <C-t> :FufFile <CR>
-map <C-x> :FufFile <CR>
+"cmap <leader>ff :FufFile **/<CR>
+"nmap <leader>t :FufFile<CR>
+"map <C-t> :FufFile <CR>
+"map <C-x> :FufFile <CR>
 
 " hit ,smr to reload snippets
 nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
@@ -89,10 +89,10 @@ nnoremap ; :
 map <Leader>R :e doc/README_FOR_APP<CR>
 
 " code folding
-set foldnestmax=2
-autocmd FileType ruby  setlocal foldmethod=syntax foldlevel=1
-autocmd FileType css   setlocal foldmethod=indent shiftwidth=2 tabstop=2
-autocmd FileType eruby setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"set foldnestmax=2
+"autocmd FileType ruby  setlocal foldmethod=syntax foldlevel=1
+"autocmd FileType css   setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"autocmd FileType eruby setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 " set .sql to mysql
 autocmd BufRead *.sql set filetype=mysql      
