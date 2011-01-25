@@ -29,6 +29,8 @@ imap <C-v> <ESC>"+pa
 map <A-C-]> <C-PageDown>
 map <A-C-[> <C-PageUp>
 
+map <D-e> :ConqueTerm zsh <CR> 
+
 " set up peepopen (to cmd p)
 if has("gui_macvim")
   set guioptions=e
