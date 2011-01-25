@@ -15,6 +15,7 @@ set guioptions+=r
 iunmenu File.Save
 imenu <silent> File.Save <Esc>:if expand("%") == ""<Bar>browse confirm w<Bar>else<Bar>confirm w<Bar>endif<CR>
 
+map <D-e> :ConqueTerm zsh <CR> 
 
 " set up peepopen (to cmd p)
 if has("gui_macvim")
