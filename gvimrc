@@ -28,6 +28,8 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 map <A-C-]> <C-PageDown>
 map <A-C-[> <C-PageUp>
+nmap <C-p> :CommandT<CR>
+imap <C-p> <ESC>:CommandT<CR>
 
 map <D-e> :ConqueTerm zsh <CR> 
 
