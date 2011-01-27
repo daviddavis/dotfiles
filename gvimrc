@@ -19,6 +19,7 @@ map <D-e> :ConqueTerm zsh <CR>
 
 " set up peepopen (to cmd p)
 if has("gui_macvim")
+  colorscheme ir_black
   set lines=58 columns=230
   set guifont=Bitstream\ Vera\ Sans\ Mono:h11
 
