@@ -30,3 +30,4 @@
   untracked = cyan
 [core]
 	quotepath = false
+	autocrlf = input
