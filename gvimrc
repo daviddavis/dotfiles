@@ -20,7 +20,7 @@ map <D-e> :ConqueTerm zsh <CR>
 " set up peepopen (to cmd p)
 if has("gui_macvim")
   set lines=58 columns=230
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h11
 
   macmenu &File.Print key=<nop>
   map <D-p> <Plug>PeepOpen
