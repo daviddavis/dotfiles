@@ -36,6 +36,8 @@ map <D-e> :ConqueTerm zsh <CR>
 " set up peepopen (to cmd p)
 if has("gui_macvim")
   set guioptions=e
+  colorscheme railscasts2
+  hi LineNr guifg=#888888 guibg=#2B2B2B
   set lines=58 columns=230
   set guifont=Bitstream\ Vera\ Sans\ Mono:h12
 

@@ -97,3 +97,6 @@ map <Leader>R :e doc/README_FOR_APP<CR>
 " set .sql to mysql
 autocmd BufRead *.sql set filetype=mysql
 autocmd BufRead *.clj set filetype=clojure
+
+" disable visual bell
+set vb t_vb=""
