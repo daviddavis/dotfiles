@@ -1,5 +1,8 @@
 --type-set
-clojure=clj
+clojure=.clj
+
+--type-set 
+gherkin=.feature
 
 --type-add
 ruby=.rake,.thor,.ru
