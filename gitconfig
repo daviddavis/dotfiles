@@ -10,6 +10,7 @@
   s = status
   ci = commit
   c = commit
+  cm = commit -m
   cam = commit -a -m
   b = branch
   co = checkout
