@@ -19,8 +19,6 @@ map <D-e> :ConqueTerm zsh <CR>
 
 " set up peepopen (to cmd p)
 if has("gui_macvim")
-  colorscheme railscasts2
-  hi LineNr guifg=#888888 guibg=#2B2B2B
   set lines=58 columns=230
   set guifont=Bitstream\ Vera\ Sans\ Mono:h12
 
@@ -29,4 +27,7 @@ if has("gui_macvim")
   imap <D-p> <Esc><Plug>PeepOpen
 end
 
-":command -nargs=* Rfinder :Rscript find <args>
+" Include user's local vim config
+if filereadable(expand("~/.gvimrc.local"))
+  source ~/.gvimrc.local
+endif

@@ -73,8 +73,7 @@ set hlsearch
 set nobackup
 set nowritebackup
 set noswapfile
-"set list
-"set listchars=tab:>-,trail:-,extends:#,nbsp:.,
+set list listchars=tab:\ \ ,trail:·
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 " rvm status
 set statusline+=%{rvm#statusline()} 
@@ -97,3 +96,8 @@ map <Leader>R :e doc/README_FOR_APP<CR>
 " set .sql to mysql
 autocmd BufRead *.sql set filetype=mysql
 autocmd BufRead *.clj set filetype=clojure
+
+" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
