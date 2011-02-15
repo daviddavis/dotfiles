@@ -13,6 +13,7 @@
   cam = commit -a -m
   b = branch
   co = checkout
+  cm = commit -m
 [color]
   ui = auto
 [color "branch"]
