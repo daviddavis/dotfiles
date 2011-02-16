@@ -2,4 +2,7 @@
 clojure=clj
 
 --type-add
-ruby=.rake,.thor,.ru
+ruby=.rake,.thor,.ru,.feature,.spec
+
+--type-set
+haml=.haml
