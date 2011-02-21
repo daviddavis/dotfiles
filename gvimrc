@@ -30,7 +30,7 @@ if has("gui_macvim")
   imap <D-p> <Esc><Plug>PeepOpen
 
   macmenu &File.Open\.\.\. key=<nop>
-  imap <D-o> :CommandT<CR>
+  imap <D-o> <ESC>:CommandT<CR>
   map <D-o> :CommandT<CR>
 end
 
