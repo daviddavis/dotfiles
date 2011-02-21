@@ -8,3 +8,4 @@ export sp=~s/sunpay
 export st=~s/sunteck_fats
 export svn=~s/svn
 export gitosis=~s/gitosis-admin
+export sr=~s/sunteck_rails

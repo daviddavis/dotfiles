@@ -5,4 +5,7 @@ clojure=.clj
 gherkin=.feature
 
 --type-add
-ruby=.rake,.thor,.ru
+ruby=.rake,.thor,.ru,.feature,.spec
+
+--type-set
+haml=.haml
