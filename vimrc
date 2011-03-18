@@ -96,7 +96,7 @@ map <Leader>R :e doc/README_FOR_APP<CR>
 " set .sql to mysql
 autocmd BufRead *.sql set filetype=mysql
 autocmd BufRead *.clj set filetype=clojure
-autocmd BufRead *.thor set filetype=thor
+autocmd BufRead *.thor set filetype=ruby
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
