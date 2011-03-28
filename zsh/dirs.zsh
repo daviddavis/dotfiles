@@ -9,3 +9,4 @@ export st=~s/sunteck_fats
 export svn=~s/svn
 export gitosis=~s/gitosis-admin
 export sr=~s/sunteck_rails
+export ab=~s/antibodyome
