@@ -1,0 +1,5 @@
+# turn off splash screen
+startup_message off
+
+# scrollblack buffer
+defscrollback 30000

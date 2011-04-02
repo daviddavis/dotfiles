@@ -5,7 +5,6 @@ alias ..="cd .."
 alias -g ...="../.."
 alias gitbox="open -a Gitbox"
 alias m="mvim"
-alias mm="mvim ."
 alias u="unicorn_rails"
 alias s="ss"
 
@@ -13,3 +12,5 @@ alias g="git"
 alias gg="g st"
 alias gs="git svn"
 alias gf="git flow"
+
+alias t="python ~/Projects/t/t.py --task-dir ~/Projects/t/tasks --list tasks"
