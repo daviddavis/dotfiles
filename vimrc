@@ -102,3 +102,12 @@ autocmd BufRead *.thor set filetype=ruby
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" gist-vim defaults
+if has("mac")
+  let g:gist_clip_command = 'pbcopy'
+elseif has("unix")
+  let g:gist_clip_command = 'xclip -selection clipboard'
+endif
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
