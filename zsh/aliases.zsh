@@ -5,6 +5,7 @@ alias ..="cd .."
 alias -g ...="../.."
 alias gitbox="open -a Gitbox"
 alias m="mvim"
+alias mm="mvim ."
 alias u="unicorn_rails"
 alias s="ss"
 
