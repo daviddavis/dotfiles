@@ -73,3 +73,9 @@
 [submodule "vim/bundle/jslint.vim"]
 	path = vim/bundle/jslint.vim
 	url = https://github.com/hallettj/jslint.vim.git
+[submodule "vim/bundle/vim-matchit"]
+	path = vim/bundle/vim-matchit
+	url = https://github.com/edsono/vim-matchit
+[submodule "vim/bundle/vim-irblack"]
+  path = vim/bundle/vim-irblack
+  url = https://github.com/wgibbs/vim-irblack.git

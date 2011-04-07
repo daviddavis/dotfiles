@@ -111,3 +111,18 @@ elseif has("unix")
 endif
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
+
+" syntastic warnings
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
+
+" Unimpaired configuration
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
+" % to bounce from do to end etc.
+runtime! macros/matchit.vim
