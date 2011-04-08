@@ -126,3 +126,6 @@ vmap <C-Down> ]egv
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
+
+" turn of jslint by default
+let g:JSLintHighlightErrorLine = 0
