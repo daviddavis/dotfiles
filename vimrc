@@ -136,3 +136,6 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
+
+" turn of jslint by default
+let g:JSLintHighlightErrorLine = 0

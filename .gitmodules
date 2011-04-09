@@ -77,5 +77,5 @@
 	path = vim/bundle/vim-matchit
 	url = https://github.com/edsono/vim-matchit
 [submodule "vim/bundle/vim-irblack"]
-  path = vim/bundle/vim-irblack
-  url = https://github.com/wgibbs/vim-irblack.git
+	path = vim/bundle/vim-irblack
+	url = https://github.com/wgibbs/vim-irblack.git
