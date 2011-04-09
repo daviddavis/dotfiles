@@ -1,5 +1,5 @@
 set number
-colorscheme ir_black
+colorscheme ir_dave
 set guioptions=e
 set showtabline=2
 set tabpagemax=15
