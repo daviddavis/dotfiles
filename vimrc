@@ -129,13 +129,9 @@ runtime! macros/matchit.vim
 
 " disable the arrow keys for now
 noremap  <Up> ""
-noremap! <Up> <Esc>
 noremap  <Down> ""
-noremap! <Down> <Esc>
 noremap  <Left> ""
-noremap! <Left> <Esc>
 noremap  <Right> ""
-noremap! <Right> <Esc>
 
 " turn of jslint by default
 let g:JSLintHighlightErrorLine = 0
