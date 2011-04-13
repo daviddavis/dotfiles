@@ -8,6 +8,7 @@ alias m="mvim"
 alias mm="mvim ."
 alias u="unicorn_rails"
 alias s="ss"
+alias clr="lein repl" # clojure lein repl
 
 alias g="git"
 alias gg="g st"
