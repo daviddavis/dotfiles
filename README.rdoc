@@ -1,12 +1,13 @@
 = David's Dot Files
 
 These are config files to set up a system the way I like it. These 
-files are based largely on Ryan Bates's dotfiles repo.
-
+files are based largely on Ryan Bates's dotfiles repo. I am storing
+my emacs configuration separately (for now); just search for 
+davemacs if you want to look at them.
 
 == Installation
 
-  git clone git@github.com:d5/dotfiles.git ~/.dotfiles
+  git clone git@github.com:daviddavis/dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
   rake install
 
