@@ -30,4 +30,4 @@ export ARCHFLAGS="-arch i386 -arch x86_64"
 export PROMPT_COMMAND='PS1="\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`\u.\h:\`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\` →\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"'
 
 # let's tell our shell to use rvm for davidd
-if [[ -s /Users/davidd/.rvm/scripts/rvm ]] ; then source /Users/davidd/.rvm/scripts/rvm ; fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
