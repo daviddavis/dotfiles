@@ -135,3 +135,6 @@ noremap  <Right> ""
 
 " turn of jslint by default
 let g:JSLintHighlightErrorLine = 0
+
+" gundo undo visualizer
+nnoremap <F5> :GundoToggle<CR>
