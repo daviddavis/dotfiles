@@ -14,6 +14,9 @@ REPORTTIME=10 # print elapsed time when more than 10 seconds
 
 zle -N newtab
 
+# export a node variable
+export NODE_PATH="$NODE_PATH:/usr/local/lib/node"
+
 # bind some keys
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word

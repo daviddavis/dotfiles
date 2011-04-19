@@ -7,7 +7,7 @@ alias gitbox="open -a Gitbox"
 alias m="mvim"
 alias mm="mvim ."
 alias u="unicorn_rails"
-alias s="ss"
+alias s="screen"
 alias clr="lein repl" # clojure lein repl
 
 alias g="git"
