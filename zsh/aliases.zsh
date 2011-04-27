@@ -9,6 +9,7 @@ alias mm="mvim ."
 alias u="unicorn_rails"
 alias s="screen"
 alias clr="lein repl" # clojure lein repl
+alias ea="open -a Emacs.app"
 
 alias g="git"
 alias gg="g st"
