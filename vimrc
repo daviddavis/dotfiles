@@ -138,3 +138,6 @@ let g:JSLintHighlightErrorLine = 0
 
 " gundo undo visualizer
 nnoremap <F5> :GundoToggle<CR>
+
+" this seems to fix rvm
+set shell=/bin/sh
