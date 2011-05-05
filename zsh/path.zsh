@@ -4,5 +4,11 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/Cell
 [[ -s "$HOME/.cabal" ]] && export PATH="$HOME/.cabal/bin:$PATH"
 [[ -s "/usr/local/Cellar/python/2.7/bin" ]] && export PATH="/usr/local/Cellar/python/2.7/bin:$PATH"
 
+# personal bin
+[[ -s "$HOME/.bin" ]] && export PATH="$HOME/.bin:$PATH"
+
 # classpath for clojure-contrib
 [[ -s "/usr/local/Cellar/clojure-contrib" ]] && export CLASSPATH="$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar"
+
+# node path
+export NODE_PATH=/usr/local/lib/node_modules
