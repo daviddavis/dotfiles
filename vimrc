@@ -15,7 +15,7 @@ set autoread
 let mapleader = ","
 
 "Nerd Tree commands and options
-map <C-d> :NERDTreeToggle<CR>
+map <Leader>d :NERDTreeToggle<CR>
 
 "Map fuzzy file find to ff
 "cmap <leader>ff :FufFile **/<CR>
