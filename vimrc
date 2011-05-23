@@ -133,11 +133,11 @@ noremap  <Down> ""
 noremap  <Left> ""
 noremap  <Right> ""
 
-" turn of jslint by default
-let g:JSLintHighlightErrorLine = 0
-
 " gundo undo visualizer
 nnoremap <F5> :GundoToggle<CR>
 
 " this seems to fix rvm
 set shell=/bin/sh
+
+" auto-compile coffeescript files
+let coffee_compile_on_save = 1
