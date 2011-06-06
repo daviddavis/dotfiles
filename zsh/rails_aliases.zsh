@@ -20,8 +20,8 @@ sg () {
 
 ss () {
   if [ -f ./script/rails ]; then 
-    rails s $@
+    rails s -u $@
   else
-    ./script/server $@
+    ./script/server -u $@
   fi
 }
