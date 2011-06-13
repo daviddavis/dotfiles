@@ -6,6 +6,9 @@ task :default do
   Rake::Task["install"].execute
 end
 
+require 'rake'
+require 'erb'
+
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
