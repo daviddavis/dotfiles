@@ -39,8 +39,8 @@ if has("gui_macvim")
   map <D-d> :NERDTreeToggle<CR>
 
   macmenu &File.Print key=<nop>
-  map <D-p> <Plug>PeepOpen
-  imap <D-p> <Esc><Plug>PeepOpen
+  map <D-p> :CommandT<CR>
+  imap <D-p> <Esc>:CommandT<CR>
 
   macmenu &File.Open\.\.\. key=<nop>
   imap <D-o> <ESC>:CommandT<CR>

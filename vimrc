@@ -140,4 +140,4 @@ nnoremap <F5> :GundoToggle<CR>
 set shell=/bin/sh
 
 " auto-compile coffeescript files
-let coffee_compile_on_save = 1
+"let coffee_compile_on_save = 1
