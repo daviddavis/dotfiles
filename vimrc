@@ -127,12 +127,6 @@ vmap <C-Down> ]egv
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
-" disable the arrow keys for now
-noremap  <Up> ""
-noremap  <Down> ""
-noremap  <Left> ""
-noremap  <Right> ""
-
 " gundo undo visualizer
 nnoremap <F5> :GundoToggle<CR>
 

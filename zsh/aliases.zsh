@@ -1,4 +1,5 @@
 alias ll="ls -al"
+alias ss="rs"
 #alias s="script/server -u"
 #alias sc="script/console -u"
 alias ..="cd .."
@@ -10,7 +11,7 @@ alias s="screen"
 alias clr="lein repl" # clojure lein repl
 alias emacs="open -a Emacs.app"
 
-alias g="git"
+alias g="nocorrect git"
 alias gg="g st"
 alias gs="git svn"
 alias gf="git flow"

@@ -1,3 +1,6 @@
+# import my customized stuff first
+for f in ~/.zsh/*.zsh; do source $f; done
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -21,14 +24,15 @@ export ZSH_THEME="miloshadzic"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm)
+plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin
 
-for f in ~/.zsh/*.zsh; do source $f; done
+# source aliases again to override oh-my-zsh's
+source ~/.zsh/aliases.zsh
 
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && .  ~/.localrc
