@@ -10,14 +10,22 @@ snippet cfjs
 			${2}
 		</script>
 	<% end %>
+snippet cf
+	<% content_for :${1:header} do %>
+		${2:body}
+	<% end %>
 snippet table
 	<table>
 		<tr>
 			<td>${1}</td>
+
 		</tr>
 	</table>
+
 snippet div
-	<div class="${1}" id="${2}">${3:body}</div>
+	<div>
+		${1:body}
+	</div>
 snippet th
 	<th>${1}</th>
 snippet td
@@ -26,3 +34,5 @@ snippet tr
 	<tr>
 		${1}
 	</tr>
+snippet render
+	<%= render "${1:partial}" %>
