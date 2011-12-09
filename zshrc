@@ -24,7 +24,7 @@ export ZSH_THEME="miloshadzic"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp)
+plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm powder passenger)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,3 +36,6 @@ source ~/.zsh/aliases.zsh
 
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && .  ~/.localrc
+
+unsetopt hist_verify
+skip_global_compinit=1
