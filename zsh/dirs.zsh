@@ -1,4 +1,5 @@
-export s=~/Sites
+export s=~/Projects
+export p=~/Projects
 export pl=~s/pipeline
 export rs=~s/robertson_scholars
 export p=~s/pando

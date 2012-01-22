@@ -11,13 +11,14 @@ alias u="unicorn_rails"
 alias s="screen"
 alias clr="lein repl" # clojure lein repl
 alias emacs="open -a Emacs.app"
+alias b="bundle"
 
 alias g="nocorrect git"
 alias gg="g st"
 alias gs="git svn"
 alias gf="git flow"
 
-alias t="python ~/Projects/t/t.py --task-dir ~/Projects/t/tasks --list tasks"
+alias cuke="bundle exec cucumber --require features"
 
 #alias gpull='git pull origin `get_git_branch`'
 #alias gpush='git push origin `get_git_branch`'
