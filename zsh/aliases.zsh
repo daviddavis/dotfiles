@@ -19,6 +19,7 @@ alias gs="git svn"
 alias gf="git flow"
 
 alias cuke="bundle exec cucumber --require features"
+alias wip="bundle exec rake cucumber:wip"
 
 #alias gpull='git pull origin `get_git_branch`'
 #alias gpush='git push origin `get_git_branch`'
