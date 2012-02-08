@@ -12,3 +12,4 @@ export gitosis=~s/gitosis-admin
 export sr=~s/sunteck_rails
 export ab=~s/antibodyome
 export eq=~s/eqapol
+export r=~s/rubeque
