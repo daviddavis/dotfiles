@@ -40,9 +40,6 @@
 [submodule "vim/bundle/VimClojure"]
 	path = vim/bundle/VimClojure
 	url = https://github.com/vim-scripts/VimClojure.git
-[submodule "vim/bundle/vim-conque"]
-	path = vim/bundle/vim-conque
-	url = https://github.com/rygwdn/vim-conque.git
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
@@ -55,12 +52,6 @@
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = git://github.com/mattn/gist-vim.git
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = git://github.com/ervandew/supertab.git
-[submodule "vim/bundle/vim-git"]
-	path = vim/bundle/vim-git
-	url = https://github.com/tpope/vim-git.git
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
@@ -73,9 +64,6 @@
 [submodule "vim/bundle/vim-irblack"]
 	path = vim/bundle/vim-irblack
 	url = https://github.com/wgibbs/vim-irblack.git
-[submodule "vim/bundle/gundo.vim"]
-	path = vim/bundle/gundo.vim
-	url = http://github.com/sjl/gundo.vim.git
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
