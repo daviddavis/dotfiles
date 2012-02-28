@@ -14,6 +14,14 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
   end
 end
 
+def assert_equal(x, y, message="The value #{x} does not equal #{y}")
+  if x == y
+    return true
+  else
+    raise message
+  end
+end
+
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)

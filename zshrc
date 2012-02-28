@@ -24,7 +24,7 @@ export ZSH_THEME="miloshadzic"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm powder passenger bundler)
+plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm powder passenger bundler heroku)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,3 +41,6 @@ unsetopt hist_verify
 skip_global_compinit=1
 
 export CC=gcc-4.2
+
+export twitter_key=gBhlF52r61vISTDvIhKAZw
+export twitter_secret=F39qZfHn8hDERnumA2UdIhP7YNVkm3nppSHXSQh48
