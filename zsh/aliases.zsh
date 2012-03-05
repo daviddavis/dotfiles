@@ -12,6 +12,7 @@ alias s="screen"
 alias clr="lein repl" # clojure lein repl
 alias emacs="open -a Emacs.app"
 alias b="bundle"
+alias heroku="nocorrect bundled_heroku"
 
 alias g="nocorrect git"
 alias gg="g st"

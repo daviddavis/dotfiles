@@ -44,3 +44,4 @@ export CC=gcc-4.2
 
 export twitter_key=gBhlF52r61vISTDvIhKAZw
 export twitter_secret=F39qZfHn8hDERnumA2UdIhP7YNVkm3nppSHXSQh48
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

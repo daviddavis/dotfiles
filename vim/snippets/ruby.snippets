@@ -680,8 +680,8 @@ snippet logi
 	logger.info { "${1:message}" }${2}
 snippet logw
 	logger.warn { "${1:message}" }${2}
-snippet mac
-	add_column :${1:table}, :${2:column}, :${3:type}
+#snippet mac
+#	add_column :${1:table}, :${2:column}, :${3:type}
 snippet mapc
 	${1:map}.${2:connect} '${3:controller/:action/:id}'
 snippet mapca
@@ -721,8 +721,8 @@ snippet migration
 	end
 snippet mp
 	map(&:${1:id})
-snippet mrc
-	remove_column :${1:column}
+#snippet mrc
+#	remove_column :${1:column}
 snippet mrmc
 	remove_column :${1:table}, :${2:column}
 snippet mrnc
