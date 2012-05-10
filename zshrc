@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="miloshadzic"
+export ZSH_THEME="gentoo"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -45,3 +45,4 @@ export CC=gcc-4.2
 export twitter_key=gBhlF52r61vISTDvIhKAZw
 export twitter_secret=F39qZfHn8hDERnumA2UdIhP7YNVkm3nppSHXSQh48
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
