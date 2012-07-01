@@ -6,3 +6,9 @@ ruby=.rake,.thor,.ru,.feature,.spec
 
 --type-set
 haml=.haml
+
+--type-set
+javascript=.ejs
+
+--type-set
+coffeescript=.coffee
