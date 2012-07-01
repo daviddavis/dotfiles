@@ -77,9 +77,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 set list listchars=tab:\ \ ,trail:·
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+"set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 " rvm status
-set statusline+=%{rvm#statusline()} 
+"set statusline+=%{rvm#statusline()} 
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
@@ -138,6 +138,9 @@ set shell=/bin/sh
 
 " auto-compile coffeescript files
 "let coffee_compile_on_save = 1
+
+" use symbols in powerline
+let g:Powerline_symbols = 'fancy'
 
 " have :make run the test
 autocmd FileType cucumber compiler cucumber | setl makeprg=cucumber\ \"%:p\"

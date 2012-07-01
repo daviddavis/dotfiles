@@ -30,7 +30,7 @@ if has("gui_macvim")
   vmap <D-[> <gv
 
   set lines=58 columns=230
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h12
 
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
