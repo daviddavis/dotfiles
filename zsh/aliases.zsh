@@ -14,6 +14,9 @@ alias emacs="open -a Emacs.app"
 alias b="bundle"
 alias heroku="nocorrect bundled_heroku"
 
+alias ctags="/usr/local/bin/ctags" # use brew ctags
+alias tag="ctags -R --exclude=.git --exclude=log"
+
 alias g="nocorrect git"
 alias gg="g st"
 alias gs="git svn"
