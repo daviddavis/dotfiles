@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vim-powerline"]
 	path = vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/bundle/ruby_bashrockets.vim"]
+	path = vim/bundle/ruby_bashrockets.vim
+	url = https://github.com/danchoi/ruby_bashrockets.vim.git
