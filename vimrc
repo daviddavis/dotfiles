@@ -160,3 +160,6 @@ vmap <C-Down> ]egv
 
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
+
+" get rid of highlighting
+noremap <silent> <c-l> :noh<cr><c-l>
