@@ -42,6 +42,8 @@ set nowritebackup
 set noswapfile
 set list listchars=tab:\ \ ,trail:·
 set autoread
+set splitright
+set splitbelow
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
