@@ -76,3 +76,6 @@
 [submodule "vim/bundle/ruby_bashrockets.vim"]
 	path = vim/bundle/ruby_bashrockets.vim
 	url = https://github.com/danchoi/ruby_bashrockets.vim.git
+[submodule "vim/bundle/showmarks"]
+	path = vim/bundle/showmarks
+	url = https://github.com/vim-scripts/ShowMarks.git
