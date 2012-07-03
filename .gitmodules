@@ -43,9 +43,6 @@
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
-[submodule "vim/bundle/color-sampler"]
-	path = vim/bundle/color-sampler
-	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -70,12 +67,15 @@
 [submodule "vim/bundle/vim-rvm"]
 	path = vim/bundle/vim-rvm
 	url = https://github.com/tpope/vim-rvm.git
-[submodule "vim/bundle/vim-powerline"]
-	path = vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/bundle/ruby_bashrockets.vim"]
 	path = vim/bundle/ruby_bashrockets.vim
 	url = https://github.com/danchoi/ruby_bashrockets.vim.git
+[submodule "vim/bundle/color-sampler-pack"]
+	path = vim/bundle/color-sampler-pack
+	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
 [submodule "vim/bundle/showmarks"]
 	path = vim/bundle/showmarks
 	url = https://github.com/vim-scripts/ShowMarks.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
