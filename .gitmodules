@@ -73,9 +73,6 @@
 [submodule "vim/bundle/color-sampler-pack"]
 	path = vim/bundle/color-sampler-pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
-[submodule "vim/bundle/showmarks"]
-	path = vim/bundle/showmarks
-	url = https://github.com/vim-scripts/ShowMarks.git
 [submodule "vim/bundle/vim-powerline"]
 	path = vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
