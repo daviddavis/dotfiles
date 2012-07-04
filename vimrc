@@ -166,3 +166,7 @@ map <Leader>R :e doc/README_FOR_APP<CR>
 
 " get rid of highlighting
 noremap <silent> <c-l> :noh<cr><c-l>
+
+" splitjoin
+noremap <silent> <leader>sjs :SplitjoinSplit<CR>
+noremap <silent> <leader>sj :SplitjoinJoin<CR>
