@@ -57,23 +57,60 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-" FILE TYPES
-autocmd BufRead *.sql set filetype=mysql
-autocmd BufRead *.clj set filetype=clojure
-autocmd BufRead *.thor set filetype=ruby
 
-" have :make run the test
-autocmd FileType cucumber compiler cucumber | setl makeprg=cucumber\ \"%:p\"
-autocmd FileType ruby
-      \ if expand('%') =~# '_test\.rb$' |
-      \   compiler rubyunit | setl makeprg=testrb\ \"%:p\" |
-      \ elseif expand('%') =~# '_spec\.rb$' |
-      \   compiler rspec | setl makeprg=rspec\ \"%:p\" |
-      \ else |
-      \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
+" --------------------------------------------------------------------------
+" CUSTOM AUTOCMDS
+" --------------------------------------------------------------------------
+
+augroup vimrcEx
+  " clear all autocmds in the group
+  autocmd!
+
+  autocmd FileType text setlocal textwidth=78
+
+  " go to the last cursor position in the file
+  autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal g`\"" |
       \ endif
-autocmd User Bundler
-      \ if &makeprg !~# 'bundle' | setl makeprg^=bundle\ exec\  | endif
+
+  " FILE TYPES
+  autocmd BufRead *.sql set filetype=mysql
+  autocmd BufRead *.clj set filetype=clojure
+  autocmd BufRead *.thor set filetype=ruby
+
+  " have :make run the test
+  autocmd FileType cucumber compiler cucumber | setl makeprg=cucumber\ \"%:p\"
+  autocmd FileType ruby
+        \ if expand('%') =~# '_test\.rb$' |
+        \   compiler rubyunit | setl makeprg=testrb\ \"%:p\" |
+        \ elseif expand('%') =~# '_spec\.rb$' |
+        \   compiler rspec | setl makeprg=rspec\ \"%:p\" |
+        \ else |
+        \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
+        \ endif
+  autocmd User Bundler
+        \ if &makeprg !~# 'bundle' | setl makeprg^=bundle\ exec\  | endif
+
+  " markdown
+  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
+  autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+  " Don't syntax highlight markdown because it's often wrong
+  autocmd! FileType mkd setlocal syn=off
+
+  " automatically update ctags
+  function! UpdateCtags()
+    if filereadable("tags") && strpart(expand("%"), 0, len(getcwd())) == expand("%")
+      execute "silent! !ctags -a " . expand("%:p")
+    endif
+  endfunction
+
+  augroup ctags
+    autocmd!
+    autocmd BufWritePost * call UpdateCtags()
+  augroup END
+
+augroup END
 
 " ---------------------------------------------------------------------------
 " PLUGIN SETTINGS
