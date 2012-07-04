@@ -44,6 +44,7 @@ set list listchars=tab:\ \ ,trail:·
 set autoread
 set splitright
 set splitbelow
+set showcmd
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
