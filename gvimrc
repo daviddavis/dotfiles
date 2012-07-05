@@ -35,8 +35,8 @@ if has("gui_macvim")
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
-  imap <D-d> <ESC>:NERDTreeToggle<CR>i
-  map <D-d> :NERDTreeToggle<CR>
+  imap <silent> <D-d> <ESC>:NERDTreeToggle<CR>i
+  map <silent> <D-d> :NERDTreeToggle<CR>
 
   macmenu &File.Print key=<nop>
   map <D-p> :CommandT<CR>
