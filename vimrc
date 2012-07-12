@@ -147,6 +147,15 @@ set shell=/bin/sh
 " use symbols in powerline
 let g:Powerline_symbols = 'fancy'
 
+" set ctrlp results to a higher number
+let g:ctrlp_max_height = 35
+
+" turn on rainbow parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 
 " ---------------------------------------------------------------------------
 " MAPPINGS
