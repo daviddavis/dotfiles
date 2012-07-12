@@ -82,3 +82,6 @@
 [submodule "vim/bundle/rainbow_parentheses"]
 	path = vim/bundle/rainbow_parentheses
 	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "vim/bundle/vim-colorpack"]
+	path = vim/bundle/vim-colorpack
+	url = git@github.com:daviddavis/vim-colorpack.git
