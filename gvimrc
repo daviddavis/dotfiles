@@ -1,5 +1,5 @@
 set number
-colorscheme railscasts2
+colorscheme ir_dave
 set guioptions=e
 set showtabline=2
 set tabpagemax=15
