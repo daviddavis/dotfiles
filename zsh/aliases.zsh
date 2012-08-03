@@ -10,12 +10,11 @@ alias mm="mvim"
 alias u="unicorn_rails"
 alias s="screen"
 alias clr="lein repl" # clojure lein repl
-alias emacs="open -a Emacs.app"
 alias b="bundle"
 alias heroku="nocorrect bundled_heroku"
 
 alias ctags="/usr/local/bin/ctags" # use brew ctags
-alias tag="ctags -R --exclude=.git --exclude=log"
+alias tag="ctags -R --exclude=.git --exclude=log --exclude='*.js'"
 
 alias g="nocorrect git"
 alias gg="g st"
@@ -29,3 +28,5 @@ alias wip="bundle exec rake cucumber:wip"
 
 #alias gpull='git pull origin `get_git_branch`'
 #alias gpush='git push origin `get_git_branch`'
+
+alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
