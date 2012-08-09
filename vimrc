@@ -174,6 +174,7 @@ map <Leader>m mz:%s/\r$//g<cr>`z
 " 1.8 -> 1.9 hash syntax
 map <silent> <Leader>h :Bashrockets<CR>
 map <silent> <Leader>oh :Hashrockets<CR>
+nmap <C-h> :Bashrockets<CR>
 
 " comands to edit and reload vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
