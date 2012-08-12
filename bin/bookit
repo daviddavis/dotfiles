@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require "rubygems"
+require "thor"
+
+class Bookit < Thor
+  default_task :convert
+
+  desc "convert [FILES] [OUTPUT]", "convert some FILES to an m4b file named OUTPUT"
+  def convert(file_reg = "*.mp3", output = nil)
+    output ||= File.basename(Dir.pwd)
+    temp_mp3 = "temp#{Time.now.to_i}.mp3"
+
+    say "Combining mp3s...", :green
+    `cat #{file_reg} > #{temp_mp3}`
+
+    say "Creating m4b file...", :green
+    `ffmpeg -i #{temp_mp3} -acodec libfaac -ab 192k '#{output}.m4a'`
+    `mv '#{output}.m4a' '#{output}.m4b'`
+    `rm #{temp_mp3}`
+
+    say "Done!", :green
+  end
+end
+
+Bookit.start
