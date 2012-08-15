@@ -218,3 +218,9 @@ noremap <silent> <c-l> :noh<cr><c-l>
 " splitjoin
 noremap <silent> <leader>sjs :SplitjoinSplit<CR>
 noremap <silent> <leader>sj :SplitjoinJoin<CR>
+
+" tabularize
+noremap <silent> <leader>a, :Tab/,<CR>
+noremap <silent> <leader>a= :Tab/=<CR>
+noremap <silent> <leader>a: :Tab/:<CR>
+noremap <silent> <leader>a{ :Tab/{<CR>
