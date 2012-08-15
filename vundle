@@ -1,0 +1,41 @@
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'danchoi/ruby_bashrockets.vim'
+Bundle 'edsono/vim-matchit'
+Bundle 'garbase/vim-snipmate'
+Bundle 'godlygeek/tabular'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kien/rainbow_parentheses'
+Bundle 'majutsushi/tagbar'
+Bundle 'mattn/gist-vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo'
+Bundle 'taq/vim-rspec'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rvm'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-colorpack'
+Bundle 'wincent/Command-T'
+" ...
+
+filetype plugin indent on     " required!
