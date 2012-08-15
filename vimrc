@@ -1,8 +1,10 @@
 " no clue what this does
 set nocompatible
 
-" use pathogen to load plugins from .vim/bundles
-silent! call pathogen#runtime_append_all_bundles()
+" using vundle to load all plugins
+if filereadable(expand("~/.vundle"))
+  source ~/.vundle
+endif
 
 " enable syntax highlighting and file type detection
 syntax enable
