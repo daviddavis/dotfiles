@@ -24,7 +24,8 @@ export ZSH_THEME="gentoo"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm powder passenger bundler heroku)
+plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm
+  powder passenger bundler heroku python pip django virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
