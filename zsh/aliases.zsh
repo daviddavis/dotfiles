@@ -30,3 +30,6 @@ alias wip="bundle exec rake cucumber:wip"
 #alias gpush='git push origin `get_git_branch`'
 
 alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
+
+alias rvm="nocorrect rvm"
+alias heroku="nocorrect heroku"

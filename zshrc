@@ -20,7 +20,7 @@ export ZSH_THEME="gentoo"
 # export DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
+export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -47,3 +47,6 @@ export twitter_key=gBhlF52r61vISTDvIhKAZw
 export twitter_secret=F39qZfHn8hDERnumA2UdIhP7YNVkm3nppSHXSQh48
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
+
+# load tmuxninator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
