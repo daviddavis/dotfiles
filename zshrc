@@ -41,7 +41,7 @@ source ~/.zsh/aliases.zsh
 unsetopt hist_verify
 skip_global_compinit=1
 
-if [[ `uname` == 'Darwin']]
+if [[ `uname` == 'Darwin' ]]; then
   export CC=gcc-4.2
 fi
 
