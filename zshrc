@@ -50,3 +50,6 @@ PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
 
 # load tmuxninator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# rebind Ctrl-p to go to beginning of line since Ctrl-a is used for screen/bash
+bindkey "\C-p" 'beginning-of-line'
