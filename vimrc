@@ -10,9 +10,6 @@ endif
 syntax enable
 filetype plugin indent on
 
-" use tmux clipboard
-set clipboard=unnamed
-
 " ---------------------------------------------------------------------------
 " BASIC SETTINGS
 " ---------------------------------------------------------------------------
