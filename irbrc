@@ -4,6 +4,7 @@ require 'irb/ext/save-history'
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+IRB.conf[:EVAL_HISTORY] = 200
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
@@ -11,14 +12,6 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
   begin
     require gem
   rescue LoadError
-  end
-end
-
-def assert_equal(x, y, message="The value #{x} does not equal #{y}")
-  if x == y
-    return true
-  else
-    raise message
   end
 end
 
