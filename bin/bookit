@@ -15,17 +15,21 @@ class Bookit < Thor
     say "Combining mp3s...", :green
     `cat #{file_reg} > #{temp_mp3}`
 
-    say "Creating m4b file...", :green
-    convert_mp3_to_m4b(temp_mp3, output)
+    say "Creating wav file", :green
+    wav = convert_mp3_to_wav(temp_mp3)
     `rm #{temp_mp3}`
+
+    say "Creating m4b file...", :green
+    convert_mp3_to_m4b(wav, output)
+    `rm #{wav}`
 
     open_with_itunes("#{output}.m4b") unless options[:stop_open]
 
     say "Done!", :green
   end
 
-  desc "split", "convert all mp3s to m4b files with one m4b file per mp3"
-  def split
+  desc "shortcut", "convert all mp3s to m4b files without making wavs"
+  def shortcut
     mp3s = Dir["*.mp3"]
     mp3s.each do |mp3|
       say "Creating a m4b for #{mp3}", :green
@@ -33,6 +37,18 @@ class Bookit < Thor
       open_with_itunes(m4b)
     end
     say "Done!", :green
+  end
+
+  desc "split", "convert mp3s to m4b with one m4b per mp3"
+  def split
+    mp3s = Dir["*.mp3"]
+    mp3s.each do |mp3|
+      say "Converting #{mp3}", :green
+      wav = convert_mp3_to_wav(mp3)
+      m4b = convert_mp3_to_m4b(wav, File.basename(mp3, ".mp3"))
+      `rm \"#{wav}\"`
+      open_with_itunes(m4b)
+    end
   end
 
   private
@@ -47,10 +63,20 @@ class Bookit < Thor
     end
 
     def convert_mp3_to_m4b(mp3, output = File.basename(mp3, ".mp3"))
-      `ffmpeg -i \"#{mp3}\" -acodec libfaac \"#{output}.m4a\"`
+      ffmpeg_convert(mp3, "#{output}.m4a", "-acodec libfaac")
       `mv \"#{output}.m4a\" \"#{output}.m4b\"`
       return "#{output}.m4b"
     end
+
+   def convert_mp3_to_wav(mp3)
+      filename = File.basename(mp3, ".mp3") + ".wav"
+      ffmpeg_convert(mp3, filename)
+      return filename
+   end
+
+   def ffmpeg_convert(input, output, flags = "")
+     `ffmpeg -i \"#{input}\" #{flags} \"#{output}\"`
+   end
 end
 
 Bookit.start
