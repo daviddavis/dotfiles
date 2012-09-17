@@ -1,0 +1,4 @@
+#!/bin/bash
+D=/home/dadavis/Projects/katello
+export PYTHONPATH=$D/cli/src:$PYTHONPATH
+$D/cli/bin/katello $*
