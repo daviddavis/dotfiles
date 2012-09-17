@@ -13,7 +13,6 @@ alias clr="lein repl" # clojure lein repl
 alias b="bundle"
 alias heroku="nocorrect bundled_heroku"
 
-alias ctags="/usr/local/bin/ctags" # use brew ctags
 alias tag="ctags -R --exclude=.git --exclude=log --exclude='*.js'"
 
 alias g="nocorrect git"
