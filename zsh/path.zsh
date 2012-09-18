@@ -1,3 +1,6 @@
+# set path for katello
+export RAILS_RELATIVE_URL_ROOT=/katello
+
 # stuff to edit the path
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/Cellar/python/2.7.1/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
