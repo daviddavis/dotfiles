@@ -14,3 +14,4 @@ export ab=~s/antibodyome
 export eq=~s/eqapol
 export r=~s/rubeque
 export k=~s/katello/src
+export se=~s/system-engine/src

@@ -12,3 +12,6 @@ javascript=.ejs
 
 --type-set
 coffeescript=.coffee
+
+--type-set
+sass=.sass,.scss
