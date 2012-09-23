@@ -225,3 +225,6 @@ noremap <silent> <leader>a, :Tab/,<CR>
 noremap <silent> <leader>a= :Tab/=<CR>
 noremap <silent> <leader>a: :Tab/:<CR>
 noremap <silent> <leader>a{ :Tab/{<CR>
+
+" CommandT shortcut
+map <C-p> :CommandT<CR>
