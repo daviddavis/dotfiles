@@ -32,3 +32,6 @@ alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
 
 alias rvm="nocorrect rvm"
 alias heroku="nocorrect heroku"
+
+# fix colors in tmux on gnome terminal
+alias tmux="TERM=xterm-256color tmux"
