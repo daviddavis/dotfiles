@@ -35,3 +35,6 @@ alias heroku="nocorrect heroku"
 
 # fix colors in tmux on gnome terminal
 alias tmux="TERM=xterm-256color tmux"
+alias mux="TERM=xterm-256color mux"
+
+alias wee="weechat-curses"

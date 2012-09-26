@@ -1,0 +1,12 @@
+# ~/.tmuxinator/katello.yml
+# you can make as many tabs as you wish...
+
+project_name: katello
+project_root: ~/Projects/katello/src
+tabs:
+  - editor:
+  - shell: git fetch origin && git fetch upstream
+  - console: rails c
+  - server: rails s
+  #- database: rails dbconsole
+  - logs: tail -f log/development.log
