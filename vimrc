@@ -101,6 +101,7 @@ augroup vimrcEx
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
   autocmd FileType python setlocal sw=4 sts=4 et
+  autocmd FileType python let g:syntastic_mode_map['mode'] = "passive"
 
   " automatically update ctags
   function! UpdateCtags()
