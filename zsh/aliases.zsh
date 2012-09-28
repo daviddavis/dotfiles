@@ -15,7 +15,7 @@ alias heroku="nocorrect bundled_heroku"
 alias tag="ctags -R --exclude=.git --exclude=log --exclude='*.js'"
 
 alias g="nocorrect git"
-alias gg="g st"
+alias gg="g st -sb"
 alias gs="git svn"
 alias gf="git flow"
 alias gpd="gist -p --type=diff"

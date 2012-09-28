@@ -22,6 +22,7 @@ set wildmode=longest,list,full
 set wildmenu
 set ruler
 set nuw=4
+set number
 set vb
 set binary noeol
 set backspace=indent,eol,start
@@ -99,7 +100,7 @@ augroup vimrcEx
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
-  autocmd FileType pthon setlocal sw=4 sts=4 et
+  autocmd FileType python setlocal sw=4 sts=4 et
 
   " automatically update ctags
   function! UpdateCtags()
