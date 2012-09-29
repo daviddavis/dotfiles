@@ -37,3 +37,5 @@ alias tmux="TERM=xterm-256color tmux"
 alias mux="TERM=xterm-256color mux"
 
 alias wee="weechat-curses"
+alias ov="sudo openvpn /etc/openvpn/*.conf"
+alias y="yum"
