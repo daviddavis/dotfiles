@@ -15,3 +15,5 @@ coffeescript=.coffee
 
 --type-set
 sass=.sass,.scss
+
+--ignore-dir=fixtures
