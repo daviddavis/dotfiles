@@ -47,7 +47,7 @@ set autoread
 set splitright
 set splitbelow
 set showcmd
-set textwidth=78
+set textwidth=79
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
