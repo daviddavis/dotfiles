@@ -7,6 +7,6 @@ tabs:
   - editor:
   - shell: git fetch origin && git fetch upstream
   - console: rails c
-  - server: rails s
+  - server: rails s -u
   #- database: rails dbconsole
   - logs: tail -f log/development.log
