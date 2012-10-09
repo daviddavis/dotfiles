@@ -163,6 +163,10 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" ignore pyc files
+let NERDTreeIgnore = ['\.pyc$']
+set wildignore+=*.pyc
+
 
 " ---------------------------------------------------------------------------
 " MAPPINGS
