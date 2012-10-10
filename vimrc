@@ -42,7 +42,7 @@ set hlsearch
 set nobackup
 set nowritebackup
 set noswapfile
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:··,trail:·
 set autoread
 set splitright
 set splitbelow
