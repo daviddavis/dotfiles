@@ -1,5 +1,4 @@
 alias ll="ls -alh"
-alias ss="rsd"
 #alias s="script/server -u"
 #alias sc="script/console -u"
 alias sc="rc"
