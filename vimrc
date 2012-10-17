@@ -71,8 +71,6 @@ augroup vimrcEx
   " clear all autocmds in the group
   autocmd!
 
-  autocmd FileType text setlocal textwidth=78
-
   " go to the last cursor position in the file
   autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
