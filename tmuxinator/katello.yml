@@ -9,4 +9,4 @@ tabs:
   - console: rails c
   - server: rails s -u
   #- database: rails dbconsole
-  - logs: tail -f log/development.log
+  - cli: cd ../cli/src
