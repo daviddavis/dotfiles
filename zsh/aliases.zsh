@@ -20,6 +20,7 @@ alias gs="git svn"
 alias gf="git flow"
 alias gpd="gist -p --type=diff"
 alias rp="rake && ggpush"
+alias gd="git diff"
 
 alias cuke="bundle exec cucumber --require features"
 alias wip="bundle exec rake cucumber:wip"
