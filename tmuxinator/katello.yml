@@ -8,5 +8,5 @@ tabs:
   - shell: git fetch origin && git fetch upstream
   - cli: cd ../cli/src
   - server: rails s -u
-  - console: rails c
+  - console: pry -r config/environment.rb
   #- database: rails dbconsole
