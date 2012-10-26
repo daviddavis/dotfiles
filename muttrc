@@ -186,3 +186,7 @@ color indicator cyan     default
 color markers   cyan  black
 # load stupid gpg file
 source ~/.muttrc-gpg
+
+# call me old fashioned
+bind pager <up> previous-line
+bind pager <down> next-line
