@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-[ -z "$ZSH_THEME" ] && export ZSH_THEME="gentoo"
+export ZSH_THEME="gentoo"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -22,6 +22,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Uncomment following line if you want to disable autosetting terminal title.
 export DISABLE_AUTO_TITLE="true"
 
+# use .localrc for settings specific to one system
+[[ -f ~/.localrc ]] && .  ~/.localrc
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm
@@ -34,9 +37,6 @@ source $ZSH/oh-my-zsh.sh
 
 # source aliases again to override oh-my-zsh's
 source ~/.zsh/aliases.zsh
-
-# use .localrc for settings specific to one system
-[[ -f ~/.localrc ]] && .  ~/.localrc
 
 unsetopt hist_verify
 skip_global_compinit=1
