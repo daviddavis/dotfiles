@@ -41,8 +41,12 @@ source ~/.zsh/aliases.zsh
 unsetopt hist_verify
 skip_global_compinit=1
 
+# load os specific settings
 if [[ `uname` == 'Darwin' ]]; then
-  export CC=gcc-4.2
+  source ~/.osx.zsh
+fi
+if [[ `uname` == 'Linux' ]]; then
+  source ~/.linux.zsh
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -53,6 +57,3 @@ PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
 
 # rebind Ctrl-p to go to beginning of line since Ctrl-a is used for screen/bash
 bindkey "\C-p" 'beginning-of-line'
-
-# allow non-root users to use main libvirt domain
-export LIBVIRT_DEFAULT_URI=qemu:///system
