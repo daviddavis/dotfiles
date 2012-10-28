@@ -53,3 +53,6 @@ PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
 
 # rebind Ctrl-p to go to beginning of line since Ctrl-a is used for screen/bash
 bindkey "\C-p" 'beginning-of-line'
+
+# allow non-root users to use main libvirt domain
+export LIBVIRT_DEFAULT_URI=qemu:///system
