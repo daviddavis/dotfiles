@@ -1,7 +1,14 @@
-# import my customized stuff first
+# load os specific settings
+if [[ `uname` == 'Darwin' ]]; then
+  source ~/.osx.zsh
+fi
+if [[ `uname` == 'Linux' ]]; then
+  source ~/.linux.zsh
+fi
+
+# import my customized stuff before oh-my-zsh
 for f in ~/.zsh/*.zsh; do source $f; done
 
-# Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -30,6 +37,7 @@ export DISABLE_AUTO_TITLE="true"
 plugins=(git rails ruby github rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm
   powder passenger bundler heroku python pip yum)
 
+# Path to your oh-my-zsh configuration.
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -40,14 +48,6 @@ source ~/.zsh/aliases.zsh
 
 unsetopt hist_verify
 skip_global_compinit=1
-
-# load os specific settings
-if [[ `uname` == 'Darwin' ]]; then
-  source ~/.osx.zsh
-fi
-if [[ `uname` == 'Linux' ]]; then
-  source ~/.linux.zsh
-fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
