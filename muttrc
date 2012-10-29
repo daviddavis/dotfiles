@@ -1,17 +1,18 @@
 # install mutt with sidebar from:
 # http://hobohouse.rdu.redhat.com/~wfoster/mutt/mutt-1.5.20-1.fc14.x86_64.rpm
 
-# nice manpage here
-# http://linux.die.net/man/5/muttrc
-
-# set useragent to somethign awesome like eck
 # first turn off user_agent
 set user_agent=no
-my_hdr User-Agent:Boondoggle/0.96.1-rc2-19990915cvs (OpenVMS 2.8)
-# shit to set for muttrc patch
-set sidebar_width       = 23
+my_hdr User-Agent:Davemail/0.0.0.1.1828458953a6 (RedHat Version)
+
+# turn off going to next page at end of email
+set pager_stop
+
+# sidebar settings
+set sidebar_width       = 28
 set sidebar_visible     = yes
-color sidebar_new yellow default
+color sidebar_new green default
+
 # dont mark messages old
 set mark_old = no
 
@@ -28,41 +29,31 @@ bind index \CO sidebar-open
 bind pager \CP sidebar-prev 
 bind pager \CN sidebar-next 
 bind pager \CO sidebar-open 
-#set folder="~/Mail/mailboxes"
-##set edit_headers = yes
-bind index \t next-unread
-bind pager   \t          next-unread
-bind index  ,\t      previous-unread
-bind pager  ,\t      previous-unread
+
+# b toggles sidebar visibility 
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>' 
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>' 
 
 # sort by thread
 set sort = threads
-# b toggles sidebar visibility 
-#macro index b '<enter-command>toggle sidebar_visible<enter>' 
-#macro pager b '<enter-command>toggle sidebar_visible<enter>' 
-macro index b '<enter-command>toggle sidebar_visible<enter><refresh>' 
-macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>' 
+
 ### save my sent messages
-#set record=imaps://dadavis@mail.corp.redhat.com/Sent
 set record=~/Maildir/Sent
-#### useful settings from docs
+
 # activate TLS if available on the server
-#set signature = "~/.signature"
 set ssl_starttls=yes
 # always use SSL when connecting to a server
 set ssl_force_tls=yes
 # Don't wait to enter mailbox manually 
 unset imap_passive        
-#       # Automatically poll subscribed mailboxes for new mail (new in 1.5.11)
+# Automatically poll subscribed mailboxes for new mail (new in 1.5.11)
 set imap_check_subscribed
 # Reduce polling frequency to a sane level
-## trobert banhammer
-##set mail_check=60
-set mail_check=300
+set mail_check=150
+
 # And poll the current mailbox more often (not needed with IDLE in post 1.5.11)
 set timeout=10
 # keep a cache of headers for faster loading (1.5.9+?)
-#set header_cache=~/.mutt/hcache
 set header_cache=~/Localmail/hcache
 # Display download progress every 5K
 set net_inc=5
@@ -72,9 +63,7 @@ set envelope_from
 set hostname="redhat.com"
 set realname="David Davis"
 set from="daviddavis@redhat.com"
-#set spoolfile=imaps://dadavis@mail.corp.redhat.com/INBOX
 set spoolfile=~/Maildir/INBOX
-#set folder=imaps://dadavis@mail.corp.redhat.com/
 # NEEDED for maildir format
 set mbox_type=Maildir
 set folder=~/Maildir/
@@ -97,21 +86,10 @@ mailboxes =INBOX \
 =rdu-list \
 =remedy \
 =ruby-talk
-### BEGIN NOTMUCH-MUTT SETTINGS
 
-    macro index <F8> \
-          "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-notmuch.pl --prompt search<enter><change-folder-readonly>~/.cache/mutt_results<enter>" \
-          "search mail (using notmuch)"
-    macro index <F9> \
-          "<enter-command>unset wait_key<enter><pipe-message>~/.mutt/mutt-notmuch.pl thread<enter><change-folder-readonly>~/.cache/mutt_results<enter><enter-command>set wait_key<enter>" \
-          "search and reconstruct owning thread (using notmuch)"
-
-
-#set folder="imaps://dadavis@shared-folders.corp.redhat.com/user.it-ops-root"
 # now give us archives/localmail from offlineimap
 set move=no
 set certificate_file=/home/dadavis/.mutt-certificates
-# make shit purty curva
 ignore *
 unignore From To Cc Subject Date Reply-To Organization X-Mailer User-Agent
 
@@ -123,14 +101,13 @@ set edit_headers
 # Use vim as the editor - this line will wrap
 # Set wordwrap on in vim to automatically wrap lines -
 # no :gq all the time
-set editor="vim +':set textwidth=70' +':set wrap' +\`awk '/^$/ {print i+2; exit} {i++}' %s\` %s"
+set editor="vim +':set textwidth=80' +':set wrap' +\`awk '/^$/ {print i+2; exit} {i++}' %s\` %s"
 
 # set format=flowed
 set text_flowed
 
 # dont mark messages old
 set nomark_old
-
 
 # Automatically quote message
 set include=yes
@@ -143,16 +120,12 @@ set forward_format="Fw: %s"     # subject in forwarded messages
 set date_format="%d/%m/%y %H:%M %Z"
 set quote_regexp="^([A-Za-z ]+>|[]%>:|}-][]>:|}-]*)"
 
-# set my stupid smtp server dammit
+# set the smtp server
 set smtp_url="smtp://smtp.corp.redhat.com"
-#set smtp_authenticators=”gssapi:digest-md5:cram-md5”
+
 set sendmail="/usr/sbin/sendmail"
 #set sendmail="/usr/bin/nbsmtp -d redhat.com -h smtp.corp.redhat.com -f dadavis@redhat.com" 
-# dammit mutt, forward mime attachments by default and yes im aware SMTP is not an FTP client - shutup
-# HTML email, for those that insist on using it
-# make sure your mailcap entry exists with the following:
-# text/html; lynx -display_charset=utf-8 -dump %s; nametemplate=%s.html; copiousoutput
-# tell mutt about it
+
 set mailcap_path  = ~/.mutt/mailcap
 # automatically open evil HTML
 auto_view text/html
@@ -168,25 +141,30 @@ color quoted5   red         default
 color quoted6   blue        default
 color signature green       default
 color tilde     cyan  default
-
-#color header white          black   .               # Headers are this color,
-#color header white    black   ^Subject        # except for `Subject:'.
-### latest edit
 color header white         default .               # Headers are this color,
 color header red    white ^Subject        # except for `Subject:'.
 color header black          red     ^(X-Spam-Status:\ Yes|X-Virus-Report:)
 color header black          red     ^Newsgroups:.*, # cross-posted
 color header black          green   ^Followup-To:   # followup header
-## changing color status to default, was brightblue black
-color status    brightblue default
-# indicator is the marker thing that moves to highlight messages and shit
+color status    white brightblack
+# indicator is the marker thing that moves to highlight messages
 #color innext unread messagedicator green default
-color indicator cyan     default
-#color markers green red
-color markers   cyan  black
-# load stupid gpg file
+color indicator red default
+color markers   red black
+
+# load gpg file
 source ~/.muttrc-gpg
 
 # call me old fashioned
 bind pager <up> previous-line
 bind pager <down> next-line
+
+
+### BEGIN NOTMUCH-MUTT SETTINGS
+
+    macro index <F8> \
+          "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-notmuch.pl --prompt search<enter><change-folder-readonly>~/.cache/mutt_results<enter>" \
+          "search mail (using notmuch)"
+    macro index <F9> \
+          "<enter-command>unset wait_key<enter><pipe-message>~/.mutt/mutt-notmuch.pl thread<enter><change-folder-readonly>~/.cache/mutt_results<enter><enter-command>set wait_key<enter>" \
+          "search and reconstruct owning thread (using notmuch)"
