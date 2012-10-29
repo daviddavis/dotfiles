@@ -1,3 +1,6 @@
 [submodule "vim/bundle/vundle"]
 	path = vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
+[submodule "vendor/ubuntu-mono-powerline"]
+	path = vendor/ubuntu-mono-powerline
+	url = git://github.com/scotu/ubuntu-mono-powerline.git
