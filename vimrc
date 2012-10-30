@@ -165,6 +165,11 @@ au Syntax * RainbowParenthesesLoadBraces
 let NERDTreeIgnore = ['\.pyc$']
 set wildignore+=*.pyc
 
+" vimux settings
+let g:VimuxOrientation = "h"
+let g:VimuxUseNearestPane = 1
+let g:VimuxHeight = "30"
+
 
 " ---------------------------------------------------------------------------
 " MAPPINGS

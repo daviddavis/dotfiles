@@ -37,6 +37,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/python.vim--Vasiliev.git'
+Bundle 'benmills/vimux'
+Bundle 'jgdavey/vim-turbux'
 " ...
 
 filetype plugin indent on     " required!
