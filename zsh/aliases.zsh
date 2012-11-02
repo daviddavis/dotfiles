@@ -12,6 +12,7 @@ alias gs="git stash"
 alias gf="git flow"
 alias gpd="gist -p --type=diff"
 alias rp="rake && ggpush"
+alias rdbm="rake db:migrate && rake db:test:prepare"
 alias gd="git diff"
 
 alias cuke="bundle exec cucumber --require features"
