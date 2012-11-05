@@ -10,6 +10,11 @@ endif
 syntax enable
 filetype plugin indent on
 
+" fix colors in gnome-terminal
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 " ---------------------------------------------------------------------------
 " BASIC SETTINGS
 " ---------------------------------------------------------------------------
@@ -55,9 +60,6 @@ set pastetoggle=<F2>
 " let's use ;w as a shortcut for :w
 nnoremap ; :
 
-hi CursorLine ctermbg=black guibg=#000000
-set cursorline
-
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
@@ -66,10 +68,8 @@ endif
 " set the line numbers to darkgray
 "hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
 
-" fix colors in gnome-terminal
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
+hi CursorLine ctermbg=black
+set cursorline
 
 " --------------------------------------------------------------------------
 " CUSTOM AUTOCMDS
