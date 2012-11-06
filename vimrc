@@ -225,3 +225,7 @@ noremap <silent> <leader>a{ :Tab/{<CR>
 
 " CommandT shortcut
 map <C-p> :CommandT<CR>
+
+" vimux/turbux mappings
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
