@@ -68,9 +68,6 @@ endif
 " set the line numbers to darkgray
 "hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
 
-hi CursorLine ctermbg=black
-set cursorline
-
 " --------------------------------------------------------------------------
 " CUSTOM AUTOCMDS
 " --------------------------------------------------------------------------
@@ -174,9 +171,7 @@ let NERDTreeIgnore = ['\.pyc$']
 set wildignore+=*.pyc
 
 " vimux settings
-let g:VimuxOrientation = "h"
 let g:VimuxUseNearestPane = 1
-let g:VimuxHeight = "30"
 
 
 " ---------------------------------------------------------------------------
