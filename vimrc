@@ -10,12 +10,17 @@ endif
 syntax enable
 filetype plugin indent on
 
+" fix colors in gnome-terminal
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 " ---------------------------------------------------------------------------
 " BASIC SETTINGS
 " ---------------------------------------------------------------------------
 
 " Colorscheme options
-colorscheme default
+colorscheme ir_dave
 
 " Other Options
 set wildmode=longest,list,full
@@ -61,7 +66,10 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 " set the line numbers to darkgray
-hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
+"hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
+
+hi CursorLine ctermbg=black
+set cursorline
 
 " --------------------------------------------------------------------------
 " CUSTOM AUTOCMDS
