@@ -1,72 +1,70 @@
 # install mutt with sidebar from:
 # http://hobohouse.rdu.redhat.com/~wfoster/mutt/mutt-1.5.20-1.fc14.x86_64.rpm
 
-# first turn off user_agent
+# Paths ----------------------------------------------------------------------
+set folder           = ~/.mail               # mailbox location
+set alias_file       = ~/.mutt/alias         # where to store aliases
+set header_cache     = ~/.mutt/cache/headers # where to store headers
+set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
+set certificate_file = ~/.mutt/certificates  # where to store certs
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+set tmpdir           = ~/.mutt/temp          # where to keep temp files
+set signature        = ~/.mutt/sig           # my signature file
+set record           = ~/.mail/Sent
+set spoolfile        = ~/.mail/INBOX
+set sendmail         = "/usr/sbin/sendmail"
+source                 ~/.mutt/gpg
+
+# Basic Options --------------------------------------------------------------
+set mbox_type  = Maildir
+set timeout    = 3
+set mail_check = 0
+set sort = threads
+unset move
+unset mark_old           # read/new is good enough for me
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+set pager_stop
+set net_inc = 5
+
+# Sidebar Patch --------------------------------------------------------------
+set sidebar_visible = yes
+set sidebar_width   = 28
+color sidebar_new green default
+
+# Key bindings ---------------------------------------------------------------
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>' 
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+bind pager <up> previous-line        # up arrow goes up
+bind pager <down> next-line          # and down arrow goes down
+macro index M "T.*\n;WN" "Mark all messages as read"
+
+# User agent -----------------------------------------------------------------
 set user_agent=no
 my_hdr User-Agent:Davemail/0.0.0.1.1828458953a6 (RedHat Version)
 
-# turn off going to next page at end of email
-set pager_stop
+# Folder settings ------------------------------------------------------------
 
-# sidebar settings
-set sidebar_width       = 28
-set sidebar_visible     = yes
-color sidebar_new green default
-
-# dont mark messages old
-set mark_old = no
-
-# LDAP search
-# http://www.perlmonks.org/?node_id=65152
-set query_command = "~/.mutt/mutt-ldap-lookup.pl '%s'"
-
-# these bind keys for the folder pane
-# ctrl-n, ctrl-p to select next, prev folder 
-# ctrl-o to open selected folder 
-bind index \CP sidebar-prev 
-bind index \CN sidebar-next 
-bind index \CO sidebar-open 
-bind pager \CP sidebar-prev 
-bind pager \CN sidebar-next 
-bind pager \CO sidebar-open 
-
-# b toggles sidebar visibility 
-macro index b '<enter-command>toggle sidebar_visible<enter><refresh>' 
-macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>' 
-
-# sort by thread
-set sort = threads
-
-### save my sent messages
-set record=~/Maildir/Sent
-
-# activate TLS if available on the server
-set ssl_starttls=yes
-# always use SSL when connecting to a server
-set ssl_force_tls=yes
-# Don't wait to enter mailbox manually 
-unset imap_passive        
-# Automatically poll subscribed mailboxes for new mail (new in 1.5.11)
+# Account settings -----------------------------------------------------------
+set realname      = "David Davis"
+set from          = "daviddavis@redhat.com"
+set hostname      = "redhat.com"
+set smtp_url      = "smtp://smtp.corp.redhat.com"
+set ssl_starttls  = yes
+set ssl_force_tls = yes
+unset imap_passive
 set imap_check_subscribed
-# Reduce polling frequency to a sane level
-set mail_check=30
-
-# And poll the current mailbox more often (not needed with IDLE in post 1.5.11)
-set timeout=10
-# keep a cache of headers for faster loading (1.5.9+?)
-set header_cache=~/Localmail/hcache
-# Display download progress every 5K
-set net_inc=5
-# force envelope and sender
 set use_from
 set envelope_from
-set hostname="redhat.com"
-set realname="David Davis"
-set from="daviddavis@redhat.com"
-set spoolfile=~/Maildir/INBOX
-# NEEDED for maildir format
-set mbox_type=Maildir
-set folder=~/Maildir/
+
+# Mailboxes ------------------------------------------------------------------
 mailboxes =INBOX \
 =Sent \
 =Drafts \
@@ -87,51 +85,28 @@ mailboxes =INBOX \
 =remedy \
 =ruby-talk
 
-# now give us archives/localmail from offlineimap
-set move=no
-set certificate_file=/home/dadavis/.mutt-certificates
+# Header options -------------------------------------------------------------
 ignore *
 unignore From To Cc Subject Date Reply-To Organization X-Mailer User-Agent
-
-# Order to display the headers in
 hdr_order From: Date: To: Cc: Subject:
-
 set edit_headers
 
-# Use vim as the editor - this line will wrap
-# Set wordwrap on in vim to automatically wrap lines -
-# no :gq all the time
+# Mail writing ---------------------------------------------------------------
 set editor="vim +':set textwidth=80' +':set wrap' +\`awk '/^$/ {print i+2; exit} {i++}' %s\` %s"
-
-# set format=flowed
 set text_flowed
-
-# dont mark messages old
-set nomark_old
-
-# Automatically quote message
 set include=yes
-
-# Set quotemark to 1 byte
 set indent_str="> "
-
 set index_format   = "%4C %Z %{%b %d} %-15.15F (%4l) %s"
 set forward_format="Fw: %s"     # subject in forwarded messages
 set date_format="%d/%m/%y %H:%M %Z"
 set quote_regexp="^([A-Za-z ]+>|[]%>:|}-][]>:|}-]*)"
 
-# set the smtp server
-set smtp_url="smtp://smtp.corp.redhat.com"
-
-set sendmail="/usr/sbin/sendmail"
-#set sendmail="/usr/bin/nbsmtp -d redhat.com -h smtp.corp.redhat.com -f dadavis@redhat.com" 
-
-set mailcap_path  = ~/.mutt/mailcap
-# automatically open evil HTML
+# Viewing email --------------------------------------------------------------
 auto_view text/html
-
 set mime_forward=yes
 set mime_forward_rest=yes
+
+# Pretty colors --------------------------------------------------------------
 color quoted0   blue        default
 color quoted1   green       default
 color quoted2   red         default
@@ -140,29 +115,22 @@ color quoted4   green       default
 color quoted5   red         default
 color quoted6   blue        default
 color signature green       default
+
 color tilde     cyan  default
+
 color header white         default .               # Headers are this color,
 color header red    white ^Subject        # except for `Subject:'.
 color header black          red     ^(X-Spam-Status:\ Yes|X-Virus-Report:)
 color header black          red     ^Newsgroups:.*, # cross-posted
 color header black          green   ^Followup-To:   # followup header
+
 color status    white brightblack
-# indicator is the marker thing that moves to highlight messages
-#color innext unread messagedicator green default
 color indicator red default
 color markers   red black
 
-# load gpg file
-source ~/.muttrc-gpg
+# Script settings ------------------------------------------------------------
 
-# call me old fashioned
-bind pager <up> previous-line
-bind pager <down> next-line
-
-# mark all messages read
-macro index M "T.*\n;WN" "Mark all messages as read"
-
-### BEGIN NOTMUCH-MUTT SETTINGS
+set query_command = "~/.mutt/mutt-ldap-lookup.pl '%s'"
 
     macro index <F8> \
           "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-notmuch.pl --prompt search<enter><change-folder-readonly>~/.cache/mutt_results<enter>" \
