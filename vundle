@@ -39,6 +39,7 @@ Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/python.vim--Vasiliev.git'
 Bundle 'benmills/vimux'
 Bundle 'jgdavey/vim-turbux'
+Bundle 'tpope/vim-repeat'
 " ...
 
 filetype plugin indent on     " required!
