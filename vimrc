@@ -223,8 +223,9 @@ noremap <silent> <leader>sj :SplitjoinJoin<CR>
 " tabularize
 noremap <silent> <leader>a, :Tab/,<CR>
 noremap <silent> <leader>a= :Tab/=<CR>
-noremap <silent> <leader>a: :Tab/:<CR>
+noremap <silent> <leader>a: :Tab/:\zs<CR>
 noremap <silent> <leader>a{ :Tab/{<CR>
+noremap <silent> <leader>ah :Tab/=><CR>
 
 " CommandT shortcut
 map <C-p> :CommandT<CR>
