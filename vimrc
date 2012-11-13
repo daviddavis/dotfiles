@@ -233,3 +233,6 @@ map <C-p> :CommandT<CR>
 " vimux/turbux mappings
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vc :CloseVimTmuxPanes<CR>
+map <Leader>vi :VimuxInterruptRunner<CR>
+vmap <silent> <LocalLeader>vs "vy :call RunVimTmuxCommand(@v)<CR>
