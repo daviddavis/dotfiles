@@ -5,7 +5,6 @@ alias clr="lein repl" # clojure lein repl
 
 alias tag="ctags -R --exclude=.git --exclude=log --exclude='*.js'"
 
-alias git="~/.bin/hub"
 alias g="nocorrect git"
 alias gg="g st -sb"
 alias gs="git stash"
