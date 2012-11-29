@@ -29,6 +29,7 @@ alias prc="pry -r config/environment.rb"
 # fix colors in tmux on gnome terminal
 alias tmux="TERM=xterm-256color tmux"
 alias tmuxinator="TERM=xterm-256color tmuxinator"
+alias mux="TERM=xterm-256color mux"
 alias m="mux"
 
 alias wee="weechat-curses"
