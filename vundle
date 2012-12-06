@@ -40,6 +40,7 @@ Bundle 'vim-scripts/python.vim--Vasiliev.git'
 Bundle 'benmills/vimux'
 Bundle 'daviddavis/vim-turbux'
 Bundle 'tpope/vim-repeat'
+Bundle 'jeetsukumaran/vim-buffergator'
 " ...
 
 filetype plugin indent on     " required!
