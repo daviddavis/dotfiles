@@ -228,7 +228,7 @@ noremap <silent> <leader>a{ :Tab/{<CR>
 noremap <silent> <leader>ah :Tab/=><CR>
 
 " CommandT shortcut
-map <C-p> :CommandT<CR>
+map <C-p> :CommandTFlush<CR>:CommandT<CR>
 
 " vimux/turbux mappings
 map <Leader>vp :VimuxPromptCommand<CR>
@@ -236,3 +236,7 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 map <Leader>vc :CloseVimTmuxPanes<CR>
 map <Leader>vi :VimuxInterruptRunner<CR>
 vmap <silent> <LocalLeader>vs "vy :call RunVimTmuxCommand(@v)<CR>
+
+" buffergator shortcuts
+let g:buffergator_suppress_keymaps = 1
+nnoremap <silent> <Leader>b :BuffergatorToggle<CR>

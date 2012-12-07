@@ -1,16 +1,11 @@
 # vim FTW
 Pry.config.editor = "vim"
 
-# load rails console helpers
-if Kernel.const_defined?("Rails") then
-  require File.join(Rails.root,"config","environment")
-  require 'rails/console/app'
-  require 'rails/console/helpers'
-  Pry::RailsCommands.instance_methods.each do |name| 
-    Pry::Commands.command name.to_s do 
-      Class.new.extend(Pry::RailsCommands).send(name)
-    end
-  end
+# Load 'awesome_print'
+begin
+  require 'awesome_print'
+  Pry.config.print = proc { |output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output) }
+rescue LoadError => err
 end
 
 # how about some hirb
@@ -50,5 +45,43 @@ end
 class Hash
   def self.toy(n=10)
     Hash[Array.toy(n).zip(Array.toy(n){|c| (96+(c+1)).chr})]
+  end
+end
+
+# alias 'q' for 'exit'
+Pry.config.commands.alias_command "q", "exit-all"
+
+# Launch Pry with access to the entire Rails stack
+rails = File.join(Dir.getwd, 'config', 'environment.rb')
+
+if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
+  require rails
+
+  if Rails.version[0..0] == "2"
+    require 'console_app'
+    require 'console_with_helpers'
+  elsif Rails.version[0..0] == "3"
+    require 'rails/console/app'
+    require 'rails/console/helpers'
+  else
+    warn "[WARN] cannot load Rails console commands (Not on Rails2 or Rails3?)"
+  end
+
+  # [] acts as find()
+  ActiveRecord::Base.instance_eval { alias :[] :find } if defined?(ActiveRecord)
+
+  # Add Rails console helpers (like `reload!`) to pry
+  if defined?(Rails::ConsoleMethods)
+    extend Rails::ConsoleMethods
+  end
+
+  # r! to reload Rails console
+  def r!
+    reload!
+  end
+
+  # sql for arbitrary SQL commands through the AR
+  def sql(query)
+    ActiveRecord::Base.connection.execute(query)
   end
 end

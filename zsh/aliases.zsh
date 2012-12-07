@@ -13,6 +13,7 @@ alias gpd="gist -p --type=diff"
 alias rp="rake && ggpush"
 alias rdbm="rake db:migrate && rake db:test:prepare"
 alias gd="git diff"
+alias gcb="git checkout -b"
 
 alias cuke="bundle exec cucumber --require features"
 alias wip="bundle exec rake cucumber:wip"
@@ -28,6 +29,7 @@ alias prc="pry -r config/environment.rb"
 
 # fix colors in tmux on gnome terminal
 alias tmux="TERM=xterm-256color tmux"
+alias tmuxinator="TERM=xterm-256color tmuxinator"
 alias mux="TERM=xterm-256color mux"
 alias m="mux"
 
