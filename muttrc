@@ -70,18 +70,18 @@ mailboxes =INBOX \
 =Drafts \
 =Junk \
 =Trash \
+=katello \
+=katello-devel \
+=katello-internal \
 =announce-list \
 =bugzilla \
-=fedora \
 =friday-list \
 =github \
-=golang \
 =jenkins \
-=katello \
 =memo-list \
 =rdu-list \
 =remedy \
-=ruby-talk
+=other
 
 # Header options -------------------------------------------------------------
 ignore *
