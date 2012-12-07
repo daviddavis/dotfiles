@@ -79,7 +79,7 @@ fi
 battery+=(["foreground"]="colour127")
 battery+=(["background"]="colour137")
 battery+=(["separator"]="${separator_left_bold}")
-#register_segment "battery"
+register_segment "battery"
 
 declare -A weather
 weather+=(["script"]="${segments_path}/weather_yahoo.sh")
