@@ -10,7 +10,7 @@ function kpr() {
   fi
 
   # push current branch
-  ggpush
+  git push origin `current_branch`
 
   if [[ -n $1 ]]
   then
@@ -21,17 +21,34 @@ function kpr() {
 }
 
 function kr() {
+  if [[ -n $1 ]]
+  then
+    br=$1
+  else
+    br=`current_branch`
+  fi
+
   git fetch upstream
-  git reset upstream/`current_branch`
+  git reset upstream/$br
 }
 
 function krh() {
-  echo "This is bad. Press Y/y to continue: \c"
+  if [[ -n $1 ]]
+  then
+    br=$1
+  else
+    br=`current_branch`
+  fi
+
+  print "Fetching upstream..."
+  git fetch upstream
+  git log upstream/$br.. --max-count=5
+  echo "The above commit(s) will be lost. Press Y to continue: \c"
   read line
   if [ "$line" = Y ] || [ "$line" = y ]; then
-    git fetch upstream
-    git reset --hard upstream/`current_branch`
+    git reset --hard upstream/$br
   else
+    echo "Aborted!"
     return 1
   fi
 }
