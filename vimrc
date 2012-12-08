@@ -178,6 +178,12 @@ let g:VimuxUseNearestPane = 1
 " MAPPINGS
 " ---------------------------------------------------------------------------
 
+" use arrow keys to navigate splits
+nnoremap <silent> <Right> <c-w>l
+nnoremap <silent> <Left> <c-w>h
+nnoremap <silent> <Up> <c-w>k
+nnoremap <silent> <Down> <c-w>j
+
 " Set map leader to , instead of \
 let mapleader = ","
 
