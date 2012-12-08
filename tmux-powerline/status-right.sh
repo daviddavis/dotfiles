@@ -79,7 +79,7 @@ fi
 battery+=(["foreground"]="colour127")
 battery+=(["background"]="colour137")
 battery+=(["separator"]="${separator_left_bold}")
-#register_segment "battery"
+register_segment "battery"
 
 declare -A weather
 weather+=(["script"]="${segments_path}/weather_yahoo.sh")
@@ -98,27 +98,28 @@ if [ "$PLATFORM" == "linux" ]; then
 fi
 #register_segment "xkb_layout"
 
-declare -A date_day
-date_day+=(["script"]="${segments_path}/date_day.sh")
-date_day+=(["foreground"]="colour136")
-date_day+=(["background"]="colour235")
-date_day+=(["separator"]="${separator_left_bold}")
-register_segment "date_day"
+#declare -A date_day
+#date_day+=(["script"]="${segments_path}/date_day.sh")
+#date_day+=(["foreground"]="colour136")
+#date_day+=(["background"]="colour235")
+#date_day+=(["separator"]="${separator_left_bold}")
+#register_segment "date_day"
 
-declare -A date_full
-date_full+=(["script"]="${segments_path}/date_full.sh")
-date_full+=(["foreground"]="colour136")
-date_full+=(["background"]="colour235")
-date_full+=(["separator"]="${separator_left_thin}")
-date_full+=(["separator_fg"]="default")
-register_segment "date_full"
+#declare -A date_full
+#date_full+=(["script"]="${segments_path}/date_full.sh")
+#date_full+=(["foreground"]="colour136")
+#date_full+=(["background"]="colour235")
+#date_full+=(["separator"]="${separator_left_thin}")
+#date_full+=(["separator_fg"]="default")
+#register_segment "date_full"
 
 declare -A time
 time+=(["script"]="${segments_path}/time.sh")
 time+=(["foreground"]="colour136")
 time+=(["background"]="colour235")
-time+=(["separator"]="${separator_left_thin}")
-time+=(["separator_fg"]="default")
+#time+=(["separator"]="${separator_left_thin}")
+#time+=(["separator_fg"]="default")
+time+=(["separator"]="${separator_left_bold}")
 register_segment "time"
 
 # Print the status line in the order of registration above.
