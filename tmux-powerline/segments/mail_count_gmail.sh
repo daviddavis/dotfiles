@@ -14,7 +14,7 @@
 # Account name : <username-below>@<server-below>
 # Password : Your password ( Once again, try to use 2 step-verification and application-specific password)
 
-username=""		# Enter your Gmail username here WITH OUT @gmail.com.( OR @domain )
+username="ddavis1"		# Enter your Gmail username here WITH OUT @gmail.com.( OR @domain )
 password=""		# Leave this empty to get password from keychain.
 server="gmail.com"	# Domain name that will complete your email. For normal GMail users it probably is "gmail.com but can be "foo.tld" for Google Apps users.
 interval=5		# Query interval in minutes .
