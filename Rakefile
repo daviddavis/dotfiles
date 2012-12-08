@@ -12,7 +12,7 @@ require 'erb'
 desc "install the dot files into user's home directory"
 task :install do
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE install.sh vendor].include? file
+    next if %w[Rakefile README.rdoc README.md LICENSE install.sh vendor].include? file
 
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       file_name = file.sub('.erb', '')
