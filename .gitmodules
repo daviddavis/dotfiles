@@ -4,3 +4,6 @@
 [submodule "vendor/ubuntu-mono-powerline"]
 	path = vendor/ubuntu-mono-powerline
 	url = git://github.com/scotu/ubuntu-mono-powerline.git
+[submodule "vendor/tmux-colors-solarized"]
+	path = vendor/tmux-colors-solarized
+	url = https://github.com/seebi/tmux-colors-solarized.git
