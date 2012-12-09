@@ -17,7 +17,7 @@
 username="ddavis1"		# Enter your Gmail username here WITH OUT @gmail.com.( OR @domain )
 password=""		# Leave this empty to get password from keychain.
 server="gmail.com"	# Domain name that will complete your email. For normal GMail users it probably is "gmail.com but can be "foo.tld" for Google Apps users.
-interval=5		# Query interval in minutes .
+interval=30		# Query interval in seconds
 tmp_file="/tmp/tmux-powerline_gmail_count.txt"  # File to store mail count in.
 override=false		# When true a force reloaded will be done.
 
@@ -39,7 +39,6 @@ if [ ! -f $tmp_file ]; then
 fi
 
 # Refresh mail count if the tempfile is older than $interval minutes.
-let interval=60*$interval
 if [ "$PLATFORM" == "mac" ]; then
   	last_update=$(stat -f "%m" ${tmp_file})
 else

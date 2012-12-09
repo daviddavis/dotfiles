@@ -31,8 +31,8 @@ get_condition_symbol() {
         fi
         ;;
     "rain" | "mixed rain and snow" | "mixed rain and sleet" | "freezing drizzle" | "drizzle" | "freezing rain" | "showers" | "mixed rain and hail" | "scattered showers" | "isolated thundershowers" | "thundershowers" | "light rain with thunder" | "light rain")
-        #echo "☂"
-        echo "☔"
+        echo "☂"
+        #echo "☔"
         ;;
     "snow" | "mixed snow and sleet" | "snow flurries" | "light snow showers" | "blowing snow" | "sleet" | "hail" | "heavy snow" | "scattered snow showers" | "snow showers" | "light snow")
         #echo "☃"
