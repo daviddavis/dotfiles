@@ -32,6 +32,8 @@ if defined? Hirb
   end
 
   Hirb.enable
+else
+  puts "Gem hirb not found. Skipping..."
 end
 
 # Toys methods
