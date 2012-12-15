@@ -255,3 +255,6 @@ vmap <silent> <LocalLeader>vs "vy :call RunVimTmuxCommand(@v)<CR>
 " buffergator shortcuts
 let g:buffergator_suppress_keymaps = 1
 nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
+
+" gundo shortcut
+map <leader>g :GundoToggle<CR>
