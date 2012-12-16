@@ -68,6 +68,9 @@ endif
 " set the line numbers to darkgray
 "hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
 
+" hightlight cursor
+highlight Cursor guifg=white guibg=black
+
 " --------------------------------------------------------------------------
 " CUSTOM AUTOCMDS
 " --------------------------------------------------------------------------
@@ -118,6 +121,12 @@ augroup vimrcEx
   augroup ctags
     autocmd!
     autocmd BufWritePost * call UpdateCtags()
+  augroup END
+
+  augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
   augroup END
 
 augroup END
