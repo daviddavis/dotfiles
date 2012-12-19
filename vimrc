@@ -110,6 +110,7 @@ augroup vimrcEx
   autocmd! FileType mkd setlocal syn=off
   autocmd FileType python setlocal sw=4 sts=4 et
   autocmd FileType python let g:syntastic_mode_map['mode'] = "passive"
+  autocmd FileType javascript setlocal sw=4 sts=4 et
 
   " automatically update ctags
   function! UpdateCtags()
@@ -182,6 +183,10 @@ set wildignore+=*.pyc
 " vimux settings
 let g:VimuxUseNearestPane = 1
 
+" turn off python code folding
+let g:pymode_folding = 0
+" ignore errors for gettext's _ function
+let g:pymode_lint_ignore = "W802,E501"
 
 " ---------------------------------------------------------------------------
 " MAPPINGS

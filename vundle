@@ -40,8 +40,7 @@ Bundle 'benmills/vimux'
 Bundle 'daviddavis/vim-turbux'
 Bundle 'tpope/vim-repeat'
 Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'nvie/vim-flake8'
+Bundle 'klen/python-mode'
 " ...
 
 filetype plugin indent on     " required!
