@@ -15,6 +15,7 @@
   su = submodule foreach "git checkout master; git pull"
   pull-all = "!f() { branches=`git branch`; for b in ${branches//'*'/}; do git checkout $b; git pull origin $b; done }; f"
   pr = pull-request
+  sm = submodule
 [color]
   ui = auto
 [color "branch"]
