@@ -13,7 +13,7 @@ alias rp="rake && ggpush"
 alias rdbm="rake db:migrate && rake db:test:prepare"
 alias gd="git diff"
 alias gcb="git checkout -b"
-alias gsu="cd $(git rev-parse --show-toplevel); git submodule update --init; cd -"
+alias gsu="grt; git submodule update --init; cd -"
 
 alias cuke="bundle exec cucumber --require features"
 alias wip="bundle exec rake cucumber:wip"
