@@ -6,7 +6,7 @@ project_root: ~/Projects/katello/src
 tabs:
   - editor: git fetch origin && git fetch upstream
   #- shell: git fetch origin && git fetch upstream
-  - cli_editor: cd ../cli/src
+  - cli_editor: cd ../cli
   - console: pry -r config/environment.rb
   - server: rails s -u
   - shell:

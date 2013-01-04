@@ -186,7 +186,8 @@ let g:VimuxUseNearestPane = 1
 " turn off python code folding
 let g:pymode_folding = 0
 " ignore errors for gettext's _ function
-let g:pymode_lint_ignore = "W802,E501"
+let g:pymode_lint_ignore = "E501"
+let g:pymode_lint_cwindow = 0
 
 " ---------------------------------------------------------------------------
 " MAPPINGS
