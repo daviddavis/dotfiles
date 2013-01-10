@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
+if [[ -n $1 ]]
+then
+  br=$1
+else
+  br=`current_branch`
+fi
+
+print "Fetching upstream..."
+git fetch upstream
+git log upstream/$br.. --max-count=5
+echo "The above commit(s) will be lost. Press Y to continue: \c"
+read line
+if [ "$line" = Y ] || [ "$line" = y ]; then
+  git reset --hard upstream/$br
+else
+  echo "Aborted!"
+  return 1
+fi
