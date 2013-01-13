@@ -1,0 +1,13 @@
+! URxvt config
+
+! colors!
+URxvt.background:   #101010
+URxvt.foreground:   #ededed
+URxvt.cursorColor:  #666666
+URxvt.transparent:  true
+URxvt.shading:      30
+
+URxvt*font:            xft:Droid Sans Mono for Powerline:antialias=true:size=11
+URxvt*urlLauncher:     chromium
+URxvt*scrollBar:       false
+URxvt*scrollBar_right: false
