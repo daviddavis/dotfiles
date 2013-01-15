@@ -1,0 +1,7 @@
+# Mac OS X hidden files
+.DS_Store
+
+# backed up files
+*.bak
+*~orig
+*~backup
