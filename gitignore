@@ -11,3 +11,6 @@ ehthumbs.db
 *.bak
 *~orig
 *~backup
+
+# temp files
+.netrwhist

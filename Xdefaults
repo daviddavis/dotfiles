@@ -7,7 +7,10 @@ URxvt.cursorColor:  #666666
 URxvt.transparent:  true
 URxvt.shading:      30
 
-URxvt*font:            xft:Droid Sans Mono for Powerline:antialias=true:size=11
-URxvt*urlLauncher:     chromium
+URxvt.font: xft:Terminus:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:pixelsize=16:antialias=false:hinting=false:autohint=false
+URxvt.boldFont: xft:Terminus:bold:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:bold:pixelsize=16:antialias=false:hinting=false:autohint=false
+URxvt*urlLauncher:     /usr/bin/google-chrome
+URxvt*perl-ext-common: matcher
+URxvt*matcher.button:  1
 URxvt*scrollBar:       false
 URxvt*scrollBar_right: false
