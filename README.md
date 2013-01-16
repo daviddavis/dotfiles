@@ -9,6 +9,16 @@ look at them.
 Installation
 -----------
 
+### Requirements
+
+Before installing the dotfiles, you must have the following installed:
+
+* git
+* zsh (optional but recommend)
+* ruby
+* rake
+
+
 The first option is to use the install script:
 
     curl -L https://raw.github.com/daviddavis/dotfiles/master/install.sh | sh
