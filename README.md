@@ -14,9 +14,10 @@ Installation
 Before installing the dotfiles, you must have the following installed:
 
 * git
-* zsh (optional but recommend)
+* zsh (optional but recommended)
 * ruby
 * rake
+* tmux (optional but recommended)
 
 
 The first option is to use the install script:
