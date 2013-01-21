@@ -1,6 +1,12 @@
 #!/bin/bash
-cd ~/.dotfiles && git pull origin master
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
+cd ~/.dotfiles && git pull origin `current_branch`
 vim +BundleInstall +qall
 git submodule init && git submodule update
-rake
+rake install
 echo "Dotfiles updated!"
