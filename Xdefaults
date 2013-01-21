@@ -3,32 +3,29 @@
 ! URxvt config
 URxvt.geometry: 140x35
 
-! colors!
-URxvt.background:   #101010
-URxvt.foreground:   #ededed
-URxvt.cursorColor:  #666666
-URxvt.color0:       #2E3436
-URxvt.color8:       #555753
-URxvt.color1:       #993C3C
-URxvt.color9:       #BF4141
-URxvt.color2:       #3C993C
-URxvt.color10:      #41BF41
-URxvt.color3:       #99993C
-URxvt.color11:      #BFBF41
-URxvt.color4:       #3C6199
-URxvt.color12:      #4174FB
-URxvt.color5:       #993C99
-URxvt.color13:      #BF41BF
-URxvt.color6:       #3C9999
-URxvt.color14:      #41BFBF
-URxvt.color7:       #D3D7CF
-URxvt.color15:      #E3E3E3
-#URxvt.transparent:  true
-#URxvt.shading:      30
+! URxvt colors
+URxvt.background: #101010
+URxvt.foreground: #f0f0f0
+URxvt.color0:     #000000
+URxvt.color8:     #727272
+URxvt.color1:     #ff7070
+URxvt.color9:     #ff8d8d
+URxvt.color2:     #93ff4f
+URxvt.color10:    #c8ffa8
+URxvt.color3:     #eab93d
+URxvt.color11:    #ffc123
+URxvt.color4:     #3480f0
+URxvt.color12:    #5090ff
+URxvt.color5:     #de5c00
+URxvt.color13:    #f57900
+URxvt.color6:     #56cce2
+URxvt.color14:    #89ddff
+URxvt.color7:     #d5d5d5
+URxvt.color15:    #ffffff
 
 #URxvt.font: xft:Terminus:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:pixelsize=16:antialias=false:hinting=false:autohint=false
 #URxvt.boldFont: xft:Terminus:bold:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:bold:pixelsize=16:antialias=false:hinting=false:autohint=false
-URxvt.letterSpace:      -1
+URxvt.letterSpace:      -0.75
 URxvt.font:             xft:Ubuntu Mono:regular:pixelsize=15:antialias=true
 URxvt.imFont:           xft:Ubuntu Mono:regular:pixelsize=15:antialias=true
 URxvt.boldFont:         xft:Ubuntu Mono:bold:pixelsize=15:antialias=true
