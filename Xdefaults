@@ -1,16 +1,39 @@
+
+
 ! URxvt config
+URxvt.geometry: 140x35
 
-! colors!
-URxvt.background:   #101010
-URxvt.foreground:   #ededed
-URxvt.cursorColor:  #666666
-URxvt.transparent:  true
-URxvt.shading:      30
+! URxvt colors
+URxvt.background: #101010
+URxvt.foreground: #f0f0f0
+URxvt.color0:     #000000
+URxvt.color8:     #727272
+URxvt.color1:     #ff7070
+URxvt.color9:     #ff8d8d
+URxvt.color2:     #93ff4f
+URxvt.color10:    #c8ffa8
+URxvt.color3:     #eab93d
+URxvt.color11:    #ffc123
+URxvt.color4:     #3480f0
+URxvt.color12:    #5090ff
+URxvt.color5:     #de5c00
+URxvt.color13:    #f57900
+URxvt.color6:     #56cce2
+URxvt.color14:    #89ddff
+URxvt.color7:     #d5d5d5
+URxvt.color15:    #ffffff
 
-URxvt.font: xft:Terminus:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:pixelsize=16:antialias=false:hinting=false:autohint=false
-URxvt.boldFont: xft:Terminus:bold:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:bold:pixelsize=16:antialias=false:hinting=false:autohint=false
-URxvt*urlLauncher:     /usr/bin/google-chrome
-URxvt*perl-ext-common: matcher
-URxvt*matcher.button:  1
-URxvt*scrollBar:       false
-URxvt*scrollBar_right: false
+#URxvt.font: xft:Terminus:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:pixelsize=16:antialias=false:hinting=false:autohint=false
+#URxvt.boldFont: xft:Terminus:bold:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminus (TTF) for Powerline:bold:pixelsize=16:antialias=false:hinting=false:autohint=false
+URxvt.letterSpace:      -0.75
+URxvt.font:             xft:Ubuntu Mono:regular:pixelsize=15:antialias=true
+URxvt.imFont:           xft:Ubuntu Mono:regular:pixelsize=15:antialias=true
+URxvt.boldFont:         xft:Ubuntu Mono:bold:pixelsize=15:antialias=true
+URxvt.italicFont:       xft:Ubuntu Mono:italic:pixelsize=15:antialias=true
+URxvt.boldItalicFont:   xft:Ubuntu Mono:bold:italic:pixelsize=15:antialias=true
+URxvt*urlLauncher:      /usr/bin/google-chrome
+URxvt*perl-ext-common:  matcher
+URxvt*matcher.button:   1
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  false
+URxvt.saveLines:        10000
