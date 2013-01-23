@@ -14,6 +14,7 @@ alias rdbm="rake db:migrate && rake db:test:prepare"
 alias gd="git diff"
 alias gcb="git checkout -b"
 alias gsu="grt; git submodule update --init; cd -"
+alias gcp="git cherry-pick -x"
 
 alias cuke="bundle exec cucumber --require features"
 alias wip="bundle exec rake cucumber:wip"
