@@ -37,3 +37,11 @@ URxvt*matcher.button:   1
 URxvt*scrollBar:        false
 URxvt*scrollBar_right:  false
 URxvt.saveLines:        10000
+
+! key fixes
+*URxvt*keysym.Home:   \033OH
+*URxvt*keysym.End:    \033OF
+*URxvt*keysym.F1:   \033OP
+*URxvt*keysym.F2:   \033OQ
+*URxvt*keysym.F3:   \033OR
+*URxvt*keysym.F4:   \033OS
