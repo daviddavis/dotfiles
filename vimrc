@@ -20,7 +20,7 @@ endif
 " ---------------------------------------------------------------------------
 
 " Colorscheme options
-colorscheme daves-tomorrow
+colorscheme daves-tomorrow-transparent
 
 " Other Options
 set wildmode=longest,list,full
