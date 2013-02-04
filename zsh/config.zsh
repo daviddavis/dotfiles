@@ -24,4 +24,9 @@ export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules:/usr/local/lib/node"
 #bindkey '^[[5C' end-of-line
 #bindkey '^[[3~' delete-char
 bindkey  '^[^N' tab
-#bindkey '^?' backward-delete-char 
+#bindkey '^?' backward-delete-char
+
+# virutalenvwrapper setup
+export WORKON_HOME=$HOME/.virtualenvs
+[[ -a /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper.sh
+[[ -a /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh

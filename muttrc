@@ -81,6 +81,8 @@ mailboxes =INBOX \
 =memo-list \
 =rdu-list \
 =remedy \
+=build \
+=fedora \
 =other
 
 # Header options -------------------------------------------------------------
