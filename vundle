@@ -10,7 +10,7 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 Bundle 'AndrewRadev/splitjoin.vim'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'daviddavis/vim-powerline'
 Bundle 'danchoi/ruby_bashrockets.vim'
 Bundle 'daviddavis/vim-colorpack'
 Bundle 'edsono/vim-matchit'
