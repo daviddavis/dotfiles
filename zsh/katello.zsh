@@ -3,6 +3,7 @@ alias krdb="$KATELLO_PATH/src/script/delayed_job stop && $KATELLO_PATH/src/scrip
 alias kping="katello ping"
 alias k="~/.bin/katello"
 alias kpl="pylint --rcfile=/etc/spacewalk-pylint.rc --additional-builtins=_ katello"
+alias dj="$KATELLO_PATH/src/script/delayed_job"
 
 function kpr() {
   if [[ -n $2 ]]
