@@ -19,6 +19,7 @@
   up = upstream
   upr = upstream reset
   uprh = upstream reset-hard
+  ctags = !.git/hooks/ctags
 [color]
   ui = auto
 [color "branch"]
@@ -38,3 +39,5 @@
 	quotepath = false
 	autocrlf = input
 	excludesfile = ~/.gitignore
+[init]
+	templatedir = ~/.git_template
