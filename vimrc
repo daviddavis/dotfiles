@@ -28,7 +28,6 @@ set wildmenu
 set ruler
 set nuw=4
 set number
-set vb
 set binary noeol
 set backspace=indent,eol,start
 set laststatus=2
