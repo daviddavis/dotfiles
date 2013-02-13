@@ -111,18 +111,6 @@ augroup vimrcEx
   autocmd FileType python let g:syntastic_mode_map['mode'] = "passive"
   autocmd FileType javascript setlocal sw=4 sts=4 et
 
-  " automatically update ctags
-  function! UpdateCtags()
-    if filereadable("tags") && strpart(expand("%"), 0, len(getcwd())) == expand("%")
-      execute "silent! !ctags -a " . expand("%:p")
-    endif
-  endfunction
-
-  augroup ctags
-    autocmd!
-    autocmd BufWritePost * call UpdateCtags()
-  augroup END
-
   augroup CursorLine
     au!
     au VimEnter,WinEnter,BufWinEnter * setlocal cursorline

@@ -3,7 +3,7 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias clr="lein repl" # clojure lein repl
 
-alias tag="ctags -R --exclude=.git --exclude=log --exclude='*.js'"
+alias tag="ctags --tag-relative -R --exclude=.git --exclude=log --languages=-javascript,sql"
 
 alias g="nocorrect git"
 alias gg="g st -s"
