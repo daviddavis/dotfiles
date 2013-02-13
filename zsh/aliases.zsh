@@ -6,7 +6,7 @@ alias clr="lein repl" # clojure lein repl
 alias tag="ctags --tag-relative -R --exclude=.git --exclude=log --languages=-javascript,sql"
 
 alias g="nocorrect git"
-alias gg="g st -sb"
+alias gg="g st -s"
 alias gs="git stash"
 alias gpd="gist -p --type=diff"
 alias rp="rake && ggpush"
