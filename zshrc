@@ -6,6 +6,9 @@ if [[ `uname` == 'Linux' ]]; then
   source ~/.linux.zsh
 fi
 
+# load my custom oh-my-zsh files
+export ZSH_CUSTOM="$HOME/.dotfiles/vendor/oh-my-zsh/"
+
 # import my customized stuff before oh-my-zsh
 for f in ~/.zsh/*.zsh; do source $f; done
 
@@ -15,7 +18,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="norm"
+export ZSH_THEME="davidd"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
