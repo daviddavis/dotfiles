@@ -8,6 +8,9 @@ fi
 
 # load my custom oh-my-zsh files
 export ZSH_CUSTOM="$HOME/.dotfiles/vendor/oh-my-zsh/"
+#
+# use .localrc for settings specific to one system
+[[ -f ~/.localrc ]] && .  ~/.localrc
 
 # import my customized stuff before oh-my-zsh
 for f in ~/.zsh/*.zsh; do source $f; done
@@ -31,9 +34,6 @@ export ZSH_THEME="davidd"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 export DISABLE_AUTO_TITLE="true"
-
-# use .localrc for settings specific to one system
-[[ -f ~/.localrc ]] && .  ~/.localrc
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
