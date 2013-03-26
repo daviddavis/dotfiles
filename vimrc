@@ -126,15 +126,6 @@ augroup END
 " set the snippets directory
 let g:snippets_dir="~/.vim/snippets"
 
-" gist-vim defaults
-if has("mac")
-  let g:gist_clip_command = 'pbcopy'
-elseif has("unix")
-  let g:gist_clip_command = 'xclip -selection clipboard'
-endif
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
 " syntastic warnings
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
