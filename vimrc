@@ -56,9 +56,6 @@ set textwidth=79
 " toggle paste mode with F2
 set pastetoggle=<F2>
 
-" let's use ;w as a shortcut for :w
-nnoremap ; :
-
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
