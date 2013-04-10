@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 function current_branch() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || \
