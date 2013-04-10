@@ -30,3 +30,16 @@ function kpr() {
     hub pull-request -b katello:`current_branch`
   fi
 }
+
+function kcp() {
+  message=$1
+  temp_branch=temp_`date +%s`
+  branch=`current_branch`
+  tld=`git rev-parse --show-toplevel`
+
+  git checkout -b $temp_branch
+  git add $tld
+  git commit -am "$message"
+  git push origin $temp_branch
+  hub pull-request "$message" -b katello:$branch
+}

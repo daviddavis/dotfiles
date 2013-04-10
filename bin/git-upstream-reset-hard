@@ -15,7 +15,7 @@ fi
 
 print "Fetching upstream..."
 git fetch upstream
-git log upstream/$br.. --max-count=5
+git log upstream/$br.. --max-count=5 | cat
 echo "The above commit(s) will be lost. Press Y to continue: \c"
 read line
 if [ "$line" = Y ] || [ "$line" = y ]; then
