@@ -32,8 +32,13 @@ function kpr() {
 }
 
 function kcp() {
+  if [[ -n $2 ]]
+  then
+    temp_branch=$2
+  else
+    temp_branch=temp_`date +%s`
+  fi
   message=$1
-  temp_branch=temp_`date +%s`
   branch=`current_branch`
   tld=`git rev-parse --show-toplevel`
 
