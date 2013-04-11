@@ -2,6 +2,7 @@ alias ll="ls -alh"
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias clr="lein repl" # clojure lein repl
+alias t=tmux
 
 alias tag="ctags --tag-relative -R --exclude=.git --exclude=log --languages=-javascript,sql"
 
