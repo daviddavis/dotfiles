@@ -163,6 +163,10 @@ let g:pymode_folding = 0
 let g:pymode_lint_ignore = "E501"
 let g:pymode_lint_cwindow = 0
 
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['ruby', 'javascript'],
+                           \ 'passive_filetypes': ['python'] }
+
 " ---------------------------------------------------------------------------
 " MAPPINGS
 " ---------------------------------------------------------------------------
