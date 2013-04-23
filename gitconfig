@@ -41,3 +41,5 @@
 	excludesfile = ~/.gitignore
 [init]
 	templatedir = ~/.git_template
+[github]
+	user = daviddavis
