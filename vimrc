@@ -180,6 +180,9 @@ nnoremap <silent> <Down> <c-w>j
 " Set map leader to , instead of \
 let mapleader = ","
 
+" let 2x's' save
+map ss :w<CR>
+
 "Nerd Tree commands and options
 map <Leader>d :NERDTreeToggle<CR>
 
