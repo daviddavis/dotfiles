@@ -40,6 +40,7 @@ Bundle 'daviddavis/vim-turbux'
 Bundle 'tpope/vim-repeat'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'klen/python-mode'
+Bundle 'mhinz/vim-startify'
 " ...
 
 filetype plugin indent on     " required!
