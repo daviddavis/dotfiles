@@ -1,13 +1,12 @@
-[[ -n $KATELLO_PATH ]] || export KATELLO_PATH="/home/dadavis/Projects/katello"
+[[ -n $KATELLO_PATH ]] || export KATELLO_PATH="/home/dadavis/Projects"
 
 # directories
 export se=~s/system-engine
-export ks="$KATELLO_PATH/src"
-export kc="$KATELLO_PATH/cli"
-export cli="$KATELLO/cli"
+export ks="$KATELLO_PATH/katello"
+export kc="$KATELLO_PATH/katello-cli"
 
 # aliases
-alias krdb="$KATELLO_PATH/src/script/delayed_job stop && $KATELLO_PATH/src/script/katello-reset-dbs -f development ."
+alias krdb="$ks/script/delayed_job stop && $ks/script/katello-reset-dbs -f development ."
 alias kping="katello ping"
 alias k="~/.bin/katello"
 alias kpl="pylint --rcfile=/etc/spacewalk-pylint.rc --additional-builtins=_ katello"
@@ -40,10 +39,9 @@ function kcp() {
   fi
   message=$1
   branch=`current_branch`
-  tld=`git rev-parse --show-toplevel`
 
   git checkout -b $temp_branch
-  git add $tld
+  git add `git rev-parse --show-toplevel`
   git commit -am "$message"
   git push origin $temp_branch
   hub pull-request "$message" -b katello:$branch
