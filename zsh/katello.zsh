@@ -10,7 +10,7 @@ alias krdb="$ks/script/delayed_job stop && $ks/script/katello-reset-dbs -f devel
 alias kping="katello ping"
 alias k="~/.bin/katello"
 alias kpl="pylint --rcfile=/etc/spacewalk-pylint.rc --additional-builtins=_ katello"
-alias dj="$KATELLO_PATH/src/script/delayed_job"
+alias dj="$KATELLO_PATH/katello/script/delayed_job"
 alias kres="krdb && dj start && rsd"
 
 function kpr() {

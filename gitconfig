@@ -9,6 +9,7 @@
   ci = commit
   c = commit
   cam = commit -a -m
+  amend = commit --amend
   b = branch
   co = checkout
   cm = commit -m
