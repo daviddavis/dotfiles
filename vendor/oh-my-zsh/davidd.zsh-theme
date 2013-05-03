@@ -15,7 +15,8 @@ else
 fi
 
 
-PROMPT='%{$orange%}%m %{$magenta%}%c $(git_prompt_info)%{$reset_color%}%{$orange%}→%{$reset_color%} '
+PROMPT='%{$orange%}%m %{$magenta%}%c $(git_prompt_info)%{$reset_color%}%{$orange%}❯%{$green%}❯%{$magenta%}❯%{$reset_color%} '
+# PROMPT='%{$orange%}%m %{$magenta%}%c $(git_prompt_info)%{$reset_color%}%{$orange%}→%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$gray%}[%{$green%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$gray%}] "
