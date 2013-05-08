@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: katello
-project_root: ~/Projects/katello/
+project_root: $KATELLO_PATH
 tabs:
   - editor: git fetch origin && git fetch upstream
   #- shell: git fetch origin && git fetch upstream
