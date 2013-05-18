@@ -87,3 +87,11 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
     ActiveRecord::Base.connection.execute(query)
   end
 end
+
+# --------------------------------------------------------
+# KATELLO
+# --------------------------------------------------------
+
+def login
+  User.current = (User.hidden.first || User.first)
+end
