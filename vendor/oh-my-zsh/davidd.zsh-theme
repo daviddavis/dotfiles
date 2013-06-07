@@ -21,3 +21,4 @@ PROMPT='%{$orange%}%m %{$magenta%}%c $(git_prompt_info)%{$reset_color%}%{$orange
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$gray%}[%{$green%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$gray%}] "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$red%}*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$magenta%}*%{$reset_color%}"
