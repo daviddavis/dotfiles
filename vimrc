@@ -61,11 +61,6 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-" set the line numbers to darkgray
-"hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
-
-" hightlight cursor
-highlight Cursor guifg=white guibg=black
 
 " --------------------------------------------------------------------------
 " CUSTOM AUTOCMDS
@@ -106,12 +101,6 @@ augroup vimrcEx
   autocmd! FileType mkd setlocal syn=off
   autocmd FileType python setlocal sw=4 sts=4 et
   autocmd FileType javascript setlocal sw=4 sts=4 et
-
-  augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-  augroup END
 
 augroup END
 
@@ -264,3 +253,15 @@ nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
 
 " gundo shortcut
 map <leader>g :GundoToggle<CR>
+
+
+" ---------------------------------------------------------------------------
+" SPELLING
+" ---------------------------------------------------------------------------
+
+map <leader>ss :setlocal spell! spelllang=en_us<cr>
+iab defintion definition
+iab Defintion Definition
+
+" spell check git commit messages
+au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
