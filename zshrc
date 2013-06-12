@@ -62,3 +62,6 @@ PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
 bindkey "\C-p" 'beginning-of-line'
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+# turn off flow control. I hate having the console freeze because I hit CTRL+S by accident
+setopt noflowcontrol
