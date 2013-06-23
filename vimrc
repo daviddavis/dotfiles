@@ -262,6 +262,7 @@ map <leader>g :GundoToggle<CR>
 map <leader>ss :setlocal spell! spelllang=en_us<cr>
 iab defintion definition
 iab Defintion Definition
+iab enviornment environment
 
 " spell check git commit messages
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
