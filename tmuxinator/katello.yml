@@ -10,7 +10,7 @@ tabs:
   - console: be rails c
   - server: be rails s -u
   - cli:
-      layout: 88c8,260x62,0,0{133x62,0,0,126x62,134,0}
+      layout: 44b2,238x56,0,0{139x56,0,0,0,98x56,140,0,1}
       panes:
         - cd ../katello-cli
         - cd ../katello-cli && tail -f ~/.katello/client.log
