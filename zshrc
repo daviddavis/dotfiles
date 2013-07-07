@@ -53,7 +53,6 @@ unsetopt hist_verify
 skip_global_compinit=1
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/Library/Haskell/bin # add haskell/cabal
 
 # load tmuxninator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
