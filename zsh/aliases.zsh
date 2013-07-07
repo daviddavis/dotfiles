@@ -30,6 +30,7 @@ alias heroku="nocorrect heroku"
 alias b="bundle"
 alias u="unicorn_rails"
 alias prc="pry -r config/environment.rb"
+alias rr="cd .. && cd - && rvm-prompt" # reload rvm
 
 # fix colors in tmux on gnome terminal
 alias m="mux"
