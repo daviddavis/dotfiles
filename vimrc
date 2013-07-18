@@ -141,7 +141,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " ignore pyc files
 let NERDTreeIgnore = ['\.pyc$']
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*.rabl
 
 " vimux settings
 let g:VimuxUseNearestPane = 1
