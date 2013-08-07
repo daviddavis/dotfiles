@@ -37,7 +37,7 @@ function kcp() {
   then
     temp_branch=$2
   else
-    temp_branch=temp/`date +%s`
+    temp_branch=temp/`date +%Y%m%d%H%M%S`
   fi
   message=$1
   branch=`current_branch`
