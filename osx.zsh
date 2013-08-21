@@ -5,3 +5,6 @@ export LANG=en_US.UTF-8
 
 export PLATFORM=mac
 export TMUX_SHOW_MAIL=true
+
+# allow brew to override system defaults
+export PATH="/usr/local/bin:$PATH"

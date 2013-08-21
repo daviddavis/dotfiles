@@ -1,0 +1,58 @@
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Recommended to install
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimproc'
+
+" My Bundles here:
+"
+NeoBundle 'AndrewRadev/splitjoin.vim'
+NeoBundle 'daviddavis/vim-powerline'
+NeoBundle 'danchoi/ruby_bashrockets.vim'
+NeoBundle 'daviddavis/vim-colorpack'
+NeoBundle 'edsono/vim-matchit'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'msanders/snipmate.vim'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sjl/gundo.vim'
+" NeoBundle 'taq/vim-rspec'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rvm'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'wincent/Command-T'
+NeoBundle 'benmills/vimux'
+NeoBundle 'daviddavis/vim-turbux'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'jeetsukumaran/vim-buffergator'
+NeoBundle 'klen/python-mode'
+" NeoBundle 'mhinz/vim-startify'
+" ...
+
+filetype plugin indent on     " Required!
+"
+" Brief help
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" Installation check.
+NeoBundleCheck

@@ -38,7 +38,7 @@ export DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git ruby rails3 osx brew lein node thor git-flow pow rvm gem cloudapp cap npm
-  powder passenger bundler heroku python pip yum vundle)
+  powder passenger bundler heroku python pip yum vundle tmuxinator)
 
 # Path to your oh-my-zsh configuration.
 source $ZSH/oh-my-zsh.sh

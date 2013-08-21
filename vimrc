@@ -2,13 +2,12 @@
 set nocompatible
 
 " using vundle to load all plugins
-if filereadable(expand("~/.vundle"))
-  source ~/.vundle
+if filereadable(expand("~/.neobundle"))
+  source ~/.neobundle
 endif
 
 " enable syntax highlighting and file type detection
 syntax enable
-filetype plugin indent on
 
 " fix colors in gnome-terminal
 if $COLORTERM == 'gnome-terminal'
