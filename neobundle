@@ -1,3 +1,5 @@
+" vim: set ft=vim:
+
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -13,6 +15,8 @@ NeoBundle 'Shougo/vimproc'
 
 " My Bundles here:
 "
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'daviddavis/vim-powerline'
 NeoBundle 'danchoi/ruby_bashrockets.vim'
@@ -42,7 +46,6 @@ NeoBundle 'wincent/Command-T'
 NeoBundle 'benmills/vimux'
 NeoBundle 'daviddavis/vim-turbux'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'klen/python-mode'
 " NeoBundle 'mhinz/vim-startify'
 " ...

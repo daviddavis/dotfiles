@@ -51,6 +51,7 @@ set splitright
 set splitbelow
 set showcmd
 set textwidth=79
+set modeline
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
@@ -202,14 +203,14 @@ map <silent> <Leader>oh :Hashrockets<CR>
 nmap <C-h> :Bashrockets<CR>
 
 " comands to edit and reload vimrc
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <Leader>ev :e $MYVIMRC<CR>
+nmap <silent> <Leader>sv :so $MYVIMRC<CR>
 
 " showmarks toggle
 map <Leader>sm <Leader>mt
 
 " hit ,smr to reload snippets
-nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
+nnoremap <Leader>smr <esc>:exec ReloadAllSnippets()<cr>
 
 " Unimpaired configuration
 " Bubble single lines
@@ -226,15 +227,15 @@ map <Leader>R :e doc/README_FOR_APP<CR>
 noremap <silent> <c-l> :noh<cr><c-l>
 
 " splitjoin
-noremap <silent> <leader>sjs :SplitjoinSplit<CR>
-noremap <silent> <leader>sj :SplitjoinJoin<CR>
+noremap <silent> <Leader>sjs :SplitjoinSplit<CR>
+noremap <silent> <Leader>sj :SplitjoinJoin<CR>
 
 " tabularize
-noremap <silent> <leader>a, :Tab/,<CR>
-noremap <silent> <leader>a= :Tab/=<CR>
-noremap <silent> <leader>a: :Tab/:\zs<CR>
-noremap <silent> <leader>a{ :Tab/{<CR>
-noremap <silent> <leader>ah :Tab/=><CR>
+noremap <silent> <Leader>a, :Tab/,<CR>
+noremap <silent> <Leader>a= :Tab/=<CR>
+noremap <silent> <Leader>a: :Tab/:\zs<CR>
+noremap <silent> <Leader>a{ :Tab/{<CR>
+noremap <silent> <Leader>ah :Tab/=><CR>
 
 " CommandT shortcut
 map <C-p> :CommandTFlush<CR>:CommandT<CR>
@@ -246,19 +247,33 @@ map <Leader>vc :CloseVimTmuxPanes<CR>
 map <Leader>vi :VimuxInterruptRunner<CR>
 vmap <silent> <LocalLeader>vs "vy :call RunVimTmuxCommand(@v)<CR>
 
-" buffergator shortcuts
-let g:buffergator_suppress_keymaps = 1
-nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
-
 " gundo shortcut
-map <leader>g :GundoToggle<CR>
+map <Leader>g :GundoToggle<CR>
+
+" Unite
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
+nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Enable navigation with control-j and control-k in insert mode
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+endfunction
 
 
 " ---------------------------------------------------------------------------
 " SPELLING
 " ---------------------------------------------------------------------------
 
-map <leader>ss :setlocal spell! spelllang=en_us<cr>
+map <Leader>ss :setlocal spell! spelllang=en_us<cr>
 iab defintion definition
 iab Defintion Definition
 iab enviornment environment
