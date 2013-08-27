@@ -12,3 +12,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/Cell
 
 # classpath for clojure-contrib
 [[ -s "/usr/local/Cellar/clojure-contrib" ]] && export CLASSPATH="$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar"
+
+# ignore _ in python
+export PYFLAKES_BUILTINS="_"
