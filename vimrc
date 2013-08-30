@@ -113,7 +113,7 @@ let g:snippets_dir="~/.vim/snippets"
 
 " syntastic warnings
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_warnings=0
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
@@ -155,6 +155,8 @@ let g:pymode_lint_cwindow = 0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['ruby', 'javascript'],
                            \ 'passive_filetypes': ['python'] }
+
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],

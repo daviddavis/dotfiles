@@ -47,6 +47,7 @@ NeoBundle 'benmills/vimux'
 NeoBundle 'daviddavis/vim-turbux'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'klen/python-mode'
+NeoBundle 'ngmy/vim-rubocop'
 " NeoBundle 'mhinz/vim-startify'
 " ...
 
