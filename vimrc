@@ -270,6 +270,9 @@ function! s:unite_settings()
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
 endfunction
 
+" Quickfix next shortcut
+noremap <leader>c :w<cr>:cnext<cr>
+
 
 " ---------------------------------------------------------------------------
 " SPELLING

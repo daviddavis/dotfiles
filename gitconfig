@@ -38,7 +38,6 @@
   untracked = cyan
 [core]
 	quotepath = false
-	autocrlf = input
 	excludesfile = ~/.gitignore
 [init]
 	templatedir = ~/.git_template
