@@ -239,9 +239,6 @@ noremap <silent> <Leader>a: :Tab/:\zs<CR>
 noremap <silent> <Leader>a{ :Tab/{<CR>
 noremap <silent> <Leader>ah :Tab/=><CR>
 
-" CommandT shortcut
-map <C-p> :CommandTFlush<CR>:CommandT<CR>
-
 " vimux/turbux mappings
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
