@@ -1,4 +1,0 @@
-#!/bin/sh
-set -e
-PATH="/usr/local/bin:$PATH"
-ctags --tag-relative -Rftags --exclude=.git --languages=-javascript,sql
