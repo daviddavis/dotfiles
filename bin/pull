@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+def branch_shortname(branch = "upstream")
+  url = `git remote show #{branch}`[/^\s*Fetch URL: (.*)/, 1]
+  url[/^.*github.com[\:\/](.*)(?:.git)?$/, 1]
+end
+
+branch = ARGV[1] || "master"
+message = ARGV.first
+upstream = branch_shortname
+
+fail "Could not find upstream repo" unless upstream
+
+if message
+  system(%{hub pull-request "#{message}" -b #{upstream}:#{branch}})
+else
+  system(%{hub pull-request -b #{upstream}:#{branch}})
+end

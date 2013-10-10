@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+def current_branch
+  ref = `git symbolic-ref HEAD`
+  ref[%r{refs/heads/(.*)}, 1]
+end
+
+branch = ARGV[1] || "temp/#{Time.now.strftime('%Y%m%d%H%M%S')}"
+message = ARGV[0]
+dest = ARGV[2] || current_branch
+
+fail "Could not get branch" unless dest && dest != ""
+
+system("git checkout -b #{branch}") || fail("Failed to create branch")
+system("git rev-parse --show-toplevel | xargs git add && git commit -am '#{message}'") || fail("Failed to commit changes")
+system("git push origin #{branch}") || fail("Could not push changes")
+system("pull \"#{message}\" #{dest}") || fail("Failed to create pull request")
