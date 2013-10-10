@@ -1,8 +1,11 @@
 --type-set
-clojure=clj
+clojure=.clj
 
 --type-add
 ruby=.rake,.thor,.ru,.feature,.spec
+
+--type-set
+puppet=.pp
 
 --type-set
 haml=.haml
