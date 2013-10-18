@@ -2,7 +2,7 @@
 
 def branch_shortname(branch = "upstream")
   url = `git remote show #{branch}`[/^\s*Fetch URL: (.*)/, 1]
-  url[/^.*github.com[\:\/](.*)(?:.git)?$/, 1]
+  url[/^.*github.com[\:\/](.*?)(?:.git)?$/, 1]
 end
 
 branch = ARGV[1] || "master"
