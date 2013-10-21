@@ -141,7 +141,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " ignore pyc files
 let NERDTreeIgnore = ['\.pyc$']
-set wildignore+=*.pyc,*.rabl
+set wildignore+=*.pyc
 
 " vimux settings
 let g:VimuxUseNearestPane = 1
@@ -176,6 +176,8 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
+
+let g:html_indent_inctags = "p,li"
 
 " ---------------------------------------------------------------------------
 " MAPPINGS
