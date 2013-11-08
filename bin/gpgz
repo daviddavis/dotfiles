@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+tar czf $1.tgz $1
+
+if [[ -n $2 ]]
+then
+  gpg -c --passphrase $2 $1.tgz
+else
+  gpg -c $1.tgz
+fi
+
+rm $1.tgz
