@@ -2,7 +2,7 @@
 clojure=.clj
 
 --type-add
-ruby=.rake,.thor,.ru,.feature,.spec
+ruby=.rake,.thor,.ru,.feature,.spec,rabl
 
 --type-set
 puppet=.pp
