@@ -4,6 +4,7 @@
 export sat=~s/satellite
 export ks="$KATELLO_PATH"
 export kc="${KATELLO_PATH}-cli"
+export KATELLO_CLI_PATH=/home/dadavis/.bin/katello
 
 # aliases
 alias krdb="$ks/script/delayed_job stop && $ks/script/katello-reset-dbs -f development ."
