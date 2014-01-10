@@ -43,3 +43,5 @@
 	templatedir = ~/.git_template
 [github]
 	user = daviddavis
+[push]
+	default = simple
