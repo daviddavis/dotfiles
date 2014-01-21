@@ -6,6 +6,10 @@ export ks="$KATELLO_PATH"
 export kc="${KATELLO_PATH}-cli"
 export KATELLO_CLI_PATH=/home/dadavis/.bin/katello
 
+export hc=~s/hammer-cli
+export hck=~s/hammer-cli-katello
+export hcf=~s/hammer-cli-foreman
+
 # aliases
 alias krdb="$ks/script/delayed_job stop && $ks/script/katello-reset-dbs -f development ."
 alias kping="katello ping"
@@ -16,3 +20,6 @@ alias kres="krdb && dj start && rsd"
 
 alias kpr="pull"
 alias kcp="pull-commit"
+
+# hammer
+alias h="hammer"

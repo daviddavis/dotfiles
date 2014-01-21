@@ -36,20 +36,6 @@ else
   puts "Gem hirb not found. Skipping..."
 end
 
-# Toys methods
-# See https://gist.github.com/807492
-class Array
-  def self.toy(n=10, &block)
-    block_given? ? Array.new(n,&block) : Array.new(n) {|i| i+1}
-  end
-end
-
-class Hash
-  def self.toy(n=10)
-    Hash[Array.toy(n).zip(Array.toy(n){|c| (96+(c+1)).chr})]
-  end
-end
-
 # aliases for debugging
 Pry.config.commands.alias_command "q", "exit-all"
 Pry.config.commands.alias_command "n", "next"
@@ -60,33 +46,12 @@ rails = File.join(Dir.getwd, 'config', 'environment.rb')
 
 if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   require rails
-
-  if Rails.version[0..0] == "2"
-    require 'console_app'
-    require 'console_with_helpers'
-  elsif Rails.version[0..0] == "3"
-    require 'rails/console/app'
-    require 'rails/console/helpers'
-  else
-    warn "[WARN] cannot load Rails console commands (Not on Rails2 or Rails3?)"
-  end
-
-  # [] acts as find()
-  ActiveRecord::Base.instance_eval { alias :[] :find } if defined?(ActiveRecord)
+  require 'rails/console/app'
+  require 'rails/console/helpers'
 
   # Add Rails console helpers (like `reload!`) to pry
   if defined?(Rails::ConsoleMethods)
     extend Rails::ConsoleMethods
-  end
-
-  # r! to reload Rails console
-  def r!
-    reload!
-  end
-
-  # sql for arbitrary SQL commands through the AR
-  def sql(query)
-    ActiveRecord::Base.connection.execute(query)
   end
 end
 
