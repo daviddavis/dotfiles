@@ -11,15 +11,17 @@ export hck=~s/hammer-cli-katello
 export hcf=~s/hammer-cli-foreman
 
 # aliases
-alias krdb="$ks/script/delayed_job stop && $ks/script/katello-reset-dbs -f development ."
-alias kping="katello ping"
-alias k="~/.bin/katello"
-alias kpl="pylint --rcfile=/etc/spacewalk-pylint.rc --additional-builtins=_ katello"
-alias dj="$KATELLO_PATH/script/delayed_job"
-alias kres="krdb && dj start && rsd"
+alias katello-reset="rake katello:reset"
+alias katello-ping="hammer ping"
+alias katello-res="katello-reset-db && rs"
+alias k="bundle exec hammer"
 
+# backwards compatible
 alias kpr="pull"
 alias kcp="pull-commit"
 
 # hammer
-alias h="hammer"
+alias h="bundle exec hammer"
+
+# pulp
+alias pulp-reset-db="mongo pulp_database --eval 'db.dropDatabase()' && sudo pulp-manage-db && sudo service httpd restart"
