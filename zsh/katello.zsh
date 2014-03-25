@@ -13,7 +13,7 @@ export hcf=~s/hammer-cli-foreman
 # aliases
 alias katello-reset="rake katello:reset"
 alias katello-ping="hammer ping"
-alias katello-res="katello-reset-db && rs"
+alias katello-res="katello-reset && rs"
 alias k="bundle exec hammer"
 
 # backwards compatible
