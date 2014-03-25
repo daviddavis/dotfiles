@@ -1,18 +1,12 @@
 # ~/.tmuxinator/katello.yml
 # you can make as many tabs as you wish...
 
-project_name: katello
-project_root: $KATELLO_PATH
-tabs:
-  - editor: git fetch origin && git fetch upstream
-  #- shell: git fetch origin && git fetch upstream
-  - cli_editor: cd ../katello-cli
+project_name: foreman
+project_root: $HOME/Projects/foreman
+windows:
+  - keditor: cd ../katello && git fetch --all
+  - kshell: cd ../katello
   - console: be rails c
   - server: be rails s -u
-  - cli:
-      layout: 44b2,238x56,0,0{139x56,0,0,0,98x56,140,0,1}
-      panes:
-        - cd ../katello-cli
-        - cd ../katello-cli && tail -f ~/.katello/client.log
-  - shell:
-  #- database: rails dbconsole
+  - katello: cd ../katello
+  - foreman: git fetch --all

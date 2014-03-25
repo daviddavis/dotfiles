@@ -1,0 +1,8 @@
+# ~/.tmuxinator/hammer-cli-katello.yml
+# you can make as many tabs as you wish...
+
+project_name: hammer-cli-katello
+project_root: $HOME/Projects/hammer-cli-katello
+windows:
+  - editor:
+  - shell:
