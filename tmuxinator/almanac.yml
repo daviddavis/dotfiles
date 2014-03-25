@@ -1,0 +1,12 @@
+# ~/.tmuxinator/almanac.yml
+# you can make as many tabs as you wish...
+
+project_name: almanac
+project_root: /Users/daviddavis/Projects/almanac
+windows:
+  - editor:
+  - server:
+    - workon almanac
+    - foreman start
+  - console:
+    - workon almanac
