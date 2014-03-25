@@ -35,6 +35,5 @@ alias rr="cd .. && cd - && rvm-prompt" # reload rvm
 # fix colors in tmux on gnome terminal
 alias m="mux"
 
-alias wee="weechat-curses"
 alias ov="sudo openvpn /etc/openvpn/*.conf"
 alias y="yum"
