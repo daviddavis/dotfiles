@@ -51,6 +51,7 @@ NeoBundle 'klen/python-mode'
 "NeoBundle 'ngmy/vim-rubocop'
 " NeoBundle 'mhinz/vim-startify'
 NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'mitsuhiko/vim-jinja'
 " ...
 
 filetype plugin indent on     " Required!
