@@ -3,7 +3,7 @@
 
 project_name: runcible
 project_root: ~/Projects/runcible
-tabs:
+windows:
   - editor: git fetch origin && git fetch upstream
   - tests:
       layout: 44b2,238x56,0,0{139x56,0,0,0,98x56,140,0,1}

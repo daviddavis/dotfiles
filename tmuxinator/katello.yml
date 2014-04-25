@@ -5,8 +5,8 @@ project_name: foreman
 project_root: $HOME/Projects/foreman
 windows:
   - keditor: cd ../katello && git fetch --all
-  - kshell: cd ../katello
+  - feditor:
   - console: be rails c
   - server: be rails s -u
-  - katello: cd ../katello
-  - foreman: git fetch --all
+  - kshell: cd ../katello
+  - shell: git fetch --all
