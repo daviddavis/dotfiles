@@ -32,3 +32,5 @@ export PROMPT_COMMAND='PS1="\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; e
 
 # rebind Ctrl-p to go to the beginning of line since Ctrl-a is used for tmux/screen
 bind '"\C-p": beginning-of-line'
+
+[ -s "/home/dadavis/.nvm/nvm.sh" ] && . "/home/dadavis/.nvm/nvm.sh" # This loads nvm
