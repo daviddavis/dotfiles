@@ -24,7 +24,7 @@ alias kcp="pull-commit"
 alias h="bundle exec hammer"
 
 # pulp
-alias pulp-reset-db="mongo pulp_database --eval 'db.dropDatabase()' && sudo pulp-manage-db && sudo service httpd restart"
+alias pulp-reset-db="mongo pulp_database --eval 'db.dropDatabase()' && pulp-manage-db && sudo service httpd restart"
 
 # js
 alias jstest="cd ~ks/engines/bastion/ && grunt ci && cd -"
