@@ -16,6 +16,9 @@ alias katello-ping="hammer ping"
 alias katello-res="katello-reset && rs"
 alias k="bundle exec hammer"
 
+# js
+alias jstest="cd ~ks/engines/bastion/ && grunt ci && cd -"
+
 # backwards compatible
 alias kpr="pull"
 alias kcp="pull-commit"
@@ -24,10 +27,18 @@ alias kcp="pull-commit"
 alias h="bundle exec hammer"
 
 # pulp
-alias pulp-reset-db="mongo pulp_database --eval 'db.dropDatabase()' && pulp-manage-db && sudo service httpd restart"
+function pulp-restart() {
+  for x in pulp_workers pulp_celerybeat pulp_resource_manager httpd
+  do
+    sudo service $x restart
+  done
+}
 
-# js
-alias jstest="cd ~ks/engines/bastion/ && grunt ci && cd -"
+function pulp-reset-db() {
+  mongo pulp_database --eval 'db.dropDatabase()'
+  sudo -u apache pulp-manage-db
+  pulp-restart
+}
 
 # github clone
 function kclone() {
