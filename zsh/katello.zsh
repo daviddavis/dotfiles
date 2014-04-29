@@ -24,4 +24,15 @@ alias kcp="pull-commit"
 alias h="bundle exec hammer"
 
 # pulp
-alias pulp-reset-db="mongo pulp_database --eval 'db.dropDatabase()' && sudo pulp-manage-db && sudo service httpd restart"
+alias pulp-reset-db="mongo pulp_database --eval 'db.dropDatabase()' && pulp-manage-db && sudo service httpd restart"
+
+# js
+alias jstest="cd ~ks/engines/bastion/ && grunt ci && cd -"
+
+# github clone
+function kclone() {
+  git clone git@github.com:daviddavis/$1.git
+  cd $1
+  git remote add upstream git://github.com/Katello/$1.git
+  git fetch --all
+}
