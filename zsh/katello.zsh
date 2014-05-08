@@ -26,19 +26,8 @@ alias kcp="pull-commit"
 # hammer
 alias h="bundle exec hammer"
 
-# pulp
-function pulp-restart() {
-  for x in pulp_workers pulp_celerybeat pulp_resource_manager httpd
-  do
-    sudo service $x restart
-  done
-}
-
-function pulp-reset-db() {
-  mongo pulp_database --eval 'db.dropDatabase()'
-  sudo -u apache pulp-manage-db
-  pulp-restart
-}
+# add in scripts directory
+[[ -s ${KATELLO_PATH}-scripts ]] && export PATH=$PATH:${KATELLO_PATH}-scripts/bin
 
 # github clone
 function kclone() {
