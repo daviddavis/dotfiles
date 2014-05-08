@@ -1,12 +1,13 @@
 # ~/.tmuxinator/katello.yml
 # you can make as many tabs as you wish...
 
-project_name: foreman
-project_root: $HOME/Projects/foreman
+project_name: katello
+project_root: ~/Projects/foreman
+pre_window: rvm use 1.9.3@foreman
 windows:
   - keditor: cd ../katello && git fetch --all
   - feditor:
-  - console: be rails c
-  - server: be rails s -u
+  - console: rc
+  - server: rs
   - kshell: cd ../katello
-  - shell: git fetch --all
+  - foreman: git fetch --all
