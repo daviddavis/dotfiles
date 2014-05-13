@@ -29,6 +29,9 @@ export ZSH_THEME="davidd"
 # Comment this out to disable weekly auto-update checks
 # export DISABLE_AUTO_UPDATE="true"
 
+# Automatically update without asking
+DISABLE_UPDATE_PROMPT=true
+
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
