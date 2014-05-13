@@ -5,6 +5,7 @@ export sat=~s/satellite
 export ks="$KATELLO_PATH"
 export kc="${KATELLO_PATH}-cli"
 export KATELLO_CLI_PATH=/home/dadavis/.bin/katello
+export foreman="$KATELLO_PATH/../foreman"
 
 export hc=~s/hammer-cli
 export hck=~s/hammer-cli-katello
