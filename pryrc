@@ -59,6 +59,7 @@ end
 # KATELLO
 # --------------------------------------------------------
 
-def login
-  User.current = (User.hidden.first || User.first)
+def login(user = nil)
+  user ||= User.admin || User.hidden.first || User.first
+  User.current = user
 end
