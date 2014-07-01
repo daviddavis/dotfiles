@@ -1,4 +1,0 @@
-#!/bin/bash
-kc=/home/dadavis/Projects/katello-cli
-export PYTHONPATH=$kc/src:$PYTHONPATH
-$kc/bin/katello -u admin -p admin "$@"

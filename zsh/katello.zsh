@@ -3,8 +3,8 @@
 # directories
 export sat=~s/satellite
 export ks="$KATELLO_PATH"
-export kc="${KATELLO_PATH}-cli"
-export KATELLO_CLI_PATH=/home/dadavis/.bin/katello
+export kc="${KATELLO_PATH}/../hammer-cli-katello"
+export KATELLO_CLI_PATH=$kc
 export foreman="$KATELLO_PATH/../foreman"
 
 export hc=~s/hammer-cli
