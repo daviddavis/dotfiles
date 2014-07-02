@@ -3,8 +3,8 @@
 # directories
 export sat=~s/satellite
 export ks="$KATELLO_PATH"
-export kc="${KATELLO_PATH}-cli"
-export KATELLO_CLI_PATH=/home/dadavis/.bin/katello
+export kc="${KATELLO_PATH}/../hammer-cli-katello"
+export KATELLO_CLI_PATH=$kc
 export foreman="$KATELLO_PATH/../foreman"
 
 export hc=~s/hammer-cli
@@ -36,4 +36,14 @@ function kclone() {
   cd $1
   git remote add upstream git://github.com/Katello/$1.git
   git fetch --all
+}
+
+# redmine/bz importer functions
+function clone-to-redmine {
+  curl http://tesla.usersys.redhat.com:3030/bz-to-redmine/$1
+  echo ""
+}
+function clone-to-bz {
+  curl http://tesla.usersys.redhat.com:3030/redmine-to-bz/$1
+  echo ""
 }
