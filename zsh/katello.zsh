@@ -41,7 +41,9 @@ function kclone() {
 # redmine/bz importer functions
 function clone-to-redmine {
   curl http://tesla.usersys.redhat.com:3030/bz-to-redmine/$1
+  echo ""
 }
 function clone-to-bz {
   curl http://tesla.usersys.redhat.com:3030/redmine-to-bz/$1
+  echo ""
 }
