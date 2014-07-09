@@ -60,6 +60,6 @@ end
 # --------------------------------------------------------
 
 def login(user = nil)
-  user ||= User.admin || User.hidden.first || User.first
+  user ||= User.only_admin.first || User.hidden.first || User.first
   User.current = user
 end
