@@ -39,6 +39,7 @@ end
 # aliases for debugging
 Pry.config.commands.alias_command "q", "exit-all"
 Pry.config.commands.alias_command "n", "next"
+Pry.config.commands.alias_command "s", "step"
 Pry.config.commands.alias_command "c", "continue"
 
 # Launch Pry with access to the entire Rails stack

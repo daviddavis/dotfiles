@@ -231,8 +231,8 @@ map <Leader>R :e doc/README_FOR_APP<CR>
 noremap <silent> <c-l> :noh<cr><c-l>
 
 " splitjoin
-noremap <silent> <Leader>sjs :SplitjoinSplit<CR>
-noremap <silent> <Leader>sj :SplitjoinJoin<CR>
+noremap <silent> <Leader>js :SplitjoinSplit<CR>
+noremap <silent> <Leader>jj :SplitjoinJoin<CR>
 
 " tabularize
 noremap <silent> <Leader>a, :Tab/,<CR>
@@ -281,6 +281,11 @@ map <Leader>ss :setlocal spell! spelllang=en_us<cr>
 iab defintion definition
 iab Defintion Definition
 iab enviornment environment
+iab Enviornment Environment
+iab fitler filter
+iab Fitler Filter
+iab teh the
+iab Teh The
 
 " spell check git commit messages
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
