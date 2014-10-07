@@ -1,0 +1,9 @@
+# ~/.tmuxinator/blog.yml
+# you can make as many tabs as you wish...
+
+project_name: blog
+project_root: /Users/daviddavis/Projects/daviddavis.github.io
+windows:
+  - editor: vim
+  - server: jekyll serve --watch
+  - console:

@@ -47,7 +47,8 @@ NeoBundle 'daviddavis/vim-turbux'
 NeoBundle 'tpope/vim-repeat'
 " NeoBundle 'mhinz/vim-startify'
 NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'mitsuhiko/vim-jinja'
+" NeoBundle 'mitsuhiko/vim-jinja'
+NeoBundle 'tpope/vim-liquid'
 " ...
 
 filetype plugin indent on     " Required!

@@ -140,8 +140,8 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " ignore pyc files
-let NERDTreeIgnore = ['\.pyc$']
-set wildignore+=*.pyc
+let NERDTreeIgnore = ['\.pyc$', '_site']
+set wildignore+=*.pyc,*/_site/**
 
 " vimux settings
 let g:VimuxUseNearestPane = 1
