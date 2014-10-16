@@ -1,0 +1,10 @@
+# ~/.tmuxinator/katello.org.yml
+# you can make as many tabs as you wish...
+
+project_name: "katello-org"
+project_root: ~/Projects/katello.org
+pre_window: "rvm use @katello.org"
+windows:
+  - editor:
+  - server: jekyll serve -w
+  - console:
