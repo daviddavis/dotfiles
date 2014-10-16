@@ -37,6 +37,12 @@ function kclone() {
   git remote add upstream git://github.com/Katello/$1.git
   git fetch --all
 }
+function fclone() {
+  git clone git@github.com:daviddavis/$1.git
+  cd $1
+  git remote add upstream git://github.com/theforeman/$1.git
+  git fetch --all
+}
 
 # redmine/bz importer functions
 function clone-to-redmine {
