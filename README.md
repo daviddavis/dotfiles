@@ -39,7 +39,7 @@ Otherwise you can manually install the dotfiles:
     git clone --recursive git@github.com:daviddavis/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     rake
-    vim -c "BundleInstall"
+    vim -c "NeoBundleInstall"
 
 
 Environment
