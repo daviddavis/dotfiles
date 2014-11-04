@@ -3,7 +3,7 @@
 
 project_name: katello
 project_root: ~/Projects/foreman
-pre_window: rvm use 1.9.3@foreman
+pre_window: rvm use @foreman
 windows:
   - keditor: cd ../katello && git fetch --all
   - feditor:
