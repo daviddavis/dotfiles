@@ -44,7 +44,7 @@ The first option is to use the install script:
 Otherwise you can manually install the dotfiles:
 
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-    git clone --recursive git@github.com:daviddavis/dotfiles.git ~/.dotfiles
+    git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     rake
     vim -c "NeoBundleInstall"

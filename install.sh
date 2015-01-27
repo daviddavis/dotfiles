@@ -14,7 +14,7 @@ then
 fi
 
 # get the dotfiles
-git clone --recursive git@github.com:daviddavis/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
 
 # install vim plugins
 cd ~/.dotfiles
