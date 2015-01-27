@@ -22,8 +22,16 @@ Before installing the dotfiles, you must have the following installed:
 For Fedora/RHEL/CentOS, here's the commands to run:
 
 ```
-sudo yum install zsh ruby ruby-devel ruby-libs rubygems rubygem-rake git tmux
+sudo yum install -y zsh ruby ruby-devel ruby-libs rubygems rubygem-rake git tmux
 chsh -s /bin/zsh
+```
+
+On Ubuntu:
+
+```
+sudo apt-get install -y ruby zsh git tmux
+sudo gem install rake
+chsh -s /usr/bin/zsh
 ```
 
 ### Install
