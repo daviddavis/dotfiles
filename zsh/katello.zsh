@@ -27,6 +27,8 @@ alias kcp="pull-commit"
 # hammer
 alias h="bundle exec hammer"
 
+alias docker-debug="sudo /usr/bin/docker -d -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock --debug=true"
+
 # add in scripts directory
 [[ -s ${KATELLO_PATH}-scripts ]] && export PATH=$PATH:${KATELLO_PATH}-scripts/bin
 
