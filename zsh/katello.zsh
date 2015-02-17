@@ -1,4 +1,4 @@
-[[ -n $KATELLO_PATH ]] || export KATELLO_PATH="/home/dadavis/Projects/katello"
+[[ -n $KATELLO_PATH ]] || export KATELLO_PATH="$HOME/Projects/katello"
 
 # directories
 export sat=~s/satellite

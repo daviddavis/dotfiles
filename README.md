@@ -22,8 +22,16 @@ Before installing the dotfiles, you must have the following installed:
 For Fedora/RHEL/CentOS, here's the commands to run:
 
 ```
-sudo yum install zsh ruby ruby-devel ruby-libs rubygems rubygem-rake git tmux
+sudo yum install -y zsh ruby ruby-devel ruby-libs rubygems rubygem-rake git tmux
 chsh -s /bin/zsh
+```
+
+On Ubuntu:
+
+```
+sudo apt-get install -y ruby zsh git tmux
+sudo gem install rake
+chsh -s /usr/bin/zsh
 ```
 
 ### Install
@@ -36,7 +44,7 @@ The first option is to use the install script:
 Otherwise you can manually install the dotfiles:
 
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-    git clone --recursive git@github.com:daviddavis/dotfiles.git ~/.dotfiles
+    git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     rake
     vim -c "NeoBundleInstall"
