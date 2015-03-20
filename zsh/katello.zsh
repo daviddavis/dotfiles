@@ -5,11 +5,13 @@ export sat=~s/satellite
 export ks="$KATELLO_PATH"
 export kc="${KATELLO_PATH}/../hammer-cli-katello"
 export KATELLO_CLI_PATH=$kc
-export foreman="$KATELLO_PATH/../foreman"
+export foreman=~s/foreman
+export fd=~s/foreman-docker
 
 export hc=~s/hammer-cli
 export hck=~s/hammer-cli-katello
 export hcf=~s/hammer-cli-foreman
+export hcfd=~s/hammer_cli_foreman_docker
 
 # aliases
 alias katello-reset="rake katello:reset"
