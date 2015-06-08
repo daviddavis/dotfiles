@@ -10,7 +10,7 @@
 # install oh-my-zsh
 if [ -e "/bin/zsh" ]
 then
-  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
 # get the dotfiles

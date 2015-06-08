@@ -43,11 +43,11 @@ The first option is to use the install script:
 
 Otherwise you can manually install the dotfiles:
 
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+    git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     rake
-    vim -c "NeoBundleInstall"
+    vim -c ":NeoBundleInstall"
 
 
 Environment
