@@ -34,3 +34,4 @@ alias rr="cd .. && cd - && rvm-prompt" # reload rvm
 
 alias m="mux"
 alias y="yum"
+alias gist="gist -p" # automatically make gists private
