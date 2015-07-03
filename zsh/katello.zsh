@@ -11,6 +11,7 @@ export hck=~s/hammer-cli-katello
 export hcf=~s/hammer-cli-foreman
 
 # aliases
+alias koji-katello="koji -c ~/.koji/katello.conf"
 alias katello-reset="rake katello:reset"
 alias katello-ping="hammer ping"
 alias katello-res="katello-reset && rs"
