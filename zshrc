@@ -29,6 +29,9 @@ export ZSH_THEME="davidd"
 # Comment this out to disable weekly auto-update checks
 # export DISABLE_AUTO_UPDATE="true"
 
+# Automatically update without asking
+DISABLE_UPDATE_PROMPT=true
+
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
@@ -37,8 +40,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby rails osx brew lein node thor git-flow pow rvm gem cloudapp cap npm
-  powder passenger bundler heroku python pip yum docker tmuxinator nvm)
+plugins=(git ruby rails osx brew node thor gem cloudapp npm bundler heroku python pip yum tmuxinator nvm rvm)
 
 # Path to your oh-my-zsh configuration.
 source $ZSH/oh-my-zsh.sh

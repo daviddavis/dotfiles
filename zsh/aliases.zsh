@@ -13,7 +13,7 @@ alias gpd="gist -p --type=diff"
 alias gaa="git rev-parse --show-toplevel | xargs git add -A"
 alias gtd="cd \`git rev-parse --show-toplevel\`"
 alias rp="rake && ggpush"
-alias rdbm="rake db:migrate && rake db:test:load"
+alias rdbm="rake db:migrate"
 alias testdb="RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rake db:migrate"
 alias gd="git diff"
 alias gcb="git checkout -b"
@@ -35,3 +35,4 @@ alias rr="cd .. && cd - && rvm-prompt" # reload rvm
 alias m="mux"
 alias y="yum"
 alias wee="mux s wee"
+alias gist="gist -p" # automatically make gists private
