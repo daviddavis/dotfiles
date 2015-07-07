@@ -1,0 +1,7 @@
+REPO=`echo $1 | cut -d"/" -f2`
+git clone git@github.com:$1.git
+cd $REPO
+hub fork
+git remote add upstream git://github.com/$1.git
+git remote rm origin
+git remote rename daviddavis origin

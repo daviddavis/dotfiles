@@ -35,20 +35,6 @@ alias docker-debug="sudo /usr/bin/docker -d -H tcp://0.0.0.0:2375 -H unix:///var
 # add in scripts directory
 [[ -s ${KATELLO_PATH}-scripts ]] && export PATH=$PATH:${KATELLO_PATH}-scripts/bin
 
-# github clone
-function kclone() {
-  git clone git@github.com:daviddavis/$1.git
-  cd $1
-  git remote add upstream git://github.com/Katello/$1.git
-  git fetch --all
-}
-function fclone() {
-  git clone git@github.com:daviddavis/$1.git
-  cd $1
-  git remote add upstream git://github.com/theforeman/$1.git
-  git fetch --all
-}
-
 # redmine/bz importer functions
 function clone-to-redmine {
   curl http://tesla.usersys.redhat.com:3030/bz-to-redmine/$1
