@@ -58,6 +58,7 @@ plugins=(
           rsync
           debian
           httpie
+          vundle
         )
 
 # Path to your oh-my-zsh configuration.
