@@ -1,0 +1,10 @@
+# ~/.tmuxinator/katello.yml
+# you can make as many tabs as you wish...
+
+project_name: memorious
+project_root: ~/Projects/memorious
+pre_window: workon memorious
+windows:
+  - editor:
+  - server: python wsgi/memorious.py
+  - console: git fetch --all
