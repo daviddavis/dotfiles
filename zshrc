@@ -8,7 +8,7 @@ fi
 
 # load my custom oh-my-zsh files
 export ZSH_CUSTOM="$HOME/.dotfiles/vendor/oh-my-zsh/"
-#
+
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && .  ~/.localrc
 
@@ -55,6 +55,7 @@ plugins=(
           yum
           tmuxinator
           rvm
+          nvm
           rsync
           debian
           httpie
@@ -64,24 +65,13 @@ plugins=(
 # Path to your oh-my-zsh configuration.
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-# export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin
-
 # source aliases again to override oh-my-zsh's
 source ~/.zsh/aliases.zsh
 
 unsetopt hist_verify
 skip_global_compinit=1
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# load tmuxninator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-# rebind Ctrl-p to go to beginning of line since Ctrl-a is used for screen/bash
+# rebind Ctrl-p to go to beginning of line since Ctrl-a is used for screen/tmux
 bindkey "\C-p" 'beginning-of-line'
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
-# turn off flow control. I hate having the console freeze because I hit CTRL+S by accident
-setopt noflowcontrol
