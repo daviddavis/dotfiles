@@ -60,6 +60,7 @@ plugins=(
           debian
           httpie
           vundle
+          z
         )
 
 # Path to your oh-my-zsh configuration.
