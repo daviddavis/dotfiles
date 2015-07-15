@@ -44,8 +44,12 @@ plugins=(
           brew
           bundler
           debian
+          extract
+          fasd
           gem
           git
+          git-extras
+          gitignore
           httpie
           node
           nvm
@@ -60,7 +64,6 @@ plugins=(
           tmuxinator
           vundle
           yum
-          z
         )
 
 # Path to your oh-my-zsh configuration.
