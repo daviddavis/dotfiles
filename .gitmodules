@@ -7,3 +7,6 @@
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git
+[submodule "vendor/pure"]
+	path = vendor/pure
+	url = git@github.com:sindresorhus/pure.git
