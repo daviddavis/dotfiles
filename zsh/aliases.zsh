@@ -28,4 +28,4 @@ alias b="bundle"
 alias u="unicorn_rails"
 alias prc="pry -r config/environment.rb"
 alias rr="cd .. && cd - && rvm-prompt" # reload rvm
-
+alias irb="pry"
