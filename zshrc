@@ -60,6 +60,7 @@ plugins=(
           rsync
           ruby
           rvm
+          systemd
           thor
           tmuxinator
           vundle
