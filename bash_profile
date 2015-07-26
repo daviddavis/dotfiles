@@ -1,14 +1,8 @@
 # aliases
-alias s="script/server -u"
-alias sp="script/server RAILS_ENV=production"
-alias sc="script/console"
 alias ll="ls -al"
-alias sl="tail -f -n 30 log/development.log"
-alias pg_start="sudo su postgres -c \"pg_ctl start -D /opt/local/var/db/postgresql84/data\""
 alias g="git"
 alias gs="git svn"
-alias rf="rm -rf"
-# alias rs="cd /Users/davidd/Sites/robertson_scholars"
+
 # mkdir, cd into it
 mkcd () {
  mkdir -p "$*"
