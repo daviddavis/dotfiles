@@ -72,6 +72,7 @@ source $ZSH/oh-my-zsh.sh
 
 # source aliases again to override oh-my-zsh's
 source ~/.zsh/aliases.zsh
+[[ -f ~/.localrc ]] && .  ~/.localrc
 
 unsetopt hist_verify
 skip_global_compinit=1
@@ -80,3 +81,4 @@ skip_global_compinit=1
 bindkey "\C-p" 'beginning-of-line'
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
