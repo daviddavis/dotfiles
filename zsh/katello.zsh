@@ -2,7 +2,7 @@
 
 # aliases
 alias koji-katello="koji -c ~/.koji/katello.conf"
-alias katello-reset="rake katello:reset"
+alias katello-reset="rake katello:reset && pushover 'Reset complete'"
 alias katello-ping="hammer ping"
 alias katello-res="katello-reset && rs"
 alias k="bundle exec hammer"

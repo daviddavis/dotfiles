@@ -8,3 +8,5 @@ then
 else
   bundle exec rake test:katello
 fi
+
+pushover 'Test run complete'
