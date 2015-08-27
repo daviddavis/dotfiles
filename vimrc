@@ -27,14 +27,11 @@ set wildmenu
 set ruler
 set nuw=4
 set number
-set binary noeol
 set backspace=indent,eol,start
 set laststatus=2
 set showmode
 set showmatch
 set ignorecase
-"set smartindent
-"set incsearch
 set ignorecase smartcase
 set ts=2
 set et
