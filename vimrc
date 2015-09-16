@@ -105,6 +105,10 @@ augroup END
 " PLUGIN SETTINGS
 " ---------------------------------------------------------------------------
 
+" turn on vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'simple'
+
 " set the snippets directory
 let g:snippets_dir="~/.vim/snippets"
 
@@ -124,8 +128,8 @@ set shell=/bin/sh
 " auto-compile coffeescript files
 "let coffee_compile_on_save = 1
 
-" use symbols in powerline
-let g:Powerline_symbols = 'fancy'
+" use symbols in airline
+let g:airline_powerline_fonts = 1
 
 " set ctrlp results to a higher number
 let g:ctrlp_max_height = 35

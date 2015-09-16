@@ -7,7 +7,7 @@ call vundle#begin()
 "
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'daviddavis/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'danchoi/ruby_bashrockets.vim'
 Plugin 'daviddavis/vim-colorpack'
 Plugin 'edsono/vim-matchit'
