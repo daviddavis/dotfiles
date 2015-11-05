@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-filename = ARGV.first # TODO: handle multiple files
-base = File.basename(filename)
-
-system("ffmpeg -i '#{filename}' '#{base}.m4a'")
-system("mv '#{base}.m4a' '#{base}.m4r'")
-system("mv '#{base}.m4r' ~/Music/Tones/")
-system("open ~/Music/Tones/'#{base}.m4r'")

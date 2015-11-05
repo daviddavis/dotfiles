@@ -1,5 +1,0 @@
-#!/bin/sh
-
-sudo rm /var/lib/mongodb/pulp_database.*
-sudo pulp-manage-db
-sudo service httpd restart
