@@ -20,3 +20,7 @@ coffeescript=.coffee
 sass=.sass,.scss
 
 --ignore-dir=fixtures
+--ignore-dir=tmp
+--ignore-dir=node_modules
+--ignore-dir=bower_components
+--ignore-dir=dist
