@@ -157,7 +157,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['ruby', 'javascript'],
                            \ 'passive_filetypes': ['python'] }
 
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_ruby_checkers = ['mri']
 
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
