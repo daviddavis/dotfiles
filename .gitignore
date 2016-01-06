@@ -1,3 +1,4 @@
 .DS_Store
 vim/bundle/*
 bin/snap-guest
+bin/hub
