@@ -31,3 +31,6 @@ function clone-to-bz {
   curl http://tesla.usersys.redhat.com:3030/redmine-to-bz/$1
   echo ""
 }
+
+# speed up apipie generation
+export FOREMAN_APIPIE_LANGS=en
