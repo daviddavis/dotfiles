@@ -6,6 +6,7 @@ alias katello-reset="rake katello:reset && pushover 'Reset complete'"
 alias katello-ping="hammer ping"
 alias katello-res="katello-reset && rs"
 alias k="bundle exec hammer"
+alias pa="pulp-admin -u admin -p admin"
 
 # js
 alias jstest="cd ~ks/engines/bastion/ && grunt ci && cd -"
