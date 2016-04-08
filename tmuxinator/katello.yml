@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: katello
-project_root: ~/Projects/foreman
+project_root: ~/foreman
 pre_window: rvm use @foreman
 windows:
   - keditor: cd ../katello && git fetch --all
