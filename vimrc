@@ -33,10 +33,10 @@ set showmode
 set showmatch
 set ignorecase
 set ignorecase smartcase
-set ts=2
-set et
+set tabstop=2
+set expandtab
 set softtabstop=2
-set sw=2
+set shiftwidth=2
 set nowrap
 set hlsearch
 set nobackup

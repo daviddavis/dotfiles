@@ -29,3 +29,4 @@ alias u="unicorn_rails"
 alias prc="pry -r config/environment.rb"
 alias rr="cd .. && cd - && rvm-prompt" # reload rvm
 alias irb="pry"
+alias rs="rails server -b 0.0.0.0" # bind to all interfaces
