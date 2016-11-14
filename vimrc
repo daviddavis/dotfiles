@@ -147,17 +147,8 @@ set wildignore+=*.pyc,*/_site/**
 " vimux settings
 let g:VimuxUseNearestPane = 1
 
-" turn off python code folding
-let g:pymode_folding = 0
-" ignore errors for gettext's _ function
-let g:pymode_lint_ignore = "E501"
-let g:pymode_lint_cwindow = 0
-
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['ruby', 'javascript'],
-                           \ 'passive_filetypes': ['python'] }
-
-let g:syntastic_ruby_checkers = ['mri']
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args="--ignore=E501,E225"
 
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
