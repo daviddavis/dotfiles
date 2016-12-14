@@ -12,7 +12,7 @@ upstream = branch_shortname
 fail "Could not find upstream repo" unless upstream
 
 if message
-  system(%{hub pull-request "[DO NOT REVIEW] #{message}" -b #{upstream}:#{branch}})
+  system(%{hub pull-request "#{message}" -b #{upstream}:#{branch}})
 else
   system(%{hub pull-request -b #{upstream}:#{branch}})
 end
