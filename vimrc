@@ -47,7 +47,7 @@ set autoread
 set splitright
 set splitbelow
 set showcmd
-set textwidth=79
+set textwidth=100
 set modeline
 
 " toggle paste mode with F2
@@ -96,7 +96,7 @@ augroup vimrcEx
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
-  autocmd FileType python setlocal sw=4 sts=4 et
+  autocmd FileType python setlocal sw=4 sts=4 ts=4 et
   autocmd FileType javascript setlocal sw=4 sts=4 et
 
 augroup END
