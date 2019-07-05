@@ -1,4 +1,4 @@
 .DS_Store
-vim/bundle/*
+vim/plugged/*
 bin/snap-guest
 bin/hub

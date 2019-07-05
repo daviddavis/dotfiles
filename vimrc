@@ -2,8 +2,8 @@
 set nocompatible
 
 " using vundle to load all plugins
-if filereadable(expand("~/.vundle"))
-  source ~/.vundle
+if filereadable(expand("~/.vim/plug"))
+  source ~/.vim/plug
 endif
 
 " enable syntax highlighting and file type detection

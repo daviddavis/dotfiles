@@ -1,0 +1,26 @@
+" vim: set ft=vim:
+
+call plug#begin('~/.vim/plugged')
+
+" My Bundles here:
+"
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'daviddavis/vim-colorpack'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'mileszs/ack.vim'
+Plug 'msanders/snipmate.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-liquid'
+Plug 'kien/ctrlp.vim'
+" ...
+
+call plug#end()
