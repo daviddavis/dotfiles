@@ -58,6 +58,9 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
+" set the tags location
+:set tags^=./.git/tags;
+
 
 " --------------------------------------------------------------------------
 " CUSTOM AUTOCMDS
