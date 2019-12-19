@@ -23,7 +23,6 @@ alias testdb="RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RA
 alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
 
 # ruby aliases
-alias rvm="nocorrect rvm"
 alias heroku="nocorrect heroku"
 alias b="bundle"
 alias u="unicorn_rails"
