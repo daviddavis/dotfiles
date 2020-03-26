@@ -1,6 +1,5 @@
 [user]
-	name = David Davis
-	email = daviddavis@redhat.com
+  useConfigOnly = true
 [diff]
   #external = /usr/bin/opendiff
 [alias]
@@ -46,3 +45,7 @@
 	user = daviddavis
 [push]
 	default = simple
+[commit]
+	gpgsign = true
+[include]
+  path = ~/.gitconfig.local
