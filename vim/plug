@@ -21,6 +21,8 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-liquid'
 Plug 'kien/ctrlp.vim'
+Plug 'python/black'
+Plug 'Vimjas/vim-python-pep8-indent'
 " ...
 
 call plug#end()
