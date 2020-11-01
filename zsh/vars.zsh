@@ -3,6 +3,9 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/Cell
 [[ -s "$HOME/.cabal" ]] && export PATH="$HOME/.cabal/bin:$PATH"
 [[ -s "/usr/local/Cellar/python/2.7/bin" ]] && export PATH="/usr/local/Cellar/python/2.7/bin:$PATH"
 
+# xdg bin
+[[ -s "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
+
 # personal bin
 [[ -s "$HOME/.bin" ]] && export PATH="$HOME/.bin:$PATH"
 
