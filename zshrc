@@ -51,6 +51,8 @@ plugins=(
           ruby
           rvm
           systemd
+          zsh-autosuggestions
+          zsh-syntax-highlighting
         )
 
 # Path to your oh-my-zsh configuration.

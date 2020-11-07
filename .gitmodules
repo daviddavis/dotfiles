@@ -10,3 +10,9 @@
 [submodule "vendor/pure"]
 	path = vendor/pure
 	url = git://github.com/sindresorhus/pure.git
+[submodule "vendor/oh-my-zsh/plugins/zsh-autosuggestions"]
+	path = vendor/oh-my-zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "vendor/oh-my-zsh/plugins/zsh-syntax-highlighting"]
+	path = vendor/oh-my-zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
