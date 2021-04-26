@@ -41,7 +41,7 @@
 	excludesfile = ~/.gitignore
 [init]
 	templatedir = ~/.git_template
-	defaultBranch = develop
+	defaultBranch = main
 [github]
 	user = daviddavis
 [push]
