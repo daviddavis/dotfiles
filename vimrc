@@ -137,6 +137,10 @@ let g:airline_powerline_fonts = 1
 " set ctrlp results to a higher number
 let g:ctrlp_max_height = 35
 
+" have ctrlp search dotfiles
+let g:ctrlp_dotfiles = 1
+let g:ctrlp_custom_ignore = '.mypy_cache\|.pytest_cache\|.git\|.*.egg-info'
+
 " turn on rainbow parentheses
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -151,7 +155,7 @@ set wildignore+=*.pyc,*/_site/**
 let g:VimuxUseNearestPane = 1
 
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args="--ignore=E501,E225"
+let g:syntastic_python_flake8_args="--ignore=E501,E225,E203"
 
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
