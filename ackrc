@@ -23,3 +23,5 @@ sass=.sass,.scss
 --ignore-dir=node_modules
 --ignore-dir=bower_components
 --ignore-dir=dist
+--ignore-dir=.venv
+--ignore-dir=.mypy_cache
