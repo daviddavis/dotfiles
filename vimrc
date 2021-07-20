@@ -49,6 +49,7 @@ set splitbelow
 set showcmd
 set textwidth=100
 set modeline
+set nojoinspaces
 
 " toggle paste mode with F2
 set pastetoggle=<F2>
@@ -139,7 +140,7 @@ let g:ctrlp_max_height = 35
 
 " have ctrlp search dotfiles
 let g:ctrlp_dotfiles = 1
-let g:ctrlp_custom_ignore = '.mypy_cache\|.pytest_cache\|.git\|.*.egg-info'
+let g:ctrlp_custom_ignore = '.mypy_cache\|.pytest_cache\|.git\/\|.*.egg-info\|.*node_modules'
 
 " turn on rainbow parentheses
 au VimEnter * RainbowParenthesesToggle
