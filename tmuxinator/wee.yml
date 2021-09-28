@@ -1,9 +1,0 @@
-# ~/.tmuxinator/wee.yml
-# you can make as many tabs as you wish...
-
-project_name: weechat
-project_root:
-windows:
-  - weechat:
-    - tmux set-window-option mode-mouse off
-    - weechat-curses
