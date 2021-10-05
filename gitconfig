@@ -20,7 +20,7 @@
   upr = upstream reset
   uprh = upstream reset-hard
   ctags = !.git/hooks/ctags
-  gist = !git diff | gist -p --file=git.diff
+  gist = !git diff | gh gist create --filename=git.diff
 [color]
   ui = auto
 [color "branch"]
