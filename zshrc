@@ -45,7 +45,7 @@ plugins=(
           fzf
           git
           httpie
-          osx
+          macos
           pip
           python
           ruby
