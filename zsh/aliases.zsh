@@ -3,11 +3,9 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias clr="lein repl" # clojure lein repl
 alias t=tmux
-alias m="mux"
 alias y="yum"
-alias wee="mux s wee"
 alias gist="gist -p" # automatically make gists private
-alias weather="curl wttr.in/rdu"
+alias weather="curl wttr.in"
 
 alias tag="ctags --tag-relative -Rf.git/tags --exclude=.git --exclude=log --languages=-javascript,sql"
 
