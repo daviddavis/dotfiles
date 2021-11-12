@@ -24,7 +24,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'python/black'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'cespare/vim-toml'
-Plug 'fisadev/vim-isort'
+" Plug 'fisadev/vim-isort'
 " ...
 
 call plug#end()
