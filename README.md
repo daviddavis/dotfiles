@@ -22,14 +22,14 @@ Before installing the dotfiles, you must have the following installed:
 For Fedora/RHEL/CentOS, here's the commands to run:
 
 ```
-sudo yum install -y zsh ruby ruby-devel ruby-libs rubygems rubygem-rake git tmux vim
+sudo yum install -y zsh ruby ruby-devel ruby-libs rubygems rubygem-rake git tmux vim fzf
 chsh -s /bin/zsh
 ```
 
 On Ubuntu:
 
 ```
-sudo apt-get install -y ruby zsh git tmux
+sudo apt-get install -y ruby zsh git tmux fzf
 sudo gem install rake
 chsh -s /usr/bin/zsh
 ```
@@ -47,7 +47,7 @@ Otherwise you can manually install the dotfiles:
     git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     rake
-    vim -c ":VundleInstall"
+    vim -c ":PlugInstall"
 
 
 Environment
