@@ -113,6 +113,12 @@ augroup END
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
 
+" fix until https://github.com/vim-airline/vim-airline/issues/2381 is fixed
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.colnr = "\u33c7"
+
 " set the snippets directory
 let g:snippets_dir="~/.vim/snippets"
 
@@ -131,9 +137,6 @@ set shell=/bin/sh
 
 " auto-compile coffeescript files
 "let coffee_compile_on_save = 1
-
-" use symbols in airline
-let g:airline_powerline_fonts = 1
 
 " set ctrlp results to a higher number
 let g:ctrlp_max_height = 35
