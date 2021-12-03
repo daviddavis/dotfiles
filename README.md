@@ -38,7 +38,7 @@ chsh -s /usr/bin/zsh
 
 The first option is to use the install script:
 
-    curl -L https://raw.github.com/daviddavis/dotfiles/master/install.sh | sh
+    curl -L https://raw.github.com/daviddavis/dotfiles/main/install.sh | sh
 
 
 Otherwise you can manually install the dotfiles:
