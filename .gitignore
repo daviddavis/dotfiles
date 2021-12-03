@@ -2,3 +2,4 @@
 vim/plugged/*
 bin/snap-guest
 bin/hub
+vim/black
