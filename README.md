@@ -29,7 +29,7 @@ chsh -s /bin/zsh
 On Ubuntu:
 
 ```
-sudo apt-get install -y ruby zsh git tmux fzf
+sudo apt-get install -y ruby zsh git tmux fzf curl
 sudo gem install rake
 chsh -s /usr/bin/zsh
 ```
