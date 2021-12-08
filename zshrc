@@ -23,6 +23,9 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 [[ -n $ZSH_THEME ]] || export ZSH_THEME="pure"
 
+# customize the pure prompt color
+zstyle :prompt:pure:prompt:success color green
+
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
