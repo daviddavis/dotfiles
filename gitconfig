@@ -50,3 +50,5 @@
 	gpgsign = true
 [include]
   path = ~/.gitconfig.local
+[credential]
+	helper = store
