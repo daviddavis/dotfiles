@@ -101,7 +101,7 @@ augroup vimrcEx
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
   autocmd FileType python setlocal sw=4 sts=4 ts=4 et
-  autocmd FileType javascript setlocal sw=4 sts=4 et
+  autocmd FileType javascript setlocal sw=2 sts=2 et
 
 augroup END
 
