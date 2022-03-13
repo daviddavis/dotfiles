@@ -50,6 +50,7 @@ plugins=(
           httpie
           macos
           pip
+          pyenv
           python
           ruby
           rvm
@@ -72,4 +73,3 @@ skip_global_compinit=1
 bindkey "\C-p" 'beginning-of-line'
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
