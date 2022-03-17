@@ -47,6 +47,7 @@ plugins=(
           extract
           fzf
           git
+          gh
           httpie
           macos
           pip
