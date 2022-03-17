@@ -143,7 +143,7 @@ let g:ctrlp_max_height = 35
 
 " have ctrlp search dotfiles
 let g:ctrlp_dotfiles = 1
-let g:ctrlp_custom_ignore = '.mypy_cache\|.pytest_cache\|.git\/\|.*.egg-info\|.*node_modules'
+let g:ctrlp_custom_ignore = '.mypy_cache\|.pytest_cache\|.git\/\|.*.egg-info\|.*node_modules\|.venv'
 
 " turn on rainbow parentheses
 au VimEnter * RainbowParenthesesToggle
@@ -158,7 +158,7 @@ set wildignore+=*.pyc,*/_site/**
 " vimux settings
 let g:VimuxUseNearestPane = 1
 
-let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_checkers = ['flake8', 'mypy']
 let g:syntastic_python_flake8_args="--ignore=E501,E225,E203"
 
 let g:rbpt_colorpairs = [
