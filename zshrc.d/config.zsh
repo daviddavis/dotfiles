@@ -3,8 +3,8 @@ export EDITOR='vim'
 #setopt CORRECT
 
 # load our functions
-fpath=(~/.zsh/functions $fpath)
-autoload -U ~/.zsh/functions/*(:t)
+fpath=(~/.zshrc.d/functions $fpath)
+autoload -U ~/.zshrc.d/functions/*(:t)
 
 # history
 #HISTFILE=~/.zsh_history

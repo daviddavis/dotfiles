@@ -13,7 +13,7 @@ export ZSH_CUSTOM="$HOME/.dotfiles/vendor/oh-my-zsh/"
 [[ -f ~/.localrc ]] && .  ~/.localrc
 
 # import my customized stuff before oh-my-zsh
-for f in ~/.zsh/*.zsh; do source $f; done
+for f in ~/.zshrc.d/*.zsh; do source $f; done
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -63,7 +63,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # source aliases again to override oh-my-zsh's
-source ~/.zsh/aliases.zsh
+source ~/.zshrc.d/aliases.zsh
 [[ -f ~/.localrc ]] && .  ~/.localrc
 
 unsetopt hist_verify
