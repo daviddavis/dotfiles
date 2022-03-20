@@ -1,6 +1,3 @@
-# stuff to edit the path
-export PATH="/usr/local/bin:/usr/local/sbin:/usr:/usr/local/Cellar/python/2.7.1/bin:$PATH"
-
 # xdg bin
 [[ -s "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 
