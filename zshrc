@@ -1,11 +1,3 @@
-# load os specific settings
-if [[ `uname` == 'Darwin' ]]; then
-  source ~/.osx.zsh
-fi
-if [[ `uname` == 'Linux' ]]; then
-  source ~/.linux.zsh
-fi
-
 # load my custom oh-my-zsh files
 export ZSH_CUSTOM="$HOME/.dotfiles/vendor/oh-my-zsh/"
 
