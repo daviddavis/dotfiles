@@ -1,5 +1,3 @@
 .DS_Store
 vim/plugged/*
-bin/snap-guest
-bin/hub
 vim/black
