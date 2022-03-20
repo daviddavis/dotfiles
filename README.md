@@ -1,10 +1,8 @@
 David's Dot Files
 =================
 
-These are config files to set up a system the way I like it. These files are
-based largely on Ryan Bates's dotfiles repo. I am storing my emacs
-configuration separately (for now); just search for davemacs if you want to
-look at them.
+These are config files to set up a system the way I like it. I am storing my emacs configuration
+separately (for now); just search for davemacs if you want to look at them.
 
 Installation
 -----------
@@ -15,22 +13,19 @@ Before installing the dotfiles, you must have the following installed:
 
 * git
 * zsh (optional but recommended)
-* ruby
-* rake
 * tmux (optional but recommended)
 
 For Fedora/RHEL/CentOS, here's the commands to run:
 
 ```
-sudo yum install -y zsh ruby ruby-devel ruby-libs rubygems rubygem-rake git tmux vim fzf
+sudo dnf install -y zsh git tmux vim fzf
 chsh -s /bin/zsh
 ```
 
-On Ubuntu:
+On Debian/Ubuntu:
 
 ```
-sudo apt-get install -y ruby zsh git tmux fzf curl
-sudo gem install rake
+sudo apt install -y zsh git tmux fzf curl
 chsh -s /usr/bin/zsh
 ```
 
@@ -46,15 +41,5 @@ Otherwise you can manually install the dotfiles:
     git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
     git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
-    rake
+    setup.sh
     vim -c ":PlugInstall"
-
-
-Environment
------------
-
-I use both Linux and Mac OS X so this ought to support both. I primarily use
-zsh, but this includes some older bash files as well.  If you would like to
-switch to zsh, you can do so with the following command.
-
-    chsh -s /bin/zsh
