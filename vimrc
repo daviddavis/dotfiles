@@ -77,24 +77,6 @@ augroup vimrcEx
       \   exe "normal g`\"" |
       \ endif
 
-  " FILE TYPES
-  autocmd BufRead *.sql set filetype=mysql
-  autocmd BufRead *.clj set filetype=clojure
-  autocmd BufRead *.thor set filetype=ruby
-
-  " have :make run the test
-  autocmd FileType cucumber compiler cucumber | setl makeprg=cucumber\ \"%:p\"
-  autocmd FileType ruby
-        \ if expand('%') =~# '_test\.rb$' |
-        \   compiler rubyunit | setl makeprg=testrb\ \"%:p\" |
-        \ elseif expand('%') =~# '_spec\.rb$' |
-        \   compiler rspec | setl makeprg=rspec\ \"%:p\" |
-        \ else |
-        \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
-        \ endif
-  autocmd User Bundler
-        \ if &makeprg !~# 'bundle' | setl makeprg^=bundle\ exec\  | endif
-
   " markdown
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
@@ -126,17 +108,8 @@ let g:snippets_dir="~/.vim/snippets"
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
-" % to bounce from do to end etc.
-runtime! macros/matchit.vim
-
-" gundo undo visualizer
-nnoremap <F5> :GundoToggle<CR>
-
-" this seems to fix rvm
-set shell=/bin/sh
-
-" map Ctrl-p to FZF
-nmap <C-P> :FZF<CR>
+" map Ctrl-p to FzF Files
+nmap <C-P> :Files<CR>
 
 " turn on rainbow parentheses
 au VimEnter * RainbowParentheses
@@ -147,30 +120,8 @@ let g:rainbow#blacklist = [143]
 let NERDTreeIgnore = ['\.pyc$', '_site']
 set wildignore+=*.pyc,*/_site/**
 
-" vimux settings
-let g:VimuxUseNearestPane = 1
-
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args="--ignore=E501,E225,E203"
-
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['yellow',      'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
 
 let g:html_indent_inctags = "p,li"
 
@@ -187,75 +138,14 @@ nnoremap <silent> <Down> <c-w>j
 " Set map leader to , instead of \
 let mapleader = ","
 
-" let 2x's' save
-map ss :w<CR>
-
 "Nerd Tree commands and options
 map <Leader>d :NERDTreeToggle<CR>
 
 " remove the Windows line endings (^M)
 map <Leader>m mz:%s/\r$//g<cr>`z
 
-" 1.8 -> 1.9 hash syntax
-map <silent> <Leader>h :Bashrockets<CR>
-map <silent> <Leader>oh :Hashrockets<CR>
-nmap <C-h> :Bashrockets<CR>
-
-" comands to edit and reload vimrc
-nmap <silent> <Leader>ev :e $MYVIMRC<CR>
-nmap <silent> <Leader>sv :so $MYVIMRC<CR>
-
-" showmarks toggle
-map <Leader>sm <Leader>mt
-
-" hit ,smr to reload snippets
-nnoremap <Leader>smr <esc>:exec ReloadAllSnippets()<cr>
-
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
-" Edit the README_FOR_APP (makes :R commands work)
-map <Leader>R :e doc/README_FOR_APP<CR>
-
 " get rid of highlighting
 noremap <silent> <c-l> :noh<cr><c-l>
-
-" splitjoin
-noremap <silent> <Leader>js :SplitjoinSplit<CR>
-noremap <silent> <Leader>jj :SplitjoinJoin<CR>
-
-" tabularize
-noremap <silent> <Leader>a, :Tab/,<CR>
-noremap <silent> <Leader>a= :Tab/=<CR>
-noremap <silent> <Leader>a: :Tab/:\zs<CR>
-noremap <silent> <Leader>a{ :Tab/{<CR>
-noremap <silent> <Leader>ah :Tab/=><CR>
-
-" vimux/turbux mappings
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vc :CloseVimTmuxPanes<CR>
-map <Leader>vi :VimuxInterruptRunner<CR>
-vmap <silent> <LocalLeader>vs "vy :call RunVimTmuxCommand(@v)<CR>
-
-" gundo shortcut
-map <Leader>g :GundoToggle<CR>
-
-" Custom mappings for the unite buffer
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-  " Enable navigation with control-j and control-k in insert mode
-  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-endfunction
-
-" Quickfix next shortcut
-noremap <leader>c :w<cr>:cnext<cr>
 
 
 " ---------------------------------------------------------------------------
