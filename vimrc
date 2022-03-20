@@ -106,7 +106,7 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 nmap <C-P> :Files<CR>
 
 " turn on rainbow parentheses
-au VimEnter * RainbowParentheses
+autocmd VimEnter * if exists(":RainbowParentheses") | exe "RainbowParentheses" | endif
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 let g:rainbow#blacklist = [143]
 
@@ -157,4 +157,4 @@ iab teh the
 iab Teh The
 
 " spell check git commit messages
-au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
+autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
