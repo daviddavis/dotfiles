@@ -135,21 +135,13 @@ nnoremap <F5> :GundoToggle<CR>
 " this seems to fix rvm
 set shell=/bin/sh
 
-" auto-compile coffeescript files
-"let coffee_compile_on_save = 1
-
-" set ctrlp results to a higher number
-let g:ctrlp_max_height = 35
-
-" have ctrlp search dotfiles
-let g:ctrlp_dotfiles = 1
-let g:ctrlp_custom_ignore = '.mypy_cache\|.pytest_cache\|.git\/\|.*.egg-info\|.*node_modules\|.venv'
+" map Ctrl-p to FZF
+nmap <C-P> :FZF<CR>
 
 " turn on rainbow parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+au VimEnter * RainbowParentheses
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+let g:rainbow#blacklist = [143]
 
 " ignore pyc files
 let NERDTreeIgnore = ['\.pyc$', '_site']
@@ -158,7 +150,7 @@ set wildignore+=*.pyc,*/_site/**
 " vimux settings
 let g:VimuxUseNearestPane = 1
 
-let g:syntastic_python_checkers = ['flake8', 'mypy']
+let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args="--ignore=E501,E225,E203"
 
 let g:rbpt_colorpairs = [

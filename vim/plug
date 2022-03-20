@@ -4,11 +4,13 @@ call plug#begin('~/.vim/plugged')
 
 " My Bundles here:
 "
+"Plug 'airblade/vim-rooter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'daviddavis/vim-colorpack'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'msanders/snipmate.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -19,12 +21,9 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-liquid'
-Plug 'kien/ctrlp.vim'
 Plug 'python/black'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'cespare/vim-toml'
-" Plug 'fisadev/vim-isort'
 " ...
 
 call plug#end()
