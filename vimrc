@@ -106,9 +106,8 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 nmap <C-P> :Files<CR>
 
 " turn on rainbow parentheses
-autocmd VimEnter * if exists(":RainbowParentheses") | exe "RainbowParentheses" | endif
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-let g:rainbow#blacklist = [143]
+let g:rainbow_active = 1
+let g:rainbow_conf = {'separately': {'nerdtree': 0}} " don't use on nerdtree window
 
 " ignore pyc files
 let NERDTreeIgnore = ['\.pyc$', '_site']
