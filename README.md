@@ -42,5 +42,5 @@ Otherwise you can manually install the dotfiles:
     git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
     git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
-    setup.sh
+    ./setup.sh
     vim -c ":PlugInstall"

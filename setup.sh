@@ -20,7 +20,7 @@ function linkDotfile {
     mv ${dest}{,.${dateStr}}
   fi
 
-  echo "Creating ${dest}"
+  echo "Linking ${dest}"
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 

@@ -6,7 +6,7 @@ function current_branch() {
 }
 
 cd ~/.dotfiles && git pull origin `current_branch`
-vim +BundleInstall +qall
+vim +PlugClean! +PlugInstall +qall
 git submodule init && git submodule update
-rake install
+~/.dotfiles/setup.sh
 echo "Dotfiles updated!"
