@@ -14,3 +14,6 @@ ehthumbs.db
 
 # temp files
 .netrwhist
+
+# direnv files
+.envrc
