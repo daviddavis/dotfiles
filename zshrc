@@ -42,9 +42,7 @@ plugins=(
           gh
           httpie
           macos
-          pip
           pyenv
-          python
           ruby
           rvm
           systemd
