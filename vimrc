@@ -98,10 +98,6 @@ let g:airline_theme = 'simple'
 " set the snippets directory
 let g:snippets_dir="~/.vim/snippets"
 
-" syntastic warnings
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-
 " map Ctrl-p to FzF Files
 nmap <C-P> :Files<CR>
 
@@ -112,9 +108,6 @@ let g:rainbow_conf = {'separately': {'nerdtree': 0}} " don't use on nerdtree win
 " ignore pyc files
 let NERDTreeIgnore = ['\.pyc$', '_site']
 set wildignore+=*.pyc,*/_site/**
-
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args="--ignore=E501,E225,E203"
 
 let g:html_indent_inctags = "p,li"
 
