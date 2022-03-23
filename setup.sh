@@ -24,6 +24,8 @@ function linkDotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
+mkdir -p ~/.vim
+
 linkDotfile bash_profile
 linkDotfile bin
 linkDotfile git_template
@@ -31,7 +33,9 @@ linkDotfile gitconfig
 linkDotfile gitignore
 linkDotfile netrc
 linkDotfile tmux.conf
-linkDotfile vim
+linkDotfile vim/autoload
+linkDotfile vim/plug
+linkDotfile vim/snippets
 linkDotfile vimrc
 linkDotfile zlogin
 linkDotfile zshrc
