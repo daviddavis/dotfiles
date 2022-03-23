@@ -26,7 +26,7 @@ function linkDotfile {
 
 mkdir -p ~/.vim
 
-linkDotfile ctags.d
+linkDotfile ctags
 linkDotfile bash_profile
 linkDotfile bin
 linkDotfile git_hooks

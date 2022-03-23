@@ -7,8 +7,6 @@ alias y="yum"
 alias gist="gh gist create"
 alias weather="curl wttr.in"
 
-alias tag="ctags --tag-relative -Rf.git/tags --exclude=.git --exclude=log --languages=-javascript,sql"
-
 alias g="nocorrect git"
 alias gg="g st -s"
 alias gs="git stash"
