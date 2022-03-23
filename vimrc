@@ -107,6 +107,10 @@ set wildignore+=*.pyc,*/_site/**
 
 let g:html_indent_inctags = "p,li"
 
+" fix strange escape char sequences that appear with devicons and vim-airline
+" https://github.com/ryanoasis/vim-devicons/issues/359
+set t_RV=
+
 " ---------------------------------------------------------------------------
 " MAPPINGS
 " ---------------------------------------------------------------------------
