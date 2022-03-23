@@ -18,14 +18,14 @@ Before installing the dotfiles, you must have the following installed:
 For Fedora/RHEL/CentOS, here's the commands to run:
 
 ```
-sudo dnf install -y zsh git tmux vim fzf fd-find ripgrep universal-ctags
+sudo dnf install -y zsh git tmux vim fzf fd-find ripgrep direnv
 chsh -s /bin/zsh
 ```
 
 On Debian/Ubuntu:
 
 ```
-sudo apt install -y zsh git tmux fzf curl fd-find ripgrep universal-ctags
+sudo apt install -y zsh git tmux fzf curl fd-find ripgrep direnv
 ln -s $(which fdfind) ~/.local/bin/fd
 chsh -s /usr/bin/zsh
 ```
