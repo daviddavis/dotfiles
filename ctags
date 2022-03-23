@@ -3,6 +3,7 @@
 
 --exclude=.git
 --exclude=log
+--exclude=vendor
 
 --exclude=.mypy_cache
 --exclude=.venv
