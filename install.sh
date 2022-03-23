@@ -19,4 +19,4 @@ git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
 # install vim plugins
 cd ~/.dotfiles
 ./setup.sh
-vim -c ":PlugInstall"
+vim +PlugClean! +PlugInstall +qall
