@@ -19,7 +19,6 @@
   up = upstream
   upr = upstream reset
   uprh = upstream reset-hard
-  ctags = !.git/hooks/ctags
   gist = !git diff | gh gist create --filename=git.diff
 [color]
   ui = auto
@@ -39,8 +38,8 @@
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore
+	hooksPath = ~/.git_hooks
 [init]
-	templatedir = ~/.git_template
 	defaultBranch = main
 [github]
 	user = daviddavis

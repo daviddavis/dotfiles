@@ -17,3 +17,6 @@ ehthumbs.db
 
 # direnv files
 .envrc
+
+# tags file
+tags

@@ -26,9 +26,10 @@ function linkDotfile {
 
 mkdir -p ~/.vim
 
+linkDotfile ctags.d
 linkDotfile bash_profile
 linkDotfile bin
-linkDotfile git_template
+linkDotfile git_hooks
 linkDotfile gitconfig
 linkDotfile gitignore
 linkDotfile netrc

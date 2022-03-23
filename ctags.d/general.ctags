@@ -1,0 +1,10 @@
+--recurse
+--tag-relative
+
+--exclude=.git
+--exclude=log
+
+--exclude=.mypy_cache
+--exclude=.venv
+
+--python-kinds=-i
