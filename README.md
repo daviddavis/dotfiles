@@ -9,12 +9,6 @@ Installation
 
 ### Requirements
 
-Before installing the dotfiles, you must have the following installed:
-
-* git
-* zsh (optional but recommended)
-* tmux (optional but recommended)
-
 For Fedora/RHEL/CentOS, here's the commands to run:
 
 ```
@@ -27,6 +21,13 @@ On Debian/Ubuntu:
 ```
 sudo apt install -y zsh git tmux fzf curl fd-find ripgrep direnv
 ln -s $(which fdfind) ~/.local/bin/fd
+chsh -s /usr/bin/zsh
+```
+
+On MacOS:
+
+```
+brew install vim fd fzf direnv ripgrep tmux
 chsh -s /usr/bin/zsh
 ```
 
