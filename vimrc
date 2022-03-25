@@ -126,7 +126,10 @@ nnoremap <silent> <Down> <c-w>j
 " Set map leader to , instead of \
 let mapleader = ","
 
-"Nerd Tree commands and options
+" Show vim-which-key after timeout
+nnoremap <silent> <leader> :<c-u>WhichKey ','<CR>
+
+" Nerd Tree commands and options
 map <Leader>d :NERDTreeToggle<CR>
 
 " remove the Windows line endings (^M)
@@ -135,6 +138,7 @@ map <Leader>m mz:%s/\r$//g<cr>`z
 " get rid of highlighting
 noremap <silent> <c-l> :noh<cr><c-l>
 
+" run ALEFix
 map <Leader>f :ALEFix<CR>
 
 
@@ -142,7 +146,7 @@ map <Leader>f :ALEFix<CR>
 " SPELLING
 " ---------------------------------------------------------------------------
 
-map <Leader>ss :setlocal spell! spelllang=en_us<cr>
+map <Leader>s :setlocal spell! spelllang=en_us<cr>
 iab defintion definition
 iab Defintion Definition
 iab enviornment environment
