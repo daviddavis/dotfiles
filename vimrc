@@ -111,6 +111,8 @@ let g:html_indent_inctags = "p,li"
 " https://github.com/ryanoasis/vim-devicons/issues/359
 set t_RV=
 
+let g:ale_fixers = {"python": ["black", "isort"]}
+
 " ---------------------------------------------------------------------------
 " MAPPINGS
 " ---------------------------------------------------------------------------
@@ -132,6 +134,8 @@ map <Leader>m mz:%s/\r$//g<cr>`z
 
 " get rid of highlighting
 noremap <silent> <c-l> :noh<cr><c-l>
+
+map <Leader>f :ALEFix<CR>
 
 
 " ---------------------------------------------------------------------------
