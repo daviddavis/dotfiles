@@ -102,8 +102,8 @@ let g:rainbow_active = 1
 let g:rainbow_conf = {'separately': {'nerdtree': 0}} " don't use on nerdtree window
 
 " ignore pyc files
-let NERDTreeIgnore = ['\.pyc$', '_site']
-set wildignore+=*.pyc,*/_site/**
+let NERDTreeIgnore = ['\.pyc$', '_site', '__pycache__']
+set wildignore+=*.pyc,*/_site/**,*/__pycache__/**
 
 let g:html_indent_inctags = "p,li"
 
