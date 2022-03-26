@@ -28,6 +28,7 @@ mkdir -p ~/.vim
 
 linkDotfile bash_profile
 linkDotfile bin
+linkDotfile config/nvim
 linkDotfile ctags
 linkDotfile direnvrc
 linkDotfile git_hooks
