@@ -57,10 +57,17 @@ Then run `nvim +PackerSync` to install neovim plugins.
 
 #### python-lsp-server
 
-Either globally or in a venv you can install python-lsp-server with plugins:
+Either globally or in a venv with pip:
 
 ```
 pip install python-lsp-server python-lsp-black git+https://github.com/paradoxxxzero/pyls-isort
+```
+
+To use pipx:
+
+```
+pipx install python-lsp-server
+pipx inject python-lsp-server python-lsp-black git+https://github.com/paradoxxxzero/pyls-isort
 ```
 
 #### MacOS
