@@ -7,7 +7,6 @@ if filereadable(expand("~/.vim/plug"))
 endif
 
 " enable syntax highlighting and file type detection
-syntax enable
 
 " fix colors in gnome-terminal
 if $COLORTERM == 'gnome-terminal'
@@ -33,10 +32,10 @@ set showmode
 set showmatch
 set ignorecase
 set ignorecase smartcase
-set tabstop=2
+set tabstop=4
 set expandtab
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 set nowrap
 set hlsearch
 set nobackup
@@ -74,12 +73,8 @@ augroup vimrcEx
       \ endif
 
   " markdown
-  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
-  autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
-  " Don't syntax highlight markdown because it's often wrong
-  autocmd! FileType mkd setlocal syn=off
-  autocmd FileType python setlocal sw=4 sts=4 ts=4 et
-  autocmd FileType javascript setlocal sw=2 sts=2 et
+  autocmd FileType ruby setlocal sw=2 sts=2 ts=2
+  autocmd FileType javascript setlocal sw=2 sts=2
 
 augroup END
 

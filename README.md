@@ -7,7 +7,7 @@ separately (for now); just search for davemacs if you want to look at them.
 Installation
 -----------
 
-### Requirements
+## Requirements
 
 For Fedora/RHEL/CentOS, here's the commands to run:
 
@@ -31,7 +31,7 @@ brew install vim fd fzf direnv ripgrep tmux
 chsh -s /usr/bin/zsh
 ```
 
-### Install
+## Install
 
 The first option is to use the install script:
 
@@ -45,3 +45,33 @@ Otherwise you can manually install the dotfiles:
     cd ~/.dotfiles
     ./setup.sh
     vim -c ":PlugInstall"
+
+
+## Neovim setup
+
+First [install neovim](https://github.com/neovim/neovim#install-from-package).
+
+Then run `nvim +PackerSync` to install neovim plugins.
+
+### Language servers
+
+#### python-lsp-server
+
+Either globally or in a venv you can install python-lsp-server with plugins:
+
+```
+pip install python-lsp-server python-lsp-black git+https://github.com/paradoxxxzero/pyls-isort
+```
+
+#### MacOS
+
+```
+brew install lua-language-server pyright
+```
+
+#### Linux
+
+For lua, [visit the website](https://github.com/sumneko/lua-language-server#build).
+
+For pyright, run `sudo snap install --classic pyright` on Ubuntu.
+
