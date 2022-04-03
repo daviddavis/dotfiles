@@ -1,7 +1,6 @@
 [user]
-  useConfigOnly = true
-[diff]
-  #external = /usr/bin/opendiff
+  email = daviddavis@users.noreply.github.com
+  name = David Davis
 [alias]
   st = status
   s = status
