@@ -72,7 +72,6 @@ augroup vimrcEx
       \   exe "normal g`\"" |
       \ endif
 
-  " markdown
   autocmd FileType ruby setlocal sw=2 sts=2 ts=2
   autocmd FileType javascript setlocal sw=2 sts=2
 
@@ -107,6 +106,7 @@ let g:html_indent_inctags = "p,li"
 set t_RV=
 
 let g:ale_fixers = {"python": ["black", "isort"]}
+let g:ale_python_black_options="--line-length=100"
 
 " ---------------------------------------------------------------------------
 " MAPPINGS
