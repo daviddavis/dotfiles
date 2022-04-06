@@ -40,6 +40,5 @@ linkDotfile vim/autoload
 linkDotfile vim/plug
 linkDotfile vim/snippets
 linkDotfile vimrc
-linkDotfile zlogin
 linkDotfile zshrc
 linkDotfile zshrc.d
