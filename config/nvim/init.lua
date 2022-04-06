@@ -246,13 +246,30 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'pylsp' }
+local servers = { 'clangd', 'rust_analyzer', 'tsserver' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
   }
 end
+
+-- configure black for python-lsp-server
+require'lspconfig'.pylsp.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+        black = {
+          line_length = 100,
+          skip_string_normalization = true,
+        }
+      }
+    }
+  },
+}
+
 
 -- Example custom server
 -- Make runtime files discoverable to the server
