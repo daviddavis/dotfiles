@@ -43,7 +43,6 @@ plugins=(
           gh
           httpie
           macos
-          pyenv
           ruby
           rvm
           systemd
