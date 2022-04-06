@@ -43,9 +43,6 @@ plugins=(
           gh
           httpie
           macos
-          ruby
-          rvm
-          systemd
           zsh-autosuggestions
           zsh-syntax-highlighting
         )
