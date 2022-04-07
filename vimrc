@@ -73,6 +73,7 @@ augroup vimrcEx
       \ endif
 
   autocmd FileType ruby setlocal sw=2 sts=2 ts=2
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2
   autocmd FileType javascript setlocal sw=2 sts=2
 
 augroup END
