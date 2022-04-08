@@ -20,3 +20,6 @@ ehthumbs.db
 
 # tags file
 tags
+
+# .venv
+.venv
