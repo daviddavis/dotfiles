@@ -43,7 +43,7 @@
 [github]
 	user = daviddavis
 [push]
-	default = simple
+	default = current
 [commit]
 	gpgsign = true
 [include]
