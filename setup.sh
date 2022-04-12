@@ -25,6 +25,7 @@ function linkDotfile {
 }
 
 mkdir -p ~/.vim
+mkdir -p ~/.config
 
 linkDotfile bash_profile
 linkDotfile bin
