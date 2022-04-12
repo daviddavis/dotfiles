@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
 "
 "Plug 'airblade/vim-rooter'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'daviddavis/vim-colorpack'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

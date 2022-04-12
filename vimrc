@@ -84,7 +84,6 @@ augroup END
 
 " turn on vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'simple'
 
 " set the snippets directory
 let g:snippets_dir="~/.vim/snippets"
