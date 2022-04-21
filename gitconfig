@@ -44,8 +44,6 @@
 	user = daviddavis
 [push]
 	default = current
-[commit]
-	gpgsign = true
 [include]
   path = ~/.gitconfig.local
 [credential]
