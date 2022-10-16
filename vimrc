@@ -18,7 +18,7 @@ endif
 " ---------------------------------------------------------------------------
 
 " Colorscheme options
-silent! colorscheme daves-tomorrow-transparent
+autocmd vimenter * colorscheme daves-tomorrow-transparent
 
 " Other Options
 set wildmode=longest,list,full
