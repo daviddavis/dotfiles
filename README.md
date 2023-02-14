@@ -19,8 +19,8 @@ chsh -s /bin/zsh
 On Debian/Ubuntu:
 
 ```
-sudo apt install -y zsh git tmux fzf curl fd-find ripgrep direnv vim ctags
-ln -s $(which fdfind) ~/.local/bin/fd
+sudo apt install -y zsh git tmux fzf curl fd-find ripgrep direnv vim exuberant-ctags
+mkdir -p ~/.local/bin && ln -s $(which fdfind) ~/.local/bin/fd
 chsh -s /usr/bin/zsh
 ```
 
