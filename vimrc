@@ -151,5 +151,6 @@ iab Fitler Filter
 iab teh the
 iab Teh The
 
-" spell check git commit messages
+" spell check git commit messages and markdown
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
+autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_us
