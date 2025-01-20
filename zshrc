@@ -43,6 +43,8 @@ plugins=(
           gh
           httpie
           macos
+          kubectl
+          uv
           zsh-autosuggestions
           zsh-syntax-highlighting
         )
