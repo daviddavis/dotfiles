@@ -58,6 +58,12 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
+" Have ctrl-c behave the same as esc. This ensures that when leaving insert mode via ctrl-c that
+" behaves the same as esc, triggers the same events, etc
+" Also, it fixes a weird quirk where ale causes the cursor to jump back one char caused by
+" https://github.com/dense-analysis/ale/issues/4605
+imap <C-c> <Esc>
+
 " --------------------------------------------------------------------------
 " CUSTOM AUTOCMDS
 " --------------------------------------------------------------------------

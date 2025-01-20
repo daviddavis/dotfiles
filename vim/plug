@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 " My Bundles here:
 "
 Plug 'vim-airline/vim-airline'
+Plug 'dense-analysis/ale'
 Plug 'daviddavis/vim-colorpack'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -24,8 +25,5 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'cespare/vim-toml'
 Plug 'carlsmedstad/vim-bicep'
-
-" Pin to v3.3.0 due to weird cursor movement when changing from insert to normal
-Plug 'dense-analysis/ale', { 'tag': 'v3.3.0' }
 
 call plug#end()
