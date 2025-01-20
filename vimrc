@@ -106,6 +106,7 @@ let g:html_indent_inctags = "p,li"
 set t_RV=
 
 let g:ale_fixers = {"python": ["black", "isort"]}
+let g:ale_virtualtext_cursor=0
 " let g:ale_fix_on_save = 1
 
 " ---------------------------------------------------------------------------
