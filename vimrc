@@ -18,7 +18,7 @@ endif
 " ---------------------------------------------------------------------------
 
 " Colorscheme options
-autocmd vimenter * colorscheme daves-tomorrow-transparent
+colorscheme daves-tomorrow-transparent
 
 " Other Options
 set wildmode=longest,list,full
@@ -111,8 +111,9 @@ let g:html_indent_inctags = "p,li"
 " https://github.com/ryanoasis/vim-devicons/issues/359
 set t_RV=
 
-let g:ale_fixers = {"python": ["black", "isort"]}
+let g:ale_fixers = {"python": ["black", "isort", "ruff", "ruff_format"]}
 let g:ale_virtualtext_cursor=0
+highlight ALEWarning ctermbg=17
 " let g:ale_fix_on_save = 1
 
 " ---------------------------------------------------------------------------
