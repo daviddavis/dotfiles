@@ -1,5 +1,5 @@
 # general config options 
-export EDITOR='vim'
+export EDITOR='nvim'
 #setopt CORRECT
 
 # load our functions
