@@ -115,7 +115,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Resume from last position in file
-vim.api.nvim_create_autocmd({'BufWinEnter'}, {
+vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
   desc = 'return cursor to where it was last time closing the file',
   pattern = '*',
   command = 'silent! normal! g`"zv',
@@ -146,7 +146,21 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+
+  -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth',
+
+  -- file explorer plugin for neovim
+  {
+    'nvim-tree/nvim-tree.lua',
+    lazy = false, -- Load immediately
+    config = function()
+      require("nvim-tree").setup()
+    end,
+    keys = {
+      { "<leader>d", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
+    },
+  },
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -341,7 +355,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch [B]uffers' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
