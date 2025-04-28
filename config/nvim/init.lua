@@ -121,6 +121,16 @@ vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
   command = 'silent! normal! g`"zv',
 })
 
+-- Spellcheck various files
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  group = vim.api.nvim_create_augroup('spellcheck', { clear = true }),
+  pattern = { 'text', 'typst', 'gitcommit', 'markdown' }, -- Only apply to these file types
+  callback = function()
+    vim.opt_local.spell = true -- Enable spellcheck for these file types
+  end,
+  desc = 'Enable spellcheck for defined filetypes', -- Description for clarity
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -155,10 +165,10 @@ require('lazy').setup({
     'nvim-tree/nvim-tree.lua',
     lazy = false, -- Load immediately
     config = function()
-      require("nvim-tree").setup()
+      require('nvim-tree').setup()
     end,
     keys = {
-      { "<leader>d", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
+      { '<leader>d', '<cmd>NvimTreeToggle<cr>', desc = 'Toggle NvimTree' },
     },
   },
 
