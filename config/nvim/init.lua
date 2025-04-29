@@ -126,6 +126,16 @@ vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
   command = 'silent! normal! g`"zv',
 })
 
+-- Start with a clear jumplist
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    -- Clear jumplist when starting Neovim
+    vim.cmd("clearjumps")
+  end,
+  group = vim.api.nvim_create_augroup("UserInit", { clear = true }),
+  pattern = "*",
+})
+
 -- Spellcheck various files
 vim.api.nvim_create_autocmd({ 'FileType' }, {
   group = vim.api.nvim_create_augroup('spellcheck', { clear = true }),
