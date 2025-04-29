@@ -100,6 +100,13 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+-- shortcut to open a terminal window
+vim.keymap.set('n', '<leader>t', function()
+  local lines = math.floor(vim.o.lines * 0.25) -- 25% of the total lines
+  vim.cmd(lines .. 'split | terminal')
+  vim.cmd 'startinsert'
+end, { noremap = true, silent = true, desc = '[T]erminal Window' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
