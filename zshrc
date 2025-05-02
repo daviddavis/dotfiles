@@ -47,6 +47,7 @@ plugins=(
           uv
           zsh-autosuggestions
           zsh-syntax-highlighting
+          zoxide
         )
 
 # Path to your oh-my-zsh configuration.
