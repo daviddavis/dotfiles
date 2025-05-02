@@ -44,3 +44,4 @@ linkDotfile vim/snippets
 linkDotfile vimrc
 linkDotfile zshrc
 linkDotfile zshrc.d
+linkDotfile rgignore
