@@ -27,8 +27,8 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
--- Save undo history
--- vim.opt.undofile = true
+-- Confirm when closing a file
+vim.opt.confirm = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
