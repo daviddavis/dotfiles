@@ -624,6 +624,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'yamlls',
+        'prettierd',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -659,7 +661,8 @@ require('lazy').setup({
       },
     },
     opts = {
-      notify_on_error = false,
+      -- notify_on_error = false,
+
       -- format_on_save = function(bufnr)
       --   -- Disable "format_on_save lsp_fallback" for languages that don't
       --   -- have a well standardized coding style. You can add additional
@@ -674,9 +677,11 @@ require('lazy').setup({
       --     }
       --   end
       -- end,
+
       formatters_by_ft = {
         lua = { 'stylua' },
         python = { 'ruff_fix', 'ruff_format' },
+        yaml = { 'prettierd' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -863,7 +868,7 @@ require('lazy').setup({
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
       },
-      indent = { enable = true, disable = { 'lua' } },
+      indent = { enable = true, disable = { 'lua', 'python', 'yaml' } },
     },
   },
 }, {
