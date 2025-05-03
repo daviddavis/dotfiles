@@ -127,13 +127,13 @@ vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
 })
 
 -- Start with a clear jumplist
-vim.api.nvim_create_autocmd("VimEnter", {
+vim.api.nvim_create_autocmd('VimEnter', {
   callback = function()
     -- Clear jumplist when starting Neovim
-    vim.cmd("clearjumps")
+    vim.cmd 'clearjumps'
   end,
-  group = vim.api.nvim_create_augroup("UserInit", { clear = true }),
-  pattern = "*",
+  group = vim.api.nvim_create_augroup('UserInit', { clear = true }),
+  pattern = '*',
 })
 
 -- Spellcheck various files
@@ -458,7 +458,7 @@ require('lazy').setup({
           map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- Add a shortcut for Goto Definition
-          map('gd', vim.lsp.buf.definition, "Goto [D]efinition")
+          map('gd', vim.lsp.buf.definition, 'Goto [D]efinition')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
