@@ -520,6 +520,12 @@ require('lazy').setup({
             })
           end
 
+          -- This fixes `gq` for Python files by unsetting formatexpr
+          -- https://vi.stackexchange.com/questions/39200/wrapping-comment-in-visual-mode-not-working-with-gq
+          if client and client.name == "pyright" then
+            vim.bo[event.buf].formatexpr = ""
+          end
+
           -- The following code creates a keymap to toggle inlay hints in your
           -- code, if the language server you are using supports them
           --
