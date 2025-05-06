@@ -65,6 +65,9 @@ vim.opt.scrolloff = 10
 -- Turn off incremental search
 vim.o.incsearch = false
 
+-- Set textwidth to 100
+vim.o.textwidth = 100
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -384,9 +387,7 @@ require('lazy').setup({
   -- Add a comment plugin
   {
     'numToStr/Comment.nvim',
-    opts = {
-      -- add any options here
-    },
+    opts = {},
   },
 
   -- LSP Plugins
