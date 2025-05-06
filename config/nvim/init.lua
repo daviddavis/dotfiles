@@ -522,8 +522,9 @@ require('lazy').setup({
 
           -- This fixes `gq` for Python files by unsetting formatexpr
           -- https://vi.stackexchange.com/questions/39200/wrapping-comment-in-visual-mode-not-working-with-gq
-          if client and client.name == "pyright" then
-            vim.bo[event.buf].formatexpr = ""
+          if client and client.name == 'pyright' then
+            vim.bo[event.buf].formatexpr = ''
+            vim.bo[event.buf].formatoptions = 'cqj' -- remove 't' to have nevovim not wrap text
           end
 
           -- The following code creates a keymap to toggle inlay hints in your
