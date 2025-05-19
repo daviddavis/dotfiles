@@ -780,6 +780,30 @@ require('lazy').setup({
         default = { 'lsp', 'path', 'snippets', 'lazydev' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+          cmdline = {
+            enabled = function()
+              -- WSL appends a bunch of Windows stuff to $PATH which causes cmdline to hang
+              if vim.fn.has("wsl") == 0 then
+                return true
+              end
+
+              local cmd_type = vim.fn.getcmdtype()
+              local cmd_line = vim.fn.getcmdline()
+              if cmd_type == ":" then
+                if cmd_line:match("^%s*terminal") then
+                  return false
+                end
+                if cmd_line:match("%s+!%w+") then
+                  return false
+                end
+                if cmd_line:match("^[%%0-9,'<>%-]*!") then
+                  return false
+                end
+              end
+
+              return true
+            end,
+          },
         },
       },
 
