@@ -69,6 +69,9 @@ vim.o.incsearch = false
 -- Set textwidth to 100
 vim.o.textwidth = 100
 
+-- Set tabstop to 4
+vim.o.tabstop = 4
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
