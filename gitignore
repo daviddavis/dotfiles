@@ -1,7 +1,7 @@
 # Mac OS X hidden files
 .DS_Store
 .DS_Store?
-Icon?
+Icon\r
 Thumbs.db
 ehthumbs.db
 .Spotlight-V100
