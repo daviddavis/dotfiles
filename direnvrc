@@ -1,4 +1,4 @@
-layout_poetry() {
+use_poetry() {
   if [[ ! -f pyproject.toml ]]; then
     log_error 'No pyproject.toml found.  Use `poetry new` or `poetry init` to create one first.'
     exit 2
@@ -17,7 +17,7 @@ layout_poetry() {
   PATH_add "$VENV"
 }
 
-layout_uv() {
+use_uv() {
     if [[ -d ".venv" ]]; then
         VIRTUAL_ENV="$(pwd)/.venv"
     fi
@@ -31,4 +31,37 @@ layout_uv() {
     PATH_add "$VIRTUAL_ENV/bin"
     export UV_ACTIVE=1  # or VENV_ACTIVE=1
     export VIRTUAL_ENV
+}
+
+use_nvm() {
+  local version=${1:-}
+  if [[ -z "$version" ]] && [[ -f .nvmrc ]]; then
+    version=$(cat .nvmrc | tr -d '[:space:]')
+  fi
+
+  if [[ -z "$version" ]]; then
+    log_error "No version specified and no .nvmrc found"
+    return 1
+  fi
+
+  local NVM_DIR=${NVM_DIR:-$HOME/.nvm}
+  if ! [[ -d "$NVM_DIR" ]]; then
+    log_error "NVM_DIR not found: $NVM_DIR"
+    return 1
+  fi
+
+  local node_version_prefix
+  node_version_prefix=$(
+    source "$NVM_DIR/nvm.sh" --no-use
+    nvm_version_path "$(nvm_version "$version")"
+  )
+
+  if [[ -d "$node_version_prefix" ]]; then
+    PATH_add "$node_version_prefix/bin"
+    export NVM_BIN="$node_version_prefix/bin"
+    log_status "Using Node $(node --version) (via nvm)"
+  else
+    log_error "Node version $version not installed. Run: nvm install $version"
+    return 1
+  fi
 }
