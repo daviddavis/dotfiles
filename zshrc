@@ -44,8 +44,7 @@ plugins=(
           httpie
           macos
           kubectl
-          nvm
-          uv
+          mise
           zsh-autosuggestions
           zsh-syntax-highlighting
           zoxide

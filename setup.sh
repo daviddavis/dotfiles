@@ -29,8 +29,6 @@ mkdir -p ~/.config
 
 linkDotfile bash_profile
 linkDotfile bin
-linkDotfile config/nvim
-linkDotfile config/pypoetry
 linkDotfile ctags
 linkDotfile direnvrc
 linkDotfile git_hooks
@@ -45,3 +43,7 @@ linkDotfile vimrc
 linkDotfile zshrc
 linkDotfile zshrc.d
 linkDotfile rgignore
+
+for item in config/*; do
+  linkDotfile "$item"
+done
