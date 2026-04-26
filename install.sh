@@ -8,9 +8,8 @@
 #
 
 # install oh-my-zsh
-if [ -e "/bin/zsh" ]
-then
-  git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+if command -v zsh >/dev/null 2>&1 && [ ! -d ~/.oh-my-zsh ]; then
+  git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 fi
 
 # get the dotfiles

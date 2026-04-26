@@ -14,9 +14,6 @@ autoload -U ~/.zshrc.d/functions/*(:t)
 
 zle -N tab
 
-# export node path
-export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules:/usr/local/lib/node"
-
 # bind some keys
 #bindkey '^[^[[D' backward-word
 #bindkey '^[^[[C' forward-word
@@ -25,8 +22,3 @@ export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules:/usr/local/lib/node"
 #bindkey '^[[3~' delete-char
 bindkey  '^[^N' tab
 #bindkey '^?' backward-delete-char
-
-# virutalenvwrapper setup
-export WORKON_HOME=$HOME/.virtualenvs
-[[ -a /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper.sh
-[[ -a /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
