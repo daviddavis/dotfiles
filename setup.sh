@@ -37,7 +37,6 @@ linkDotfile netrc
 linkDotfile tmux.conf
 linkDotfile vim/autoload
 linkDotfile vim/plug
-linkDotfile vim/snippets
 linkDotfile vimrc
 linkDotfile zshrc
 linkDotfile zshrc.d

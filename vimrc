@@ -91,9 +91,6 @@ augroup END
 " turn on vim-airline
 let g:airline_powerline_fonts = 1
 
-" set the snippets directory
-let g:snippets_dir="~/.vim/snippets"
-
 " map Ctrl-p to FzF Files
 nmap <C-P> :Files<CR>
 
