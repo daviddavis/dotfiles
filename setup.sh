@@ -30,7 +30,6 @@ mkdir -p ~/.config
 linkDotfile bash_profile
 linkDotfile bin
 linkDotfile ctags
-linkDotfile direnvrc
 linkDotfile gitconfig
 linkDotfile gitignore
 linkDotfile netrc

@@ -12,14 +12,14 @@ Installation
 For Fedora/RHEL/CentOS, here's the commands to run:
 
 ```
-sudo dnf install -y zsh git tmux vim fzf fd-find ripgrep direnv
+sudo dnf install -y zsh git tmux vim fzf fd-find ripgrep
 chsh -s /bin/zsh
 ```
 
 On Debian/Ubuntu:
 
 ```
-sudo apt install -y zsh git tmux fzf curl fd-find ripgrep direnv vim exuberant-ctags
+sudo apt install -y zsh git tmux fzf curl fd-find ripgrep vim exuberant-ctags
 mkdir -p ~/.local/bin && ln -s $(which fdfind) ~/.local/bin/fd
 chsh -s /usr/bin/zsh
 ```
@@ -27,9 +27,11 @@ chsh -s /usr/bin/zsh
 On MacOS:
 
 ```
-brew install vim fd fzf direnv ripgrep tmux
+brew install vim fd fzf ripgrep tmux mise
 chsh -s /usr/bin/zsh
 ```
+
+You'll also need to [install mise](https://mise.jdx.dev/installing-mise.html).
 
 ## Install
 
