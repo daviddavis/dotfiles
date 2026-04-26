@@ -23,3 +23,6 @@ tags
 
 # .venv
 .venv
+
+# local project mise configs
+.mise.local.toml
