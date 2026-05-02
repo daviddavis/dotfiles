@@ -1,2 +1,3 @@
 [settings]
 python.uv_venv_auto = "source"
+idiomatic_version_file_enable_tools = ["python"]
