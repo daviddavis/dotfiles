@@ -280,12 +280,6 @@ require('lazy').setup({
     end,
   },
 
-  -- Add a comment plugin
-  {
-    'numToStr/Comment.nvim',
-    opts = {},
-  },
-
   -- LSP Plugins
   {
     'folke/lazydev.nvim',
