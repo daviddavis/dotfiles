@@ -293,10 +293,13 @@ require('lazy').setup({
   },
   {
     -- Main LSP Configuration
+    --
+    -- Uses Neovim 0.11+ built-ins: vim.lsp.config() / vim.lsp.enable().
+    -- nvim-lspconfig is kept for the default per-server configs it ships
+    -- in its `lsp/` directory (auto-discovered by vim.lsp.enable).
     'neovim/nvim-lspconfig',
     dependencies = {
       { 'williamboman/mason.nvim', opts = {} },
-      'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
@@ -421,48 +424,37 @@ require('lazy').setup({
       -- LSP servers and clients are able to communicate to each other what features they support.
       --  By default, Neovim doesn't support everything that is in the LSP specification.
       --  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
-      --  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
+      --  So, we broadcast blink.cmp's capabilities to all servers via the '*' wildcard config.
+      vim.lsp.config('*', {
+        capabilities = require('blink.cmp').get_lsp_capabilities(),
+      })
 
-      -- Enable the following language servers
-      local servers = {
-        pyright = {},
-        ruff = {},
-        mypy = {},
-        lua_ls = {
-          settings = {
-            Lua = {
-              completion = {
-                callSnippet = 'Replace',
-              },
-              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              diagnostics = { disable = { 'missing-fields' } },
-            },
+      -- Per-server overrides (merged on top of nvim-lspconfig's defaults).
+      vim.lsp.config('lua_ls', {
+        settings = {
+          Lua = {
+            completion = { callSnippet = 'Replace' },
+            -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+            diagnostics = { disable = { 'missing-fields' } },
           },
         },
-      }
-
-      -- Ensure the servers and tools above are installed
-      local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
-        'yamlls',
-        'prettierd',
       })
-      require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-      require('mason-lspconfig').setup {
-        ensure_installed = {}, -- installs are handled by mason-tool-installer above
-        automatic_installation = false,
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for ts_ls)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
+      -- Enable the language servers we want to use.
+      local servers = { 'pyright', 'ruff', 'lua_ls' }
+      vim.lsp.enable(servers)
+
+      -- Ensure the servers and tools above are installed via Mason.
+      -- NOTE: Mason package names differ from LSP server names (e.g. lua_ls -> lua-language-server).
+      require('mason-tool-installer').setup {
+        ensure_installed = {
+          'pyright',
+          'ruff',
+          'mypy', -- not an LSP; available for use via linters/formatters
+          'lua-language-server',
+          'stylua', -- Used to format Lua code
+          'yaml-language-server',
+          'prettierd',
         },
       }
     end,
