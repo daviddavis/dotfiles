@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+# TODO: make sure git-upstream-$1 exists
+git-upstream-$1 ${@[2, -1]}

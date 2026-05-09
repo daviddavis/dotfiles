@@ -1,0 +1,18 @@
+#!/bin/bash
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
+cd ~/.dotfiles && git pull origin `current_branch`
+#vim +PlugClean! +PlugInstall +qall
+
+# update neovim
+nvim --headless "+Lazy! restore" +qa
+nvim --headless "+TSUpdateSync" +qa
+nvim --headless "+MasonUpdate" +qa
+
+git submodule init && git submodule update
+~/.dotfiles/setup.sh
+echo "Dotfiles updated!"

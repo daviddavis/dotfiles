@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Encrypt and compress a file using gpg and tar
+#
+# Usage:
+#   gpgz test.txt [password]
+#
+# To unecrypt/extract:
+#   tar zx test.txt.tgz.gpg | gpg --output test.txt --decrypt
+
+tar czf $1.tgz $1
+
+if [[ -n $2 ]]
+then
+  gpg -c --passphrase $2 $1.tgz
+else
+  gpg -c $1.tgz
+fi
+
+rm $1.tgz

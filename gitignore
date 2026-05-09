@@ -1,0 +1,28 @@
+# Mac OS X hidden files
+.DS_Store
+.DS_Store?
+Icon\r
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+
+# backed up files
+*.bak
+*~orig
+*~backup
+
+# temp files
+.netrwhist
+
+# direnv files
+.envrc
+
+# tags file
+tags
+
+# .venv
+.venv
+
+# local project mise configs
+mise.local.toml
