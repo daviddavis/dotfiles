@@ -9,76 +9,58 @@ Installation
 
 ## Requirements
 
-For Fedora/RHEL/CentOS, here's the commands to run:
+Most dev tools (node, python, neovim, ripgrep, fd, etc.) are managed by
+[mise](https://mise.jdx.dev/) via [config/mise/config.toml](config/mise/config.toml),
+so each OS only needs a small bootstrap: a shell, git, tmux, vim, and mise itself.
 
-```
-sudo dnf install -y zsh git tmux vim fzf fd-find ripgrep
+See the [mise installation docs](https://mise.jdx.dev/installing-mise.html) for the
+recommended way to install mise on your platform.
+
+### Fedora/RHEL/CentOS
+
+```sh
+sudo dnf install -y zsh git tmux vim
 chsh -s /bin/zsh
 ```
 
-On Debian/Ubuntu:
+### Debian/Ubuntu
 
-```
-sudo apt install -y zsh git tmux fzf curl fd-find ripgrep vim exuberant-ctags
-mkdir -p ~/.local/bin && ln -s $(which fdfind) ~/.local/bin/fd
+```sh
+sudo apt update
+sudo apt install -y zsh git tmux vim curl
 chsh -s /usr/bin/zsh
 ```
 
-On MacOS:
+### macOS
 
-```
-brew install vim fd fzf ripgrep tmux mise
+Install [Homebrew](https://brew.sh/), then from the repo root:
+
+```sh
+brew bundle --file=Brewfile
 chsh -s /usr/bin/zsh
 ```
 
-You'll also need to [install mise](https://mise.jdx.dev/installing-mise.html).
+### After bootstrap (all platforms)
+
+Once dotfiles are linked (see Install below), mise will pick up
+`~/.config/mise/config.toml` and install the rest of the tools:
+
+```sh
+mise install
+```
 
 ## Install
 
 The first option is to use the install script:
 
-    curl -L https://raw.github.com/daviddavis/dotfiles/main/install.sh | sh
-
+```sh
+curl -L https://raw.github.com/daviddavis/dotfiles/main/install.sh | sh
+```
 
 Otherwise you can manually install the dotfiles:
 
-    git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-    git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
-    ~/.dotfiles/bin/update-dotfiles
-
-
-## Neovim setup
-
-First [install neovim](https://github.com/neovim/neovim#install-from-package).
-
-Then run `nvim +PackerSync` to install neovim plugins.
-
-### Language servers
-
-#### python-lsp-server
-
-Either globally or in a venv with pip:
-
+```sh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
+~/.dotfiles/bin/update-dotfiles
 ```
-pip install python-lsp-server python-lsp-black pylsp-mypy pyls-flake8 git+https://github.com/paradoxxxzero/pyls-isort
-```
-
-To use pipx:
-
-```
-pipx install python-lsp-server
-pipx inject python-lsp-server python-lsp-black pylsp-mypy pyls-flake8 git+https://github.com/paradoxxxzero/pyls-isort
-```
-
-#### MacOS
-
-```
-brew install lua-language-server pyright
-```
-
-#### Linux
-
-For lua, [visit the website](https://github.com/sumneko/lua-language-server#build).
-
-For pyright, run `sudo snap install --classic pyright` on Ubuntu.
-
