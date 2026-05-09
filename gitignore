@@ -25,4 +25,4 @@ tags
 .venv
 
 # local project mise configs
-.mise.local.toml
+mise.local.toml
