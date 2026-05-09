@@ -1,3 +1,30 @@
 [settings]
 python.uv_venv_auto = "source"
 idiomatic_version_file_enable_tools = ["python"]
+
+[tools]
+# Language runtimes
+node   = "lts"
+python = "3.12"
+
+# Package managers
+uv = "latest"
+
+# Editors
+helix  = "latest"
+neovim = "latest"
+
+# Shell utilities (pinned cross-platform; brew/apt versions can lag)
+bat     = "latest"
+fd      = "latest"
+ripgrep = "latest"
+zoxide  = "latest"
+
+# Dev CLIs
+gh          = "latest"
+tree-sitter = "latest"
+xh          = "latest"
+
+# Language servers / formatters
+lua-language-server = "latest"
+stylua              = "latest"
