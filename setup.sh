@@ -44,3 +44,6 @@ linkDotfile rgignore
 for item in config/*; do
   linkDotfile "$item"
 done
+
+# Ensure netrc has secure permissions (mise and other tools require 0600)
+chmod 600 ~/.netrc
