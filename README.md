@@ -19,7 +19,7 @@ recommended way to install mise on your platform.
 ### Fedora/RHEL/CentOS
 
 ```sh
-sudo dnf install -y zsh git tmux vim
+sudo dnf install -y zsh git tmux vim gcc make unzip
 chsh -s /bin/zsh
 ```
 
@@ -27,7 +27,7 @@ chsh -s /bin/zsh
 
 ```sh
 sudo apt update
-sudo apt install -y zsh git tmux vim curl
+sudo apt install -y fzf zsh git tmux vim curl build-essential unzip
 chsh -s /usr/bin/zsh
 ```
 
