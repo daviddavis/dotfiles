@@ -130,6 +130,16 @@ vim.api.nvim_create_autocmd({ 'FileType' }, {
   desc = 'Enable spellcheck for defined filetypes', -- Description for clarity
 })
 
+-- Filetype detection for Caddyfile (uses the `caddy` treesitter parser)
+vim.filetype.add {
+  filename = {
+    ['Caddyfile'] = 'caddy',
+  },
+  pattern = {
+    ['.*/Caddyfile%.d/.*'] = 'caddy',
+  },
+}
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -637,7 +647,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'python' },
+      ensure_installed = { 'bash', 'c', 'caddy', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'python' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
