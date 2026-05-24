@@ -1,5 +1,7 @@
 # general config options 
 export EDITOR='nvim'
+export VISUAL='nvim'
+export SUDO_EDITOR='nvim'
 #setopt CORRECT
 
 # load our functions
