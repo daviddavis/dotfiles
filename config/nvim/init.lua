@@ -642,23 +642,55 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    branch = 'master',
-    build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    branch = 'main',
+    lazy = false,
+    build = function()
+      require('nvim-treesitter').update()
+    end,
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-    opts = {
-      ensure_installed = { 'bash', 'c', 'caddy', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'python' },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = {
-        enable = true,
-        -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-        --  If you are experiencing weird indenting issues, add the language to
-        --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
-      },
-      indent = { enable = true, disable = { 'lua', 'python', 'yaml' } },
-    },
+    config = function()
+      local ensure_installed = {
+        'bash',
+        'c',
+        'caddy',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'python',
+      }
+
+      require('nvim-treesitter').install(ensure_installed)
+
+      -- Filetypes that should use treesitter highlighting (and, optionally, indent).
+      -- Ruby still needs vim regex highlighting alongside treesitter for correct indent.
+      -- Lua/python/yaml opt out of treesitter indent.
+      local no_indent = { lua = true, python = true, yaml = true }
+      local extra_regex_hl = { ruby = true }
+
+      vim.api.nvim_create_autocmd('FileType', {
+        group = vim.api.nvim_create_augroup('user-treesitter', { clear = true }),
+        callback = function(args)
+          local ft = args.match
+          local lang = vim.treesitter.language.get_lang(ft)
+          if not lang or not vim.treesitter.language.add(lang) then
+            return
+          end
+          vim.treesitter.start(args.buf, lang)
+          if not no_indent[ft] then
+            vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          end
+          if extra_regex_hl[ft] then
+            vim.bo[args.buf].syntax = 'ON'
+          end
+        end,
+      })
+    end,
   },
 }, {
   ui = {
