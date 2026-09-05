@@ -10,7 +10,8 @@ cd ~/.dotfiles && git pull origin `current_branch`
 
 # update neovim
 nvim --headless "+Lazy! restore" +qa
-nvim --headless "+TSUpdateSync" +qa
+# nvim-treesitter main branch has no :TS* commands; update() is async so wait on it
+nvim --headless "+lua require('nvim-treesitter').update():wait(300000)" +qa
 nvim --headless "+MasonUpdate" +qa
 
 git submodule init && git submodule update
