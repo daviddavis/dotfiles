@@ -1,0 +1,17 @@
+font-family = FiraCode Nerd Font Mono
+font-thicken = true
+font-size = 17
+font-style-bold = false
+font-style-bold-italic = false
+
+theme = Catppuccin Mocha
+
+cursor-style = block
+
+# Initial window size, in terminal cells (columns x rows)
+window-width = 120
+window-height = 30
+
+# disable the bar cursor by default with no-cursor
+# also, avoid using xterm-ghostty for remote hosts
+shell-integration-features = no-cursor,ssh-env
