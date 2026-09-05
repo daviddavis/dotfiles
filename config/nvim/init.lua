@@ -66,6 +66,9 @@ vim.opt.textwidth = 100
 -- Set tabstop to 4
 vim.opt.tabstop = 4
 
+-- Indent continuation lines of multiline (plain) scalars in YAML; off by default upstream
+vim.g.yaml_indent_multiline_scalar = 1
+
 -- [[ Basic Keymaps ]]
 
 -- Clear highlights on search when pressing <Esc> in normal mode
@@ -589,7 +592,7 @@ require('lazy').setup({
       fuzzy = { implementation = 'lua' },
 
       -- Shows a signature help window while you type arguments for a function
-      signature = { enabled = true },
+      signature = { enabled = false },
     },
   },
 
