@@ -40,7 +40,6 @@ plugins=(
           fzf
           git
           gh
-          httpie
           macos
           kubectl
           mise
