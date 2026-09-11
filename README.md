@@ -13,14 +13,21 @@ Most dev tools (node, python, neovim, ripgrep, fd, etc.) are managed by
 [mise](https://mise.jdx.dev/) via [config/mise/config.toml](config/mise/config.toml),
 so each OS only needs a small bootstrap: a shell, git, tmux, vim, and mise itself.
 
-See the [mise installation docs](https://mise.jdx.dev/installing-mise.html) for the
-recommended way to install mise on your platform.
+See the [mise installation docs](https://mise.jdx.dev/installing-mise.html) for other
+ways to install mise.
 
 ### Fedora/RHEL/CentOS
 
 ```sh
 sudo dnf install -y fzf zsh git tmux vim gcc make unzip
 chsh -s /bin/zsh
+```
+
+Install mise from the COPR repo:
+
+```sh
+sudo dnf copr enable -y jdxcode/mise
+sudo dnf install -y mise
 ```
 
 ### Debian/Ubuntu
@@ -31,6 +38,14 @@ sudo apt install -y fzf zsh git tmux vim curl build-essential unzip
 chsh -s /usr/bin/zsh
 ```
 
+Install mise from the PPA:
+
+```sh
+sudo add-apt-repository -y ppa:jdxcode/mise
+sudo apt update
+sudo apt install -y mise
+```
+
 ### macOS
 
 Install [Homebrew](https://brew.sh/), then from the repo root:
@@ -39,6 +54,8 @@ Install [Homebrew](https://brew.sh/), then from the repo root:
 brew bundle --file=Brewfile
 chsh -s /usr/bin/zsh
 ```
+
+The Brewfile includes mise, so no extra step is needed.
 
 ## Install
 
