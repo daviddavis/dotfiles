@@ -17,6 +17,7 @@ brew "vim"
 brew "fzf"
 brew "gnu-sed"
 brew "tree"
+brew "tlrc"
 
 # ---------------------------------------------------------------------------
 # System / network utilities
@@ -38,15 +39,12 @@ brew "yt-dlp"
 brew "ffmpeg"
 brew "html2text"
 brew "lynx"
-brew "ctags"
 
 # ---------------------------------------------------------------------------
 # Containers / cloud
 # ---------------------------------------------------------------------------
-brew "colima"
 brew "docker"
 brew "docker-compose"
-brew "azure-cli"
 
 # ---------------------------------------------------------------------------
 # Security / GPG
@@ -58,12 +56,10 @@ brew "pinentry-mac"
 # Casks
 # ---------------------------------------------------------------------------
 cask "bitwarden"
-cask "copilot-cli"
-cask "db-browser-for-sqlite"
 cask "font-fira-code-nerd-font"
 cask "gimp"
+cask "ghostty"
 cask "iterm2"
-cask "jellyfin-media-player"
 cask "raycast"
 cask "syncthing-app"
 cask "xquartz"
