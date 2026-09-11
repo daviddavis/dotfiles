@@ -38,7 +38,6 @@ fi
 
 linkDotfile bash_profile
 linkDotfile bin
-linkDotfile ctags
 linkDotfile gitconfig
 linkDotfile gitignore
 linkDotfile netrc

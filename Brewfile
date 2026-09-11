@@ -13,7 +13,6 @@ brew "mise"           # everything else dev-runtime-ish goes through mise
 # ---------------------------------------------------------------------------
 brew "zsh"
 brew "tmux"
-brew "vim"
 brew "fzf"
 brew "gnu-sed"
 brew "tree"
