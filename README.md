@@ -57,6 +57,12 @@ chsh -s /usr/bin/zsh
 
 The Brewfile includes mise, so no extra step is needed.
 
+To update the Brewfile with currently installed packages:
+
+```sh
+brew bundle dump --file=Brewfile --force
+```
+
 ## Install
 
 The first option is to use the install script:
