@@ -65,13 +65,7 @@ brew bundle dump --file=Brewfile --force
 
 ## Install
 
-The first option is to use the install script:
-
-```sh
-curl -L https://raw.github.com/daviddavis/dotfiles/main/install.sh | sh
-```
-
-Otherwise you can manually install the dotfiles:
+Clone oh-my-zsh and the dotfiles, then link them into place:
 
 ```sh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
