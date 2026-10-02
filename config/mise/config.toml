@@ -9,9 +9,6 @@ python = "3.14"
 
 # Package managers
 uv = "latest"
-
-# Editors
-helix  = "latest"
 neovim = "latest"
 
 # Shell utilities (pinned cross-platform; brew/apt versions can lag)
@@ -28,3 +25,4 @@ xh          = "latest"
 # Language servers / formatters
 lua-language-server = "latest"
 stylua              = "latest"
+claude = "latest"
