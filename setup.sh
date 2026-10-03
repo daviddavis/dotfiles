@@ -24,26 +24,19 @@ function linkDotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
-mkdir -p ~/.vim
 mkdir -p ~/.config
 
-if [ -h ~/.vim/autoload ]; then
-  rm ~/.vim/autoload
-fi
-mkdir -p ~/.vim/autoload
-if [ ! -f ~/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
+# Remove links to files that moved under ~/.config
+for old in ~/.gitconfig ~/.gitignore ~/.tmux.conf ~/.vimrc ~/.vim/plug; do
+  if [ -h "$old" ] && [[ "$(readlink "$old")" == "${dotfilesDir}"/* ]]; then
+    echo "Removing old link: ${old}"
+    rm "$old"
+  fi
+done
 
 linkDotfile bash_profile
 linkDotfile bin
-linkDotfile gitconfig
-linkDotfile gitignore
 linkDotfile netrc
-linkDotfile tmux.conf
-linkDotfile vim/plug
-linkDotfile vimrc
 linkDotfile zshrc
 linkDotfile zshrc.d
 linkDotfile rgignore
@@ -51,6 +44,11 @@ linkDotfile rgignore
 for item in config/*; do
   linkDotfile "$item"
 done
+
+if [ ! -f ~/.config/vim/autoload/plug.vim ]; then
+  curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
 
 # Ensure netrc has secure permissions (mise and other tools require 0600)
 chmod 600 ~/.netrc

@@ -1,2 +1,5 @@
 .DS_Store
 .luarc.json
+config/vim/autoload/
+config/vim/plugged/
+config/vim/.netrwhist
