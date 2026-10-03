@@ -1,6 +1,6 @@
 " vim: set ft=vim:
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/vim/plugged')
 
 " My Bundles here:
 "

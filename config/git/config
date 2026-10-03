@@ -36,7 +36,6 @@
   untracked = cyan
 [core]
 	quotepath = false
-	excludesfile = ~/.gitignore
 [init]
 	defaultBranch = main
 [github]
