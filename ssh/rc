@@ -1,0 +1,5 @@
+# Run by sshd on login. Keep a stable path to the forwarded agent socket so
+# long-lived tmux sessions can find the agent after reconnecting.
+if [ -S "$SSH_AUTH_SOCK" ]; then
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
