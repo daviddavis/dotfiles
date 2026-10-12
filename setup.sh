@@ -25,6 +25,7 @@ function linkDotfile {
 }
 
 mkdir -p ~/.config
+mkdir -p -m 700 ~/.ssh
 
 # Remove links to files that moved under ~/.config
 for old in ~/.gitconfig ~/.gitignore ~/.tmux.conf ~/.vimrc ~/.vim/plug; do
@@ -40,6 +41,7 @@ linkDotfile netrc
 linkDotfile zshrc
 linkDotfile zshrc.d
 linkDotfile rgignore
+linkDotfile ssh/rc
 
 for item in config/*; do
   linkDotfile "$item"
