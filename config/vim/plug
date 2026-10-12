@@ -8,17 +8,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'luochen1990/rainbow'
-Plug 'liuchengxu/vim-which-key'
-Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'carlsmedstad/vim-bicep'
 
 call plug#end()

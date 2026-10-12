@@ -88,25 +88,20 @@ augroup END
 " PLUGIN SETTINGS
 " ---------------------------------------------------------------------------
 
+" built-in commenting (gcc to toggle a line, gc with a motion or selection)
+silent! packadd! comment
+
 " turn on vim-airline
 let g:airline_powerline_fonts = 1
 
 " map Ctrl-p to FzF Files
 nmap <C-P> :Files<CR>
 
-" turn on rainbow parentheses
-let g:rainbow_active = 1
-let g:rainbow_conf = {'separately': {'nerdtree': 0}} " don't use on nerdtree window
-
 " ignore pyc files
 let NERDTreeIgnore = ['\.pyc$', '_site', '__pycache__']
 set wildignore+=*.pyc,*/_site/**,*/__pycache__/**
 
 let g:html_indent_inctags = "p,li"
-
-" fix strange escape char sequences that appear with devicons and vim-airline
-" https://github.com/ryanoasis/vim-devicons/issues/359
-set t_RV=
 
 let g:ale_fixers = {"python": ["ruff", "ruff_format"]}
 let g:ale_virtualtext_cursor=0
@@ -125,9 +120,6 @@ nnoremap <silent> <Down> <c-w>j
 
 " Set map leader to , instead of \
 let mapleader = ","
-
-" Show vim-which-key after timeout
-nnoremap <silent> <leader> :<c-u>WhichKey ','<CR>
 
 " Nerd Tree commands and options
 map <Leader>d :NERDTreeToggle<CR>
