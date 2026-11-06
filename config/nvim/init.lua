@@ -454,10 +454,10 @@ require('lazy').setup({
       })
 
       -- Enable the language servers we want to use.
-      local servers = { 'pyright', 'ruff', 'lua_ls' }
+      local servers = { 'pyright', 'ruff', 'lua_ls', 'ruby_lsp', 'ts_ls' }
       vim.lsp.enable(servers)
 
-      -- Ensure the servers and tools above are installed via Mason.
+      -- Install the language servers and tools via Mason.
       -- NOTE: Mason package names differ from LSP server names (e.g. lua_ls -> lua-language-server).
       require('mason-tool-installer').setup {
         ensure_installed = {
@@ -465,6 +465,8 @@ require('lazy').setup({
           'ruff',
           'mypy', -- not an LSP; available for use via linters/formatters
           'lua-language-server',
+          'ruby-lsp',
+          'typescript-language-server', -- JavaScript, JSX, TypeScript, and TSX
           'stylua', -- Used to format Lua code
           'yaml-language-server',
           'prettierd',
