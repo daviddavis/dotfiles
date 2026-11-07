@@ -88,8 +88,6 @@ cask "appcleaner"
 cask "balenaetcher"
 # Desktop password and login vault
 cask "bitwarden"
-# Brings the power of Copilot coding agent directly to your terminal
-cask "copilot-cli"
 # Server and cloud storage browser
 cask "cyberduck"
 # Browser for SQLite databases
@@ -103,18 +101,20 @@ cask "ghostty"
 cask "gimp"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Control your tools with a few keystrokes
-cask "raycast"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
 # Tool to reverse the direction of scrolling
 cask "scroll-reverser"
 # Real time file synchronisation software
 cask "syncthing-app"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
-# Tiny, fully native launcher, hotkeys, and clipboard history
-cask "abue-ammar/tinycast/tinycast"
+# Application launcher and productivity tool
+cask "tinycast"
 # Multimedia player
 cask "vlc"
+# Connect to Windows
+cask "windows-app"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
 vscode "github.vscode-github-actions"
@@ -129,4 +129,3 @@ vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.remote-explorer"
 vscode "rust-lang.rust-analyzer"
-npm "corepack"

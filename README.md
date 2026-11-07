@@ -52,7 +52,7 @@ Install [Homebrew](https://brew.sh/), then from the repo root:
 
 ```sh
 brew bundle --file=Brewfile
-chsh -s /usr/bin/zsh
+chsh -s /bin/zsh
 ```
 
 The Brewfile includes mise, so no extra step is needed.
