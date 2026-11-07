@@ -1,0 +1,4 @@
+# herdr keeps runtime state (sockets, logs, sessions) here; only track config
+*
+!.gitignore
+!config.toml

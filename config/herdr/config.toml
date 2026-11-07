@@ -1,0 +1,20 @@
+onboarding = false
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+# Without this the sidebar uses the terminal background, so it blends into the
+# main pane. Catppuccin Mocha "mantle" sits one shade darker than Ghostty's
+# "base" (#1e1e2e) background.
+sidebar_bg = "#181825"
+surface_dim = "#45475a"
+
+[keys]
+prefix = "ctrl+a"
+split_vertical = ["prefix+v", "prefix+|"]
+
+[ui]
+# Create tabs immediately with generated names instead of prompting
+prompt_new_tab_name = false
