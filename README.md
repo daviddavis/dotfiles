@@ -65,13 +65,21 @@ brew bundle dump --file=Brewfile --force
 
 ## Install
 
-Clone oh-my-zsh and the dotfiles, then link them into place:
+Clone oh-my-zsh and the dotfiles, then link them into place with
+[mise dotfiles](https://mise.jdx.dev/dotfiles.html):
 
 ```sh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 git clone --recursive https://github.com/daviddavis/dotfiles.git ~/.dotfiles
-~/.dotfiles/bin/update-dotfiles
+cd ~/.dotfiles && mise trust && mise dot apply
 ```
+
+The links are declared under `[dotfiles]` in [mise.toml](mise.toml). Use `mise dot status`
+to check them and `mise dot apply --dry-run` to preview changes. mise won't replace an
+existing real file (e.g. a default `~/.zshrc`); move it aside or use `--force`, which
+does not keep a backup.
+
+To pull and apply later changes, run `~/.dotfiles/bin/update-dotfiles`.
 
 ### After bootstrap (all platforms)
 

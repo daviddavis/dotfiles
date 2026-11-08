@@ -1,0 +1,21 @@
+# Dotfiles managed by mise: https://mise.jdx.dev/dotfiles.html
+# Apply with `mise dot apply` from this directory (run `mise trust` once per machine).
+# Sources are relative to this file; the default mode symlinks the whole file or directory.
+[dotfiles]
+"~/.bash_profile"   = "bash_profile"
+"~/.bin"            = "bin"
+"~/.rgignore"       = "rgignore"
+"~/.zshrc"          = "zshrc"
+"~/.zshrc.d"        = "zshrc.d"
+"~/.ssh/rc"         = "ssh/rc"
+"~/.config/ghostty" = "config/ghostty"
+"~/.config/git"     = "config/git"
+"~/.config/herdr"   = "config/herdr"
+"~/.config/mise"    = "config/mise"
+"~/.config/nvim"    = "config/nvim"
+"~/.config/tmux"    = "config/tmux"
+"~/.config/vim"     = "config/vim"
+
+[bootstrap.hooks]
+pre-dotfiles = "mkdir -p -m 700 ~/.ssh"
+post-dotfiles = "[ -f ~/.config/vim/autoload/plug.vim ] || curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"

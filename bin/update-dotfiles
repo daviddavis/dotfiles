@@ -15,5 +15,5 @@ nvim --headless "+lua require('nvim-treesitter').update():wait(300000)" +qa
 nvim --headless "+MasonUpdate" +qa
 
 git submodule init && git submodule update
-~/.dotfiles/setup.sh
+mise -C ~/.dotfiles dot apply
 echo "Dotfiles updated!"
