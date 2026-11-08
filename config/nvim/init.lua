@@ -465,7 +465,7 @@ require('lazy').setup({
           'ruff',
           'mypy', -- not an LSP; available for use via linters/formatters
           'lua-language-server',
-          'ruby-lsp',
+          -- 'ruby-lsp',
           'typescript-language-server', -- JavaScript, JSX, TypeScript, and TSX
           'stylua', -- Used to format Lua code
           'yaml-language-server',
