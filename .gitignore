@@ -3,3 +3,4 @@
 config/vim/autoload/
 config/vim/plugged/
 config/vim/.netrwhist
+config/mise/config.local.toml
