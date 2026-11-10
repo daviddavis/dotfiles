@@ -36,13 +36,14 @@ export DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
+          # load mise first since other plugins require it.
+          mise
           extract
           fzf
           git
           gh
           macos
           kubectl
-          mise
           zsh-autosuggestions
           zsh-syntax-highlighting
           zoxide
