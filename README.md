@@ -19,7 +19,7 @@ ways to install mise.
 ### Fedora/RHEL/CentOS
 
 ```sh
-sudo dnf install -y fzf zsh git tmux vim gcc make unzip
+sudo dnf install -y zsh git tmux vim gcc make unzip
 chsh -s /bin/zsh
 ```
 
@@ -34,7 +34,7 @@ sudo dnf install -y mise
 
 ```sh
 sudo apt update
-sudo apt install -y fzf zsh git tmux vim curl build-essential unzip
+sudo apt install -y zsh git tmux vim curl build-essential unzip
 chsh -s /usr/bin/zsh
 ```
 

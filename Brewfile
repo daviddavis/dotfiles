@@ -20,8 +20,6 @@ brew "docker-compose"
 brew "dos2unix"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
-# Command-line fuzzy finder written in Go
-brew "fzf"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # Library to load and enumerate PKCS#11 modules
