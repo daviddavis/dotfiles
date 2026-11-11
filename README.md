@@ -90,13 +90,12 @@ and install the rest of the tools:
 mise install
 ```
 
-### Update authorized SSH keys
+#### Local customizations
 
-To append the public SSH keys from GitHub:
+You can set env vars, etc in `~/.localrc`.
+
+For tools specific to this machine, use the gitignored `config/mise/config.local.toml`:
 
 ```sh
-mkdir -p ~/.ssh
-gh api --paginate /user/keys --jq '.[] | "\(.key) \(.title)"' >> ~/.ssh/authorized_keys
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
+mise use --path ~/.config/mise/config.local.toml jq@latest
 ```
