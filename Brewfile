@@ -1,25 +1,11 @@
-tap "abue-ammar/tinycast", trusted: true
-tap "homebrew/core"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# Microsoft Azure CLI 2.0
-brew "azure-cli"
-# Secure and free password manager for all of your devices
-brew "bitwarden-cli"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # TIFF library and utilities
 brew "libtiff"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
-# Pack, ship and run any application as a lightweight container
-brew "docker"
-# Isolated development environments using Docker
-brew "docker-compose"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
-# Play, record, convert, and stream select audio and video codecs
-brew "ffmpeg"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # Library to load and enumerate PKCS#11 modules
@@ -34,26 +20,16 @@ brew "pinentry"
 brew "gnupg"
 # Advanced HTML-to-text converter
 brew "html2text"
-# Improved top (interactive process viewer)
-brew "htop"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
 # Text-based web browser
 brew "lynx"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
-# Feature-rich command-line audio/video downloader
-brew "yt-dlp"
-# Media player based on MPlayer and mplayer2
-brew "mpv"
 # NCurses Disk Usage
 brew "ncdu"
 # Oracle Cloud Infrastructure CLI
 brew "oci-cli"
-# AI coding agent, built for the terminal
-brew "opencode"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Pinentry for GPG on Mac
@@ -76,6 +52,8 @@ brew "watch"
 brew "wget"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Terminal interface for Antigravity agents
@@ -84,8 +62,8 @@ cask "antigravity-cli"
 cask "appcleaner"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# Desktop password and login vault
-cask "bitwarden"
+# Multi-platform client-side cloud file encryption tool
+cask "cryptomator"
 # Server and cloud storage browser
 cask "cyberduck"
 # Browser for SQLite databases
@@ -101,8 +79,12 @@ cask "gimp"
 cask "iterm2"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Tool to reverse the direction of scrolling
 cask "scroll-reverser"
+# Music streaming service
+cask "spotify"
 # Real time file synchronisation software
 cask "syncthing-app"
 # Mesh VPN based on WireGuard
@@ -115,6 +97,8 @@ cask "vlc"
 cask "windows-app"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
+# Comic reader
+cask "yacreader"
 vscode "github.vscode-github-actions"
 vscode "matthewpi.caddyfile-support"
 vscode "ms-azuretools.vscode-containers"
