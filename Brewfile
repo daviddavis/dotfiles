@@ -62,14 +62,22 @@ cask "antigravity-cli"
 cask "appcleaner"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# Web browser focusing on privacy
+cask "brave-browser"
+# E-books management software
+cask "calibre"
 # Multi-platform client-side cloud file encryption tool
 cask "cryptomator"
 # Server and cloud storage browser
 cask "cyberduck"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
+# Voice and text chat software
+cask "discord"
 # Matrix collaboration client
 cask "element"
+# Web browser
+cask "firefox"
 cask "font-fira-code-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
@@ -77,12 +85,26 @@ cask "ghostty"
 cask "gimp"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Tool to show what is persistently installed on the computer
+cask "knockknock"
+# Audible audiobook manager and liberator
+cask "libation"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
+# Open-source firewall to block unknown outgoing connections
+cask "lulu"
+# Free and open-source RSS reader
+cask "netnewswire"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# VPN client focusing on security
+cask "protonvpn"
+# Client for viewing and managing security cameras and NVRs
+cask "reolink"
 # Tool to reverse the direction of scrolling
 cask "scroll-reverser"
+# Instant messaging application focusing on security
+cask "signal"
 # Music streaming service
 cask "spotify"
 # Real time file synchronisation software
