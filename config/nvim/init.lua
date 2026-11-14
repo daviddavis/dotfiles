@@ -454,7 +454,12 @@ require('lazy').setup({
       })
 
       -- Enable the language servers we want to use.
-      local servers = { 'pyright', 'ruff', 'lua_ls', 'ruby_lsp', 'ts_ls' }
+      local servers = { 'pyright', 'ruff', 'lua_ls', 'ts_ls' }
+      -- ruby-lsp isn't installed by Mason (it's a gem tied to the active Ruby),
+      -- so only enable it when the executable is on PATH.
+      if vim.fn.executable 'ruby-lsp' == 1 then
+        table.insert(servers, 'ruby_lsp')
+      end
       vim.lsp.enable(servers)
 
       -- Install the language servers and tools via Mason.
