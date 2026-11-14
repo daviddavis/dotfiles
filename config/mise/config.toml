@@ -13,6 +13,7 @@ neovim = "latest"
 
 # Shell utilities (pinned cross-platform; brew/apt versions can lag)
 bat     = "latest"
+btop    = { version = "latest", os = ["linux"] } # upstream ships no macOS binaries
 fd      = "latest"
 fzf     = "latest"
 ripgrep = "latest"
