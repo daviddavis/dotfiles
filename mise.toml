@@ -15,6 +15,11 @@
 "~/.config/nvim"    = "config/nvim"
 "~/.config/tmux"    = "config/tmux"
 "~/.config/vim"     = "config/vim"
+"~/.agents/skills"  = "skills"
+"~/.claude/skills/address"   = "skills/address"
+"~/.claude/skills/commit"    = "skills/commit"
+"~/.claude/skills/review-pr" = "skills/review-pr"
+"~/.claude/skills/standup"   = "skills/standup"
 
 [bootstrap.hooks]
 pre-dotfiles = "mkdir -p -m 700 ~/.ssh"

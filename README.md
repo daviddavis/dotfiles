@@ -79,6 +79,9 @@ to check them and `mise dot apply --dry-run` to preview changes. mise won't repl
 existing real file (e.g. a default `~/.zshrc`); move it aside or use `--force`, which
 does not keep a backup.
 
+AI agent skills live in [skills/](skills/README.md) and are linked into `~/.claude/skills` and
+`~/.agents/skills` by the same command.
+
 To pull and apply later changes, run `~/.dotfiles/bin/update-dotfiles`.
 
 ### After bootstrap (all platforms)
